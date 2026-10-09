@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<style>.r{fill:none;stroke-width:10}.s0{stroke:#c2410c}.s1{stroke:#c7791a}.s2{stroke:#2b7a4b}.s3{stroke:#0f766e}.s4{stroke:#245fa6}.s5{stroke:#b5322e}.s6{stroke:#be185d}.s7{stroke:#6b3fa0}.c{fill:#3f4c5c}.p{fill:#fff}@media (prefers-color-scheme:dark){.s0{stroke:#f08a5a}.s1{stroke:#f0a94a}.s2{stroke:#5fc48a}.s3{stroke:#4fc2b4}.s4{stroke:#6fa3e6}.s5{stroke:#f0726c}.s6{stroke:#f07aa8}.s7{stroke:#b48ce8}.c{fill:#9aa7b8}.p{fill:#15181d}}</style>
+<path class="r s0" d="M33.09 7.02A25 25 0 0 1 48.89 13.57"/><path class="r s1" d="M50.43 15.11A25 25 0 0 1 56.98 30.91"/><path class="r s2" d="M56.98 33.09A25 25 0 0 1 50.43 48.89"/><path class="r s3" d="M48.89 50.43A25 25 0 0 1 33.09 56.98"/><path class="r s4" d="M30.91 56.98A25 25 0 0 1 15.11 50.43"/><path class="r s5" d="M13.57 48.89A25 25 0 0 1 7.02 33.09"/><path class="r s6" d="M7.02 30.91A25 25 0 0 1 13.57 15.11"/><path class="r s7" d="M15.11 13.57A25 25 0 0 1 30.91 7.02"/>
+<circle class="c" cx="32" cy="32" r="14"/>
+<g class="p" style="stroke:none"><circle cx="32" cy="26.5" r="4.3"/><path d="M23.5 41.2A8.5 8.5 0 0 1 40.5 41.2Z"/></g>
+</svg>
