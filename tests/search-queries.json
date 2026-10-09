@@ -1188,5 +1188,53 @@
   ],
   "difficulty": "easy",
   "kind": "2026"
+ },
+ {
+  "q": "ลูกค้าที่ซื้อผ่าน TikTok Shop เป็นคนเดียวกับสมาชิกร้านเราไหม จะเช็กยังไง",
+  "relevant": [
+   "customer-data-analytics"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "อยากให้ฝ่ายการตลาดพิมพ์ถามยอดขายเองโดยไม่ต้องรอทีม data ต้องเตรียมอะไร",
+  "relevant": [
+   "customer-data-analytics"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "ลูกค้าบอกให้หยุดส่งโปรแล้ว แต่ระบบยังส่งไปอีก ต้องแก้ที่ไหน",
+  "relevant": [
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "easy",
+  "kind": "2026"
+ },
+ {
+  "q": "ก่อนเปิดให้บอทตอบแชตดึงยอดสะสมแต้มลูกค้าเอง ต้องตรวจข้อมูลอะไรบ้าง",
+  "relevant": [
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "อยากให้ระบบส่งข้อความเตือนคนที่ใส่ของในตะกร้าแล้วไม่จ่าย ควรส่งตอนไหนบ้าง",
+  "relevant": [
+   "crm-automation-workflow"
+  ],
+  "difficulty": "easy",
+  "kind": "2026"
+ },
+ {
+  "q": "จะปล่อยให้แชตบอตคืนเงินหรือแจกโค้ดให้ลูกค้าที่ไม่พอใจได้เลยไหม ต้องมีขั้นตอนอะไรกัน",
+  "relevant": [
+   "crm-automation-workflow"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
  }
 ]
