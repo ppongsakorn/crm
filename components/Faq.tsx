@@ -2,8 +2,7 @@
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { CopyButton } from "@/components/CopyButton";
-import { PromptText } from "@/components/PromptText";
+import { FillablePrompt } from "@/components/FillablePrompt";
 import type { Knowledge } from "@/lib/data";
 
 /** Question-and-answer accordion. Each answer ends with a follow-up prompt to take to an AI. */
@@ -23,11 +22,8 @@ export function Faq({ items }: { items: Knowledge["faq"] }) {
             <div className="followup">
               <div className="followup-head">
                 <b>Prompt ต่อยอด</b>
-                <CopyButton text={f.prompt} />
               </div>
-              <pre>
-                <PromptText text={f.prompt} />
-              </pre>
+              <FillablePrompt text={f.prompt} block />
             </div>
           </div>
         </details>

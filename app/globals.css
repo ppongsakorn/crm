@@ -429,3 +429,31 @@ table.metrics td:last-child { color: var(--ink2); }
   .nav { overflow-x: auto; scrollbar-width: none; min-width: 0; }
   .nav::-webkit-scrollbar { display: none; }
 }
+
+/* fillable prompts + business profile */
+.fp { min-width: 0; display: grid; gap: 6px; }
+.prompts li .fp { grid-column: 2 / -1; }
+.prompts li { grid-template-columns: 44px 1fr; }
+.fp-text { min-width: 0; overflow-wrap: anywhere; }
+.fp.block .fp-text { background: var(--bg); border-radius: 8px; padding: 10px 12px; }
+.fp-actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.prompts li .fp-actions { justify-content: flex-start; }
+.copy.fill { color: var(--c); border-color: color-mix(in srgb, var(--c) 40%, var(--line)); }
+mark.ph.filled { background: color-mix(in srgb, var(--engage) 16%, transparent); color: var(--engage); }
+.fp-form { display: grid; gap: 8px; background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; padding: 10px 12px; }
+.fp-form label { display: grid; gap: 2px; font-size: 13px; color: var(--ink2); }
+.fp-form input, .profile input { font-size: 15px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); min-width: 0; }
+.fp-form p { margin: 0; font-size: 12.5px; color: var(--ink2); }
+.profile { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--engage); border-radius: 12px; margin: 12px 0 16px; }
+.profile summary { cursor: pointer; list-style: none; padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.profile summary::-webkit-details-marker { display: none; }
+.profile summary::before { content: "＋"; color: var(--engage); font-weight: 700; }
+.profile[open] summary::before { content: "－"; }
+.profile-title { font-weight: 600; font-size: 15px; }
+.profile-count { font-size: 13px; color: var(--ink2); }
+.profile-body { padding: 0 14px 12px; }
+.profile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.profile-grid label { display: grid; gap: 3px; font-size: 13px; color: var(--ink2); }
+.profile-note { margin: 10px 0 0; font-size: 12.5px; color: var(--ink2); }
+.profile-clear { margin-left: 8px; background: none; border: 0; color: var(--predict); cursor: pointer; font-size: 12.5px; text-decoration: underline; }
+.profile.compact { margin: 0 0 12px; }

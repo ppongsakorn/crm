@@ -121,3 +121,29 @@ test("mobile app routes map to and from the desktop pages", async () => {
   // the redirect script is built from toMobilePath's source, so it must be self-contained
   assert.doesNotMatch(toMobilePath.toString(), /\b(KEY|import|require)\b/);
 });
+
+test("prompt filling maps the business profile and keeps unknown placeholders", async () => {
+  const { placeholders, fillPrompt, fieldFor, normalizeKey } = await import("../lib/prompts.ts");
+  assert.deepEqual(placeholders("เขียนให้ [ชื่อธุรกิจ] ที่ขาย [สินค้า/บริการ] ให้ [ชื่อธุรกิจ]"), ["ชื่อธุรกิจ", "สินค้า/บริการ"]);
+  assert.equal(normalizeKey("ประเภทธุรกิจ เช่น ร้านอาหาร"), "ประเภทธุรกิจ");
+  assert.equal(fieldFor("ชื่อร้าน")?.id, "businessName");
+  assert.equal(fieldFor("แพลตฟอร์ม เช่น Facebook, IG")?.id, "channels");
+  assert.equal(fieldFor("จำนวน"), undefined);
+  const r = fillPrompt("ทำแผนให้ [ชื่อธุรกิจ] ภายใน [ช่วงเวลา] งบ [งบ]", { businessName: "Baan Coffee" }, { "ช่วงเวลา": "3 เดือน" });
+  assert.equal(r.prompt, "ทำแผนให้ Baan Coffee ภายใน 3 เดือน งบ [งบ]");
+  assert.deepEqual(r.filled, ["ชื่อธุรกิจ", "ช่วงเวลา"]);
+  assert.deepEqual(r.missing, ["งบ"]);
+  // an exact answer for a placeholder wins over the profile, blanks count as missing
+  assert.equal(fillPrompt("[ชื่อแบรนด์]", { businessName: "A" }, { "ชื่อแบรนด์": "B" }).prompt, "B");
+  assert.deepEqual(fillPrompt("[ชื่อแบรนด์]", { businessName: "  " }).missing, ["ชื่อแบรนด์"]);
+  // the profile should help a meaningful share of prompts: all prompts on the site, and the book's own
+  const book = topics.flatMap((t) => t.prompts);
+  const site = [...book];
+  for (const f of fs.readdirSync("data/knowledge")) {
+    const k = JSON.parse(fs.readFileSync(`data/knowledge/${f}`, "utf8"));
+    site.push(...k.faq.map((x) => x.prompt), ...k.advancedPrompts.map((x) => x.prompt));
+  }
+  const share = (list) => list.filter((p) => placeholders(p).some((ph) => fieldFor(ph))).length / list.length;
+  assert.ok(share(site) > 0.4, `profile helps only ${(share(site) * 100).toFixed(0)}% of all prompts`);
+  assert.ok(share(book) > 0.2, `profile helps only ${(share(book) * 100).toFixed(0)}% of book prompts`);
+});

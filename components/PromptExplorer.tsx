@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { CopyButton } from "@/components/CopyButton";
-import { PromptText } from "@/components/PromptText";
+import { FillablePrompt } from "@/components/FillablePrompt";
 import { makeEngine } from "@/lib/search";
 import type { Group, GroupId, PromptItem, Topic } from "@/lib/data";
 
@@ -69,13 +68,11 @@ export function PromptExplorer({ groups, topics, prompts, mobile = false }: { gr
           return (
             <li key={p.id} className={`g-${p.group}`}>
               <span className="pn">{p.id}</span>
-              <span className="pt">
-                <PromptText text={p.text} />
+              <FillablePrompt text={p.text}>
                 <Link href={`${mobile ? "/mobile/t" : "/topics"}/${t.slug}`} className="pt-topic">
                   {t.emoji} {t.name}
                 </Link>
-              </span>
-              <CopyButton text={p.text} />
+              </FillablePrompt>
             </li>
           );
         })}

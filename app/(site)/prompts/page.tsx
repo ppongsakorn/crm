@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProfilePanel } from "@/components/ProfilePanel";
 import { PromptExplorer } from "@/components/PromptExplorer";
 import { allPrompts, bookPromptCount, groups, promptCount, topics } from "@/lib/data";
 
@@ -19,6 +20,7 @@ export default function PromptsPage() {
             ` · ${bookPromptCount} รายการแรกมาจาก 500 CRM Prompts Book อีก ${promptCount - bookPromptCount} รายการเพิ่มใหม่ปี 2026 สำหรับหัวข้อที่เกิดขึ้นใหม่`}
         </p>
       </div>
+      <ProfilePanel />
       <PromptExplorer groups={groups} topics={topics} prompts={allPrompts} />
     </>
   );

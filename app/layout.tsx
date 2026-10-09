@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 import { promptCount, topics } from "@/lib/data";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { ProfileProvider } from "@/components/ProfileProvider";
 import "./globals.css";
 
 const plex = IBM_Plex_Sans_Thai({
@@ -29,7 +30,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="th" className={plex.variable}>
-      <body>{children}</body>
+      <body>
+        <ProfileProvider>{children}</ProfileProvider>
+      </body>
     </html>
   );
 }

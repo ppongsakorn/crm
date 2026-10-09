@@ -7,6 +7,7 @@ import { Chat } from "@/components/Chat";
 import { Faq } from "@/components/Faq";
 import { WhatsNew } from "@/components/WhatsNew";
 import { MegaPrompts } from "@/components/MegaPrompts";
+import { ProfilePanel } from "@/components/ProfilePanel";
 import { PromptList } from "@/components/PromptList";
 import { getGroup, getKnowledge, getTopic, isBook, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
 import { aiEnabled } from "@/lib/site";
@@ -116,6 +117,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
 
               <h2 id="faq">ถาม-ตอบ</h2>
               <p className="muted lead">ไล่จากคำถามพื้นฐานไปถึงขั้นสูง ทุกข้อปิดท้ายด้วย Prompt ต่อยอดให้คัดลอกไปถาม AI ต่อ</p>
+              <ProfilePanel />
               <Faq items={k.faq} />
 
               <h2 id="metrics">KPI ที่ควรวัด</h2>
@@ -169,6 +171,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
           <p className="muted lead">
             {isBook(t) ? `หมายเลข ${t.n}.1–${t.n}.${t.prompts.length} ตาม 500 CRM Prompts Book` : `หมายเลข ${t.n}.1–${t.n}.${t.prompts.length} ชุดเพิ่มเติมจากการค้นคว้าปี 2026 ไม่ได้อยู่ในหนังสือ`} เติม <mark className="ph">[ช่องว่าง]</mark> ให้เป็นบริบทของคุณก่อนส่ง
           </p>
+          <ProfilePanel compact />
           <PromptList n={t.n} prompts={t.prompts} />
 
           {k && (

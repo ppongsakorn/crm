@@ -1,5 +1,4 @@
-import { CopyButton } from "@/components/CopyButton";
-import { PromptText } from "@/components/PromptText";
+import { FillablePrompt } from "@/components/FillablePrompt";
 import type { Knowledge } from "@/lib/data";
 
 /** Longer, structured prompts (role · context · task · format) to build on. */
@@ -9,15 +8,10 @@ export function MegaPrompts({ items }: { items: Knowledge["advancedPrompts"] }) 
       {items.map((p, i) => (
         <article key={i} className="mega-card">
           <header>
-            <div>
-              <h3>{p.title}</h3>
-              <p className="use-when">ใช้เมื่อ {p.useWhen}</p>
-            </div>
-            <CopyButton text={p.prompt} />
+            <h3>{p.title}</h3>
+            <p className="use-when">ใช้เมื่อ {p.useWhen}</p>
           </header>
-          <pre>
-            <PromptText text={p.prompt} />
-          </pre>
+          <FillablePrompt text={p.prompt} block />
         </article>
       ))}
     </div>

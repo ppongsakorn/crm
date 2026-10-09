@@ -8,6 +8,7 @@ import { WhatsNew } from "@/components/WhatsNew";
 import { MegaPrompts } from "@/components/MegaPrompts";
 import { MTabs } from "@/components/mobile/MTabs";
 import { MTop } from "@/components/mobile/MTop";
+import { ProfilePanel } from "@/components/ProfilePanel";
 import { PromptList } from "@/components/PromptList";
 import { getGroup, getKnowledge, getTopic, isBook, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
 
@@ -35,7 +36,13 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
   const tabs = [
     ...(k
       ? [
-          { id: "faq", label: `ถาม-ตอบ ${k.faq.length}`, content: <Faq items={k.faq} /> },
+          { id: "faq", label: `ถาม-ตอบ ${k.faq.length}`, content: (
+              <>
+                <ProfilePanel compact />
+                <Faq items={k.faq} />
+              </>
+            ),
+          },
           ...(k.whatsNew?.length
             ? [{ id: "news", label: "ใหม่ 2025–26", content: <WhatsNew items={k.whatsNew} /> }]
             : []),
@@ -82,7 +89,16 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
               </ul>
             ),
           },
-          { id: "mega", label: "Mega Prompt", content: <MegaPrompts items={k.advancedPrompts} /> },
+          {
+            id: "mega",
+            label: "Mega Prompt",
+            content: (
+              <>
+                <ProfilePanel compact />
+                <MegaPrompts items={k.advancedPrompts} />
+              </>
+            ),
+          },
         ]
       : []),
     {
@@ -93,6 +109,7 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
           <p className="m-hint">
             {isBook(t) ? `หมายเลข ${t.n}.1–${t.n}.${t.prompts.length} ตาม 500 CRM Prompts Book` : "ชุดเพิ่มเติมจากการค้นคว้าปี 2026"} เติม <mark className="ph">[ช่องว่าง]</mark> ก่อนส่ง
           </p>
+          <ProfilePanel compact />
           <PromptList n={t.n} prompts={t.prompts} />
         </>
       ),
