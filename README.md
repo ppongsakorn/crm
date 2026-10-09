@@ -3,9 +3,9 @@
 
 > **CRM ไม่ใช่ซอฟต์แวร์ แต่คือวิธีที่ธุรกิจ "เข้าใจลูกค้าให้ลึกที่สุด"**
 
-เว็บไซต์สำหรับเรียนรู้และ**นำ CRM ไปใช้จริง** จัด 25 หัวข้อตาม *วงจรชีวิตลูกค้า 9 ขั้น* (ไม่ใช่ตามฟีเจอร์ซอฟต์แวร์) ทุกหัวข้ออธิบายแบบ**ถาม-ตอบ** มี KPI ขั้นตอนลงมือทำ ข้อผิดพลาดที่พบบ่อย และ **Prompt ต่อยอด** ให้คัดลอกไปใช้กับ AI ได้ทันที พร้อม**ที่ปรึกษา AI** ที่รู้จักทุกหัวข้อในเว็บ
+เว็บไซต์สำหรับเรียนรู้และ**นำ CRM ไปใช้จริง** จัด 31 หัวข้อตาม *วงจรชีวิตลูกค้า 9 ขั้น* (ไม่ใช่ตามฟีเจอร์ซอฟต์แวร์) ทุกหัวข้ออธิบายแบบ**ถาม-ตอบ** มี KPI ขั้นตอนลงมือทำ ข้อผิดพลาดที่พบบ่อย และ **Prompt ต่อยอด** ให้คัดลอกไปใช้กับ AI ได้ทันที พร้อม**ที่ปรึกษา AI** ที่รู้จักทุกหัวข้อในเว็บ
 
-โครงสร้างหัวข้อและ prompt ทั้ง 500 รายการ เรียบเรียงจาก [500 CRM Prompts Book (Thai Version)](https://github.com/ppongsakorn/prompts-book-template-thai/blob/main/crm-prompts-books-template.md) โดย Buzzebees · โครงสร้างเว็บต่อยอดจาก [เข็มทิศกรอบความคิด](https://github.com/ppongsakorn/management-framework)
+หัวข้อที่ 1–25 และ prompt 500 รายการแรก เรียบเรียงจาก [500 CRM Prompts Book (Thai Version)](https://github.com/ppongsakorn/prompts-book-template-thai/blob/main/crm-prompts-books-template.md) โดย Buzzebees · อีก 6 หัวข้อเพิ่มใหม่จากการค้นคว้าปี 2026 · โครงสร้างเว็บต่อยอดจาก [เข็มทิศกรอบความคิด](https://github.com/ppongsakorn/management-framework)
 
 ---
 
@@ -13,7 +13,7 @@
 
 - [ทำไมต้องมีเว็บนี้](#ทำไมต้องมีเว็บนี้)
 - [ฟีเจอร์](#ฟีเจอร์)
-- [หัวข้อทั้ง 25](#หัวข้อทั้ง-25)
+- [หัวข้อทั้ง 31](#หัวข้อทั้ง-31)
 - [ที่ปรึกษา AI ทำงานอย่างไร](#ที่ปรึกษา-ai-ทำงานอย่างไร)
 - [สถาปัตยกรรม](#สถาปัตยกรรม)
 - [เริ่มใช้งาน](#เริ่มใช้งาน)
@@ -55,7 +55,7 @@
 
 ### 📚 เรียนรู้
 - **วงแหวนวงจรชีวิตลูกค้า** หน้าแรก แตะขั้นไหนก็ไปขั้นนั้น
-- **ค้นหาด้วย AI ในเบราว์เซอร์** พิมพ์สถานการณ์ เช่น "คนซื้อแล้วไม่กลับมาอีกเลย" แล้วได้หัวข้อที่ใช่ ทำงาน 3 ชั้น (ค้นคำแบบตัดคำไทย + BM25 · คลังวลีสถานการณ์ 870 วลี · ค้นตามความหมายด้วยโมเดล embedding ภาษาไทยที่รันในเบราว์เซอร์) รวมอันดับด้วย RRF ไม่ส่งข้อความไป server — ชุดทดสอบ 100 คำค้น ได้หัวข้อถูกต้องอันดับแรก 96%
+- **ค้นหาด้วย AI ในเบราว์เซอร์** พิมพ์สถานการณ์ เช่น "คนซื้อแล้วไม่กลับมาอีกเลย" แล้วได้หัวข้อที่ใช่ ทำงาน 3 ชั้น (ค้นคำแบบตัดคำไทย + BM25 · คลังวลีสถานการณ์ราว 1,300 วลี · ค้นตามความหมายด้วยโมเดล embedding ภาษาไทยที่รันในเบราว์เซอร์) รวมอันดับด้วย RRF ไม่ส่งข้อความไป server — ชุดทดสอบ 162 คำค้น ได้หัวข้อที่ถูกใน 3 อันดับแรก 96%
 - **หน้าหัวข้อ** ประกอบด้วย: สรุปสั้น · ศัพท์ที่ต้องรู้ · **ถาม-ตอบ 8–12 ข้อ** (ทุกข้อมี Prompt ต่อยอด) · KPI พร้อมสูตรและค่าอ้างอิง · ขั้นตอนลงมือทำ · ข้อผิดพลาดที่พบบ่อย · **Mega Prompt** · Prompt 20 รายการจากหนังสือ · บริบทตลาดไทย · สิ่งที่ทีมข้อมูลต้องเตรียม · แหล่งอ้างอิง
 
 ### ✂️ Prompt
@@ -67,8 +67,13 @@
 - **AI ประจำแต่ละหน้าหัวข้อ** ช่วยปรับความรู้ให้เข้ากับบริบท เขียน prompt ที่ดีกว่า หรือบอกว่าทีมข้อมูลต้องเตรียมอะไร
 - ตอบเป็นภาษาไทย streaming รองรับตาราง markdown
 
+### 🆕 อัปเดตปี 2026
+- ทุกหัวข้อค้นคว้ารอบสองเมื่อ ต.ค. 2026: ตรวจข้อเท็จจริงใหม่ ปรับภาษาให้อ่านง่าย และเพิ่มส่วน **"อะไรเปลี่ยนไปในปี 2025–2026"** (AI, Social Media, Marketplace, Live Commerce, แชท, กฎหมาย, Loyalty, ข้อมูล) พร้อมแหล่งอ้างอิง
+- **หน้า `/trends`** รวมการเปลี่ยนแปลงทั้งหมดตามธีม (มือถือที่ `/mobile/trends`)
+- ข้อมูลอยู่ใน `whatsNew` และ `updatedAt` ของ `data/knowledge/<slug>.json` · หัวข้อใหม่มี `"source": "2026"` ใน `data/crm.json`
+
 ### 🔌 WebMCP
-ทุกหน้าลงทะเบียนเครื่องมือแบบอ่านอย่างเดียว 6 ตัวผ่าน `document.modelContext` (ร่างมาตรฐาน WebMCP ของ W3C WebML CG): `search_topics`, `list_topics`, `get_topic`, `get_faq`, `get_prompts`, `open_topic` ให้ AI agent ในเบราว์เซอร์ที่รองรับเรียกใช้เว็บนี้เป็นเครื่องมือได้ ทดสอบได้ใน Edge/Chrome Canary ที่เปิด flag WebMCP เบราว์เซอร์ทั่วไปไม่ได้รับผลกระทบ ดูรายละเอียดที่หน้า `/architecture`
+ทุกหน้าลงทะเบียนเครื่องมือแบบอ่านอย่างเดียว 7 ตัวผ่าน `document.modelContext` (ร่างมาตรฐาน WebMCP ของ W3C WebML CG): `search_topics`, `list_topics`, `get_topic`, `get_faq`, `get_prompts`, `list_trends`, `open_topic` ให้ AI agent ในเบราว์เซอร์ที่รองรับเรียกใช้เว็บนี้เป็นเครื่องมือได้ ทดสอบได้ใน Edge/Chrome Canary ที่เปิด flag WebMCP เบราว์เซอร์ทั่วไปไม่ได้รับผลกระทบ ดูรายละเอียดที่หน้า `/architecture`
 
 ### 📱 แอปมือถือ (`/mobile/`)
 หน้าจอ native แยกจากเว็บเดสก์ท็อป ไม่ใช่แค่ responsive: top bar + แท็บล่าง 5 ปุ่ม, หน้าค้นหาเต็มจอ, หน้ารายชื่อหัวข้อรายขั้น, หน้าหัวข้อแบบแท็บเลื่อน (ถาม-ตอบ · ขั้นตอน · KPI · Mega Prompt · Prompt 20 · ศัพท์ & บริบท), tap target 44px+, safe-area ของ iPhone, input 16px กัน iOS ซูม เปิดจากมือถือ (จอ ≤ 760px) แล้วพาไปหน้าแอปอัตโนมัติ เลือก "เว็บเต็ม" เพื่อกลับเดสก์ท็อป (จำค่าที่เลือกใน localStorage) และมีลิงก์ "เปิดแบบแอปมือถือ" ท้ายหน้าเดสก์ท็อป หน้า `/mobile/*` ตั้ง `noindex` เพราะหน้าเดสก์ท็อปเป็นฉบับหลัก
@@ -77,21 +82,21 @@
 
 ---
 
-## หัวข้อทั้ง 25
+## หัวข้อทั้ง 31
 
-<!-- จาก data/crm.json -->
+<!-- จาก data/crm.json · 🆕 = หัวข้อใหม่ปี 2026 ที่ไม่ได้อยู่ในหนังสือ -->
 
 | ขั้น | หัวข้อ |
 |---|---|
-| **A. ดึงดูด & ระบุลูกค้า** | 🧲 Lead Generation · 📱 Social Media Marketing |
+| **A. ดึงดูด & ระบุลูกค้า** | 🧲 Lead Generation · 📱 Social Media Marketing · 🆕 Creator & Affiliate · 🆕 AI Search & GEO · 🆕 Marketplace CRM |
 | **B. เปิดใช้งาน & ทำความเข้าใจลูกค้า** | 🎉 Onboarding & Activation · 🔍 Customer Segmentation · 🗺️ Customer Journey Mapping |
-| **C. สื่อสาร & เสนอคุณค่า** | 💬 Omnichannel Engagement · 📅 Marketing Campaign Planning · 💌 Personalized Selling & Service |
+| **C. สื่อสาร & เสนอคุณค่า** | 💬 Omnichannel Engagement · 📅 Marketing Campaign Planning · 💌 Personalized Selling & Service · 🆕 Live Commerce · 🆕 Chat Commerce |
 | **D. ขยายมูลค่า** | 🎟️ Pricing & Discount Optimization · 💰 Upselling & Cross-selling · 🧑‍🤝‍🧑 Referral & Advocacy |
 | **E. วัดผลประสบการณ์ลูกค้า** | ⭐ Customer Satisfaction Tracking · 🫀 Customer Health Scoring |
 | **F. คาดการณ์ & ป้องกันการสูญเสีย** | 🔥 Churn Prediction · 📊 Sales Forecasting |
 | **G. รักษา & ต่ออายุความสัมพันธ์** | ❤️ Customer Loyalty Strategy · 🔄 Renewal & Subscription Management |
 | **H. รับฟัง & ปรับปรุง** | 📩 Customer Feedback & Complaint Management |
-| **I. พื้นฐานข้อมูลและระบบ** | 🧠 Customer Data Analytics · 🔐 CRM Data Quality & Governance · ⚙️ CRM Automation & Workflow · 🤖 AI-driven CRM · 🎯 KPI Tracking & Reporting · 🔒 Compliance & Data Privacy · 👥 Team Collaboration & Productivity |
+| **I. พื้นฐานข้อมูลและระบบ** | 🧠 Customer Data Analytics · 🔐 CRM Data Quality & Governance · ⚙️ CRM Automation & Workflow · 🤖 AI-driven CRM · 🎯 KPI Tracking & Reporting · 🔒 Compliance & Data Privacy · 👥 Team Collaboration & Productivity · 🆕 First-party & Zero-party Data |
 
 ---
 
@@ -175,7 +180,7 @@ npm run dev                     # เปิด http://localhost:3000
 |---|---|
 | `npm run dev` | รัน dev server |
 | `npm run build` / `npm start` | build และรันแบบ production (โหมด server มี AI) |
-| `npm test` | ตรวจข้อมูล: 9 ขั้น, 25 หัวข้อ, 500 prompts, ไฟล์ความรู้ครบทุก field |
+| `npm test` | ตรวจข้อมูล: 9 ขั้น, 25 หัวข้อจากหนังสือและ 500 prompts ไม่ถูกแก้, ทุกหัวข้อมีไฟล์ความรู้ครบทุก field รวมส่วน 2025–2026, วลีค้นหาและคำค้นทดสอบ, การจับคู่ URL มือถือ |
 | `npm run typecheck` | ตรวจ TypeScript |
 | `npm run data` | รวม `data/knowledge/*.json` → `data/knowledge.json` (รันให้อัตโนมัติก่อน `dev` / `build` / `typecheck`) |
 | `npm run search:model` | ดาวน์โหลด multilingual-e5-small แล้วตัดคลังคำให้เหลือไทย/อังกฤษ → `public/models/e5-small-th` (ต้องมี Python 3 + `pip install numpy onnx tokenizers wordfreq`) |

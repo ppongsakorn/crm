@@ -52,7 +52,8 @@
   "q": "จะจ้าง influencer ยังไงดี",
   "relevant": [
    "social-media-marketing",
-   "campaign-planning"
+   "campaign-planning",
+   "creator-affiliate-marketing"
   ],
   "difficulty": "medium",
   "kind": "keyword"
@@ -832,7 +833,8 @@
  {
   "q": "อยากให้บอทเลือกเองว่าจะแจกคูปองให้ลูกค้าที่กำลังจะเลิกซื้อคนไหน ต้องตั้งกติกาอะไรก่อน",
   "relevant": [
-   "churn-prediction"
+   "churn-prediction",
+   "ai-driven-crm"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -856,7 +858,8 @@
  {
   "q": "ลูกค้าทักแชทนอกเวลาแล้วเงียบหาย ควรตั้งระบบตอบกลับยังไงให้ไม่เสียลีด",
   "relevant": [
-   "lead-generation"
+   "lead-generation",
+   "chat-commerce"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -864,7 +867,8 @@
  {
   "q": "ทำไมยอดฟอร์มจากเว็บไซต์ตกหลังกูเกิลมีสรุปคำตอบด้วย AI และควรปรับการเก็บรายชื่อผู้สนใจอย่างไร",
   "relevant": [
-   "lead-generation"
+   "lead-generation",
+   "ai-search-geo"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -880,7 +884,9 @@
  {
   "q": "ถ้าจ้างนาโนครีเอเตอร์หลายคนรีวิวผ่านไลฟ์และลิงก์ขาย ต้องเตรียมเรื่องการเปิดเผยโฆษณาและการวัดยอดขายรายคนอย่างไร",
   "relevant": [
-   "social-media-marketing"
+   "social-media-marketing",
+   "creator-affiliate-marketing",
+   "live-commerce"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -888,7 +894,8 @@
  {
   "q": "อยากให้บอทตอบลูกค้าเองทั้งหมดแต่กลัวมันพูดมั่ว ต้องตั้งกฎอะไรก่อนเปิด",
   "relevant": [
-   "ai-driven-crm"
+   "ai-driven-crm",
+   "chat-commerce"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -896,7 +903,8 @@
  {
   "q": "เทียบค่าใช้จ่ายบอท AI ที่คิดเงินต่อแชตกับจ้างแอดมินเพิ่มอีกคน แบบไหนคุ้มกว่า",
   "relevant": [
-   "ai-driven-crm"
+   "ai-driven-crm",
+   "chat-commerce"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -912,7 +920,9 @@
  {
   "q": "จ้างเน็ตไอดอลไลฟ์ขายของ ต้องเขียนสัญญายังไงไม่ให้ผิดกฎ สคบ. และ PDPA",
   "relevant": [
-   "compliance-data-privacy"
+   "compliance-data-privacy",
+   "live-commerce",
+   "creator-affiliate-marketing"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -928,7 +938,8 @@
  {
   "q": "เปิดบอท AI ในเพจแล้วควรให้มันคุยเองถึงขั้นไหน ก่อนส่งให้พนักงานรับต่อ และต้องบอกลูกค้าไหมว่าเป็นบอท",
   "relevant": [
-   "chat-commerce"
+   "chat-commerce",
+   "ai-driven-crm"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -944,7 +955,8 @@
  {
   "q": "จะทำแคมเปญร่วมกับห้างและธนาคาร โดยไม่ต้องส่งรายชื่อลูกค้าให้กัน มีวิธีไหนบ้าง และต้องระวังกฎหมายอะไร",
   "relevant": [
-   "first-party-data"
+   "first-party-data",
+   "compliance-data-privacy"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -968,7 +980,8 @@
  {
   "q": "อยากรู้ล่วงหน้าว่าสมาชิกคนไหนกำลังจะหายไป โดยดูจากพฤติกรรมในแชทและการซื้อ",
   "relevant": [
-   "customer-health-scoring"
+   "customer-health-scoring",
+   "churn-prediction"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -984,7 +997,8 @@
  {
   "q": "แคมเปญคูปองเดือนนี้ช่วยให้ลูกค้าซื้อเพิ่มจริงหรือแค่คนที่จะซื้ออยู่แล้ว จะพิสูจน์ยังไง",
   "relevant": [
-   "kpi-tracking-reporting"
+   "kpi-tracking-reporting",
+   "campaign-planning"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1000,7 +1014,9 @@
  {
   "q": "เปิดบอทให้ตอบลูกค้าใน Messenger แล้ว แต่ลูกค้าที่ถามเรื่องเคลมสินค้าค้างอยู่ไม่มีใครรับเรื่อง ต้องตั้งกติกาอะไร",
   "relevant": [
-   "team-collaboration-productivity"
+   "team-collaboration-productivity",
+   "chat-commerce",
+   "feedback-complaint-management"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -1008,7 +1024,8 @@
  {
   "q": "ผู้บริหารอยากให้ทุกทีมใช้ AI แต่ทีมบ่นว่างานเพิ่มขึ้น ควรเริ่มจัดบทบาทคนกับ AI ยังไง",
   "relevant": [
-   "team-collaboration-productivity"
+   "team-collaboration-productivity",
+   "ai-driven-crm"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1032,7 +1049,8 @@
  {
   "q": "ลูกค้าซื้อผ่านมาร์เก็ตเพลสแล้วเราติดต่อเขาไม่ได้ จะชวนซื้อชิ้นที่สองยังไง",
   "relevant": [
-   "upselling-cross-selling"
+   "upselling-cross-selling",
+   "marketplace-crm"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -1040,7 +1058,8 @@
  {
   "q": "ตั้งบอท AI ในเพจให้แนะนำสินค้าเสริมแบบไม่น่ารำคาญต้องทำยังไง",
   "relevant": [
-   "upselling-cross-selling"
+   "upselling-cross-selling",
+   "ai-driven-crm"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1048,7 +1067,9 @@
  {
   "q": "จ้างนาโนอินฟลูเอนเซอร์รีวิวสินค้า ต้องบอกคนดูว่าเป็นงานจ้างหรือเปล่า",
   "relevant": [
-   "referral-advocacy"
+   "referral-advocacy",
+   "creator-affiliate-marketing",
+   "compliance-data-privacy"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -1064,7 +1085,8 @@
  {
   "q": "คนที่ซื้อของผ่านไลฟ์ TikTok จะดึงมาเป็นเพื่อนใน LINE ของร้านเราได้ยังไง",
   "relevant": [
-   "onboarding-activation"
+   "onboarding-activation",
+   "live-commerce"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -1120,7 +1142,8 @@
  {
   "q": "เลือกนาโนอินฟลูเอนเซอร์มารีวิวสินค้ายังไงดี",
   "relevant": [
-   "creator-affiliate-marketing"
+   "creator-affiliate-marketing",
+   "social-media-marketing"
   ],
   "difficulty": "easy",
   "kind": "2026"
@@ -1152,7 +1175,9 @@
  {
   "q": "อยากรู้ว่าแคมเปญหลายช่องทางทำยอดขายเพิ่มจริงหรือเปล่า ไม่ใช่แค่คนเปิดอ่าน",
   "relevant": [
-   "omnichannel-engagement"
+   "omnichannel-engagement",
+   "campaign-planning",
+   "kpi-tracking-reporting"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1168,7 +1193,8 @@
  {
   "q": "อยากพิสูจน์กับผู้บริหารว่างบ Ads เดือนนี้สร้างยอดขายเพิ่มจริง ไม่ใช่แค่ตัวเลขที่แพลตฟอร์มรายงาน",
   "relevant": [
-   "campaign-planning"
+   "campaign-planning",
+   "kpi-tracking-reporting"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1176,7 +1202,8 @@
  {
   "q": "อยากให้ระบบเลือกเองว่าลูกค้าคนไหนควรได้โปรอะไร แต่กลัวแจกส่วนลดเกินจนขาดทุน",
   "relevant": [
-   "personalized-selling-service"
+   "personalized-selling-service",
+   "pricing-discount-optimization"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1192,7 +1219,9 @@
  {
   "q": "ลูกค้าที่ซื้อผ่าน TikTok Shop เป็นคนเดียวกับสมาชิกร้านเราไหม จะเช็กยังไง",
   "relevant": [
-   "customer-data-analytics"
+   "customer-data-analytics",
+   "marketplace-crm",
+   "first-party-data"
   ],
   "difficulty": "medium",
   "kind": "2026"
@@ -1232,7 +1261,8 @@
  {
   "q": "จะปล่อยให้แชตบอตคืนเงินหรือแจกโค้ดให้ลูกค้าที่ไม่พอใจได้เลยไหม ต้องมีขั้นตอนอะไรกัน",
   "relevant": [
-   "crm-automation-workflow"
+   "crm-automation-workflow",
+   "feedback-complaint-management"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1248,7 +1278,8 @@
  {
   "q": "ปีนี้ค่าธรรมเนียมแพลตฟอร์มแพงขึ้น ควรลดงบคูปองหรือย้ายเงินไปสร้างสมาชิกของแบรนด์ดี",
   "relevant": [
-   "marketplace-crm"
+   "marketplace-crm",
+   "pricing-discount-optimization"
   ],
   "difficulty": "hard",
   "kind": "2026"
@@ -1265,6 +1296,58 @@
   "q": "แบรนด์อาหารเสริมจ้างนักไลฟ์หลายคน ถ้ามีคนพูดสรรพคุณเกินจริง บริษัทจะโดนด้วยไหมตามกฎหมายใหม่",
   "relevant": [
    "live-commerce"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "ลูกค้าซื้อเราผ่านมาร์เก็ตเพลสหมด อยากให้เขามาสะสมแต้มกับแบรนด์โดยตรง",
+  "relevant": [
+   "customer-loyalty-strategy",
+   "marketplace-crm"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "แบรนด์เล็กควรสร้างระบบแต้มเองหรือไปโอนแต้มร่วมกับเครือข่ายใหญ่",
+  "relevant": [
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "สมาชิกที่จ่ายด้วยการสแกน QR มักหลุดตอนครบรอบ เพราะไม่ได้จ่ายต่อ แก้ยังไง",
+  "relevant": [
+   "renewal-subscription-management"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ทำปุ่มยกเลิกให้ง่ายแล้วยังรักษาลูกค้าไว้ได้อย่างไร ไม่ให้โดนร้องเรียน",
+  "relevant": [
+   "renewal-subscription-management"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "คนดูไลฟ์ด่าว่าของที่ได้ไม่ตรงปกกลางไลฟ์ แอดมินควรทำอะไรก่อน",
+  "relevant": [
+   "feedback-complaint-management",
+   "live-commerce"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ตั้งกติกาให้บอตตอบเคสคืนเงินเองได้แค่ไหน และเมื่อไหร่ต้องโยนให้พนักงาน",
+  "relevant": [
+   "feedback-complaint-management",
+   "crm-automation-workflow",
+   "chat-commerce"
   ],
   "difficulty": "hard",
   "kind": "2026"

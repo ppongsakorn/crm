@@ -421,3 +421,11 @@ table.metrics td:last-child { color: var(--ink2); }
 .trends-band { margin: 0 0 8px; border-left: 4px solid var(--listen); }
 .trends-band p { margin: 0; }
 .new-badge { display: inline-block; margin-left: 8px; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 999px; background: var(--listen); color: #fff; vertical-align: 1px; letter-spacing: 0.02em; }
+.news { grid-template-columns: minmax(0, 1fr); }
+.news-item { min-width: 0; overflow-wrap: anywhere; }
+/* Narrow screens on the full site: the extra nav link no longer fits next to the WebMCP chip. */
+@media (max-width: 560px) {
+  .nav .webmcp { display: none; }
+  .nav { overflow-x: auto; scrollbar-width: none; min-width: 0; }
+  .nav::-webkit-scrollbar { display: none; }
+}

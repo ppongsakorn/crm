@@ -31,6 +31,10 @@ test("book topics stay intact; every topic complete and uniquely addressable", (
   });
 });
 
+test("every topic has a knowledge file", () => {
+  for (const t of topics) assert.ok(fs.existsSync(`data/knowledge/${t.slug}.json`), `${t.slug} has no knowledge file`);
+});
+
 test("every knowledge file matches a topic and is complete", () => {
   const dir = "data/knowledge";
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json")) : [];
@@ -53,6 +57,13 @@ test("every knowledge file matches a topic and is complete", () => {
     for (const p of k.advancedPrompts) assert.ok(/\[[^\]]+\]/.test(p.prompt), `${slug} mega prompt "${p.title}" has no [placeholder]`);
     for (const s of k.sources) assert.match(s.url, /^https?:\/\//, `${slug} source url`);
     assert.ok(/[ก-๙]/.test(k.tldr), `${slug} tldr must be Thai`);
+    assert.match(k.updatedAt ?? "", /^\d{4}-\d{2}$/, `${slug} updatedAt`);
+    range(k.whatsNew, 3, 6, `${slug} whatsNew`);
+    for (const w of k.whatsNew) {
+      assert.ok(["ai", "social", "marketplace", "live", "messaging", "privacy", "loyalty", "data"].includes(w.theme), `${slug} whatsNew theme ${w.theme}`);
+      assert.ok(w.title && w.body && w.sources.length > 0, `${slug} whatsNew item incomplete`);
+      for (const u of w.sources) assert.match(u, /^https?:\/\//, `${slug} whatsNew source url`);
+    }
   }
 });
 
