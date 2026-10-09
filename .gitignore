@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.env
+.env.local
+
+# generated from data/knowledge/*.json by `npm run data` (runs before dev/build/typecheck)
+data/knowledge.json
