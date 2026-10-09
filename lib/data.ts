@@ -29,9 +29,34 @@ export interface Topic {
   prompts: string[];
 }
 
+/** Themes of the 2025–2026 changes ("what's new") across topics. */
+export const THEMES = ["ai", "social", "marketplace", "live", "messaging", "privacy", "loyalty", "data"] as const;
+export type Theme = (typeof THEMES)[number];
+export const THEME_LABEL: Record<Theme, string> = {
+  ai: "AI",
+  social: "Social Media",
+  marketplace: "Marketplace",
+  live: "Live Commerce",
+  messaging: "แชท & ข้อความ",
+  privacy: "กฎหมาย & ความเป็นส่วนตัว",
+  loyalty: "Loyalty & การจ่ายเงิน",
+  data: "ข้อมูล & ระบบ",
+};
+
+export interface WhatsNew {
+  theme: Theme;
+  title: string;
+  body: string;
+  sources: string[];
+}
+
 /** Deep-research knowledge layer for a topic (data/knowledge/<slug>.json). */
 export interface Knowledge {
   slug: string;
+  /** "YYYY-MM" of the last research round. */
+  updatedAt?: string;
+  /** What changed in 2025–2026 for this topic and what to do about it. */
+  whatsNew?: WhatsNew[];
   tldr: string;
   whenYouSay: string;
   concepts: { term: string; desc: string }[];
@@ -73,6 +98,18 @@ export function unquote(s: string): string {
 }
 
 export const promptCount = topics.reduce((n, t) => n + t.prompts.length, 0);
+
+/** Every "what's new" item across topics, in topic order, with its topic. */
+export const allWhatsNew: (WhatsNew & { topic: Topic })[] = topics.flatMap((t) =>
+  (getKnowledge(t.slug)?.whatsNew ?? []).map((w) => ({ ...w, topic: t })),
+);
+
+const THAI_MONTHS = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."];
+/** "2026-10" → "ต.ค. 2026" */
+export function thaiMonth(ym: string): string {
+  const [y, m] = ym.split("-").map(Number);
+  return `${THAI_MONTHS[m - 1]} ${y}`;
+}
 
 /** Every prompt in the book, flattened, with its book number ("3.7"). */
 export interface PromptItem {

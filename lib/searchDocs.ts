@@ -12,6 +12,7 @@ export function searchDoc(t: Topic): SearchDoc {
     tldr: k?.tldr ?? t.intro,
     concepts: k ? k.concepts.map((c) => `${c.term} ${c.desc}`).join(" ") : "",
     faq: k ? k.faq.map((f) => f.q).join(" ") : "",
+    news: (k?.whatsNew ?? []).map((w) => `${w.title} ${w.body}`).join(" "),
     prompts: t.prompts.join(" "),
   };
 }

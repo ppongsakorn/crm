@@ -114,3 +114,9 @@
 .m-app .sources { font-size: 14.5px; }
 .m-app .pitfalls { margin-top: 4px; }
 .m-app .m-steps + .m-h2 { margin-top: 28px; }
+.m-stamp { font-size: 13px; margin: 0 !important; }
+.m-trends { margin-top: 16px; border-left: 4px solid var(--listen); }
+.m-trends small { font-size: 13px; color: var(--ink2); }
+.m-trends span { font-size: 14px; color: var(--accent); font-weight: 600; }
+.m-app .news-item p { font-size: 15px; }
+.m-app .news-topic { min-height: 32px; display: inline-flex; align-items: center; }

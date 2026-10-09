@@ -95,6 +95,8 @@ test("mobile app routes map to and from the desktop pages", async () => {
   assert.equal(toMobilePath("/topics/churn-prediction/"), "/mobile/t/churn-prediction/");
   assert.equal(toMobilePath("/prompts/"), "/mobile/prompts/");
   assert.equal(toMobilePath("/updates/"), "/mobile/updates/");
+  assert.equal(toMobilePath("/trends/"), "/mobile/trends/");
+  assert.equal(toDesktopPath("/mobile/trends/"), "/trends/");
   assert.equal(toMobilePath("/architecture/"), null);
   assert.equal(toMobilePath("/advisor/"), null);
   assert.equal(toDesktopPath("/mobile/t/churn-prediction/"), "/topics/churn-prediction/");

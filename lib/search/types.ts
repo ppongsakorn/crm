@@ -10,6 +10,8 @@ export interface SearchDoc {
   concepts: string;
   /** The Q&A questions. */
   faq: string;
+  /** What changed in 2025–2026 (titles and bodies). */
+  news: string;
   /** The 20 prompts from the book. */
   prompts: string;
 }

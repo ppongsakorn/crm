@@ -392,3 +392,31 @@ table.metrics td:last-child { color: var(--ink2); }
 .sources a { color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
 .sources a:hover { text-decoration: underline; }
 .sources span { font-size: 12.5px; color: var(--ink2); }
+
+/* what's new 2025–2026 */
+.stamp { font-size: 13px; color: var(--ink2); margin: 6px 0 0; }
+.news { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.news-item { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: 12px 14px; display: grid; gap: 4px; }
+.news-item b { font-size: 15.5px; line-height: 1.45; }
+.news-item p { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--ink); }
+.news-item p.news-src { font-size: 12.5px; color: var(--ink2); }
+.news-src a { color: var(--ink2); margin-left: 4px; }
+.news-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.news-topic { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
+.news-topic:hover { text-decoration: underline; }
+.theme { display: inline-flex; gap: 6px; align-items: center; font-size: 12.5px; font-weight: 600; padding: 2px 10px; border-radius: 999px; background: var(--accent-bg); color: var(--accent); text-decoration: none; }
+.theme small { font-weight: 400; opacity: 0.8; }
+.th-ai { --accent: var(--listen); --accent-bg: var(--listen-bg); }
+.th-social { --accent: var(--attract); --accent-bg: var(--attract-bg); }
+.th-marketplace { --accent: var(--activate); --accent-bg: var(--activate-bg); }
+.th-live { --accent: var(--retain); --accent-bg: var(--retain-bg); }
+.th-messaging { --accent: var(--engage); --accent-bg: var(--engage-bg); }
+.th-privacy { --accent: var(--predict); --accent-bg: var(--predict-bg); }
+.th-loyalty { --accent: var(--grow); --accent-bg: var(--grow-bg); }
+.th-data { --accent: var(--data); --accent-bg: var(--data-bg); }
+.theme-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+.theme-nav .theme { font-size: 14px; padding: 5px 14px; }
+.trend-group { margin: 32px 0 0; }
+.trend-group h2 { font-size: 22px; margin: 0 0 12px; }
+.trends-band { margin: 0 0 8px; border-left: 4px solid var(--listen); }
+.trends-band p { margin: 0; }

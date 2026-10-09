@@ -14,10 +14,10 @@ const searchOptions = {
 export function bm25Engine(docs: SearchDoc[]) {
   const ms = new MiniSearch<SearchDoc>({
     idField: "slug",
-    fields: ["name", "en", "when", "tldr", "concepts", "faq", "prompts"],
+    fields: ["name", "en", "when", "tldr", "concepts", "faq", "news", "prompts"],
     tokenize,
     processTerm: (t) => t,
-    searchOptions: { ...searchOptions, boost: { name: 5, en: 4, when: 3, tldr: 2, concepts: 1.5, faq: 1, prompts: 0.7 } },
+    searchOptions: { ...searchOptions, boost: { name: 5, en: 4, when: 3, tldr: 2, concepts: 1.5, faq: 1, news: 1, prompts: 0.7 } },
   });
   ms.addAll(docs);
   return (query: string): SearchHit[] =>

@@ -19,6 +19,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <nav className="nav" aria-label="หลัก">
             <WebMcpBadge />
             <Link href="/topics">หัวข้อ</Link>
+            <Link href="/trends">เทรนด์ 2026</Link>
             <Link href="/prompts">Prompts</Link>
             <Link href="/updates">อัปเดต</Link>
             {aiEnabled && (
@@ -42,7 +43,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             {aiEnabled && " · คำแนะนำจาก AI เป็นข้อมูลประกอบการตัดสินใจ ไม่ใช่คำตัดสินแทนคุณ"}
           </p>
           <p className="footer-links">
-            <Link href="/topics">หัวข้อทั้งหมด</Link> · <Link href="/prompts">Prompt ทั้งหมด</Link> · <Link href="/updates">ประวัติการอัปเดต</Link> · <Link href="/architecture">สถาปัตยกรรมระบบ</Link> ·{" "}
+            <Link href="/topics">หัวข้อทั้งหมด</Link> · <Link href="/trends">เทรนด์ 2025–2026</Link> · <Link href="/prompts">Prompt ทั้งหมด</Link> · <Link href="/updates">ประวัติการอัปเดต</Link> · <Link href="/architecture">สถาปัตยกรรมระบบ</Link> ·{" "}
             <a href="https://crm.buzzebees.com/" target="_blank" rel="noopener noreferrer">
               crm.buzzebees.com
             </a>

@@ -28,6 +28,7 @@ const docs: SearchDoc[] = topics.map((t: { slug: string; name: string; en: strin
     tldr: k?.tldr ?? t.intro,
     concepts: k ? k.concepts.map((c: { term: string; desc: string }) => `${c.term} ${c.desc}`).join(" ") : "",
     faq: k ? k.faq.map((f: { q: string }) => f.q).join(" ") : "",
+    news: (k?.whatsNew ?? []).map((w: { title: string; body: string }) => `${w.title} ${w.body}`).join(" "),
     prompts: t.prompts.join(" "),
   };
 });

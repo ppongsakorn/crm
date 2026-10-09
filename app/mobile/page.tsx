@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MTop } from "@/components/mobile/MTop";
 import { WebMcpBadge } from "@/components/WebMcpBadge";
 import { changelog, thaiDate } from "@/lib/changelog";
-import { groups, promptCount, topics, topicsIn } from "@/lib/data";
+import { allWhatsNew, groups, promptCount, THEME_LABEL, THEMES, topics, topicsIn } from "@/lib/data";
 
 export default function MobileHome() {
   const latest = changelog[0];
@@ -23,6 +23,14 @@ export default function MobileHome() {
           </Link>
           <WebMcpBadge />
         </section>
+
+        {allWhatsNew.length > 0 && (
+          <Link href="/mobile/trends" className="m-card m-trends">
+            <b>อะไรเปลี่ยนไปในโลก CRM ปี 2025–2026</b>
+            <small>{THEMES.filter((th) => allWhatsNew.some((w) => w.theme === th)).map((th) => THEME_LABEL[th]).join(" · ")}</small>
+            <span>อ่านเทรนด์ {allWhatsNew.length} เรื่อง ›</span>
+          </Link>
+        )}
 
         <h2 className="m-h2">ตอนนี้ทีมคุณกำลังพูดประโยคไหน?</h2>
         <ul className="m-list">

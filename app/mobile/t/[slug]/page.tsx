@@ -4,11 +4,12 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Faq } from "@/components/Faq";
+import { WhatsNew } from "@/components/WhatsNew";
 import { MegaPrompts } from "@/components/MegaPrompts";
 import { MTabs } from "@/components/mobile/MTabs";
 import { MTop } from "@/components/mobile/MTop";
 import { PromptList } from "@/components/PromptList";
-import { getGroup, getKnowledge, getTopic, topics, topicsIn, unquote } from "@/lib/data";
+import { getGroup, getKnowledge, getTopic, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
 
 export const dynamicParams = false;
 
@@ -35,6 +36,9 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
     ...(k
       ? [
           { id: "faq", label: `ถาม-ตอบ ${k.faq.length}`, content: <Faq items={k.faq} /> },
+          ...(k.whatsNew?.length
+            ? [{ id: "news", label: "ใหม่ 2025–26", content: <WhatsNew items={k.whatsNew} /> }]
+            : []),
           {
             id: "steps",
             label: "ขั้นตอน",
@@ -161,6 +165,7 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
             </p>
           )}
           <p className="m-how">{k?.tldr ?? t.intro}</p>
+          {k?.updatedAt && <p className="m-stamp">ปรับปรุงล่าสุด {thaiMonth(k.updatedAt)}</p>}
         </header>
         <MTabs tabs={tabs} />
         <nav className="m-pager" aria-label="ก่อนหน้า / ถัดไป">

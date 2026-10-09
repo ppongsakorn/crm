@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { groups, promptCount, topics, topicsIn, type GroupId } from "@/lib/data";
+import { allWhatsNew, groups, promptCount, THEME_LABEL, THEMES, topics, topicsIn, type GroupId } from "@/lib/data";
 import { aiEnabled, basePath } from "@/lib/site";
 import { changelog, thaiDate } from "@/lib/changelog";
 
@@ -110,6 +110,23 @@ export default function Home() {
           ))}
         </ul>
       </section>
+
+      {allWhatsNew.length > 0 && (
+        <section className="panel trends-band">
+          <div className="latest-head">
+            <h2>อะไรเปลี่ยนไปในโลก CRM ปี 2025–2026</h2>
+            <Link href="/trends">ดูทั้งหมด →</Link>
+          </div>
+          <p className="muted">AI, Social Media, Marketplace และ Live Commerce เปลี่ยนวิธีดูแลลูกค้าไปมาก ทุกหัวข้อสรุปไว้ว่าอะไรเปลี่ยนและทีมควรทำอะไร</p>
+          <div className="theme-nav">
+            {THEMES.filter((th) => allWhatsNew.some((w) => w.theme === th)).map((th) => (
+              <Link key={th} href={`/trends#${th}`} className={`theme th-${th}`}>
+                {THEME_LABEL[th]} <small>{allWhatsNew.filter((w) => w.theme === th).length}</small>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <h2 className="section-title">
         {groups.length} ขั้น {topics.length} หัวข้อ ตามวงจรชีวิตลูกค้า

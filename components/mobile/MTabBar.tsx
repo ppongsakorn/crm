@@ -26,7 +26,7 @@ export function MTabBar() {
   const path = usePathname() ?? "/mobile";
   const at = (p: string) => (p === "/mobile" ? path === "/mobile" || path === "/mobile/" : path.startsWith(p));
   const tabs = [
-    { href: "/mobile", label: "หน้าแรก", icon: ICON.home, on: at("/mobile") || at("/mobile/g") || at("/mobile/t") },
+    { href: "/mobile", label: "หน้าแรก", icon: ICON.home, on: at("/mobile") || at("/mobile/g") || at("/mobile/t") || at("/mobile/trends") },
     { href: "/mobile/search", label: "ค้นหา", icon: ICON.search, on: at("/mobile/search") },
     { href: "/mobile/prompts", label: "Prompts", icon: ICON.prompts, on: at("/mobile/prompts") },
     { href: "/mobile/updates", label: "อัปเดต", icon: ICON.updates, on: at("/mobile/updates") },

@@ -20,6 +20,10 @@ for (const t of topics) {
   const k = knowledge[t.slug];
   items.push({ slug: t.slug });
   texts.push(`passage: ${t.name} (${t.en}). ${k?.whenYouSay ?? ""} ${k?.tldr ?? t.intro} ${(k?.concepts ?? []).map((c) => c.term).join(", ")}`);
+  for (const w of k?.whatsNew ?? []) {
+    items.push({ slug: t.slug, phrase: w.title });
+    texts.push(`query: ${w.title}`);
+  }
   for (const f of k?.faq ?? []) {
     items.push({ slug: t.slug, phrase: f.q });
     texts.push(`query: ${f.q}`);

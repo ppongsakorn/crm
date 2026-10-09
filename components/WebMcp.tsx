@@ -131,6 +131,8 @@ function register(
             metrics: k?.metrics ?? [],
             playbook: k?.playbook ?? [],
             pitfalls: k?.pitfalls ?? [],
+            updatedAt: k?.updatedAt ?? null,
+            whatsNew: k?.whatsNew ?? [],
             thaiContext: k?.thaiContext ?? null,
             dataNotes: k?.dataNotes ?? null,
             sources: k?.sources ?? [],
@@ -170,6 +172,24 @@ function register(
             megaPrompts: (k?.advancedPrompts ?? []).map((p) => ({ title: p.title, useWhen: p.useWhen, prompt: p.prompt })),
           };
         },
+      },
+      {
+        name: "list_trends",
+        title: "เทรนด์ CRM 2025–2026",
+        description:
+          "What changed in CRM in 2025–2026 across all topics (AI, social media, marketplaces, live commerce, messaging, privacy, loyalty, data), each with what CRM teams should do differently, the topic it belongs to, and source URLs.",
+        inputSchema: {
+          type: "object",
+          properties: { theme: { type: "string", enum: ["ai", "social", "marketplace", "live", "messaging", "privacy", "loyalty", "data"], description: "Optional: only this theme" } },
+        },
+        annotations: { readOnlyHint: true, untrustedContentHint: true },
+        execute: async ({ theme }) => ({
+          trends: topics.flatMap((t) =>
+            (knowledge[t.slug]?.whatsNew ?? [])
+              .filter((w) => !theme || w.theme === theme)
+              .map((w) => ({ theme: w.theme, title: w.title, body: w.body, sources: w.sources, topic: t.slug, url: url(t.slug) })),
+          ),
+        }),
       },
       {
         name: "open_topic",

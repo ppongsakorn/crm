@@ -5,9 +5,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Chat } from "@/components/Chat";
 import { Faq } from "@/components/Faq";
+import { WhatsNew } from "@/components/WhatsNew";
 import { MegaPrompts } from "@/components/MegaPrompts";
 import { PromptList } from "@/components/PromptList";
-import { getGroup, getKnowledge, getTopic, topics, topicsIn, unquote } from "@/lib/data";
+import { getGroup, getKnowledge, getTopic, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
 import { aiEnabled } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -65,7 +66,9 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
         </h1>
         {k && <div className="when">“{unquote(k.whenYouSay)}”</div>}
         <p className="how">{k?.tldr ?? t.intro}</p>
+        {k?.updatedAt && <p className="stamp">ค้นคว้าและปรับปรุงล่าสุด {thaiMonth(k.updatedAt)}</p>}
         <nav className="jump" aria-label="ไปยังส่วน">
+          {k?.whatsNew?.length ? <a href="#news">อะไรเปลี่ยนไป 2025–2026</a> : null}
           {k && <a href="#faq">ถาม-ตอบ</a>}
           {k && <a href="#metrics">KPI</a>}
           {k && <a href="#playbook">ขั้นตอน</a>}
@@ -81,6 +84,14 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
 
       <div className={aiEnabled ? "fw-layout" : "fw-layout solo"}>
         <article className="fw-main">
+          {k?.whatsNew?.length ? (
+            <>
+              <h2 id="news">อะไรเปลี่ยนไปในปี 2025–2026</h2>
+              <p className="muted lead">สิ่งที่เปลี่ยนในโลกจริง และทีม CRM ควรทำอะไรต่างจากเดิม</p>
+              <WhatsNew items={k.whatsNew} />
+            </>
+          ) : null}
+
           <h2>เรื่องนี้คืออะไร</h2>
           <p className="example">{t.intro}</p>
           <h3 className="sub">ประโยชน์ที่ได้</h3>
