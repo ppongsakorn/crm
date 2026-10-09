@@ -291,7 +291,19 @@
   "cross-channel messaging frequency",
   "LINE OA Messenger SMS integration",
   "single customer view",
-  "channel orchestration"
+  "channel orchestration",
+  "ส่ง SMS แนบลิงก์แล้วลูกค้าไม่กล้ากด",
+  "SMS โดนบล็อกหรือขึ้นเครื่องหมายตกใจ",
+  "โควตา LINE OA ไม่พอ ส่ง Broadcast แพง",
+  "ข้อความตอบกลับ LINE OA นับโควตาไหม",
+  "Open rate อีเมลสูงผิดปกติ เชื่อได้ไหม",
+  "อีเมลเข้าสแปม Gmail ต้องตั้ง DMARC",
+  "ลูกค้าบล็อก LINE OA เพราะส่งถี่",
+  "ใช้ AI ตอบแชต Messenger กับ LINE พร้อมกัน",
+  "ดึงลูกค้าจาก Shopee มาเป็นเพื่อน LINE OA",
+  "รวมแชตทุกช่องทางไว้ที่เดียว",
+  "ขอโล่ยืนยัน LINE OA ช่วยให้ลูกค้าเชื่อใจไหม",
+  "Consent แยกช่องทาง LINE SMS อีเมล ตาม PDPA"
  ],
  "campaign-planning": [
   "แคมเปญจบแล้วบอกไม่ได้ว่าได้ผลไหม",
@@ -330,7 +342,19 @@
   "campaign ROI calculation",
   "A/B test ad copy landing page",
   "marketing attribution model",
-  "campaign budget allocation"
+  "campaign budget allocation",
+  "วางแผนแคมเปญ 11.11 ยังไงให้ไม่ขาดทุน",
+  "ลดราคา 12.12 แล้วค่าธรรมเนียม Shopee กินกำไรหมด",
+  "ลูกค้าจาก Mega Sale ไม่กลับมาซื้อซ้ำ",
+  "จ้างไมโครอินฟลูขายของวัดผลยังไง",
+  "ครีเอเตอร์ไลฟ์ขายของต้องบอกว่าเป็นโฆษณาไหม",
+  "ใช้ AI ทำภาพโฆษณาต้องติดป้ายไหม",
+  "ยอด Conversion Facebook กับ TikTok ไม่ตรงกับยอดขายจริง",
+  "วัด incrementality แคมเปญด้วย holdout",
+  "เลิกใช้ last click แล้วจะวัดอะไรแทน",
+  "GMV Max TikTok Shop ตั้งค่าเองไม่ได้แล้ว",
+  "ทำ MMM ด้วย Google Meridian ต้องมีข้อมูลอะไร",
+  "ฟอร์มชิงรางวัลต้องแยก consent ไหม"
  ],
  "personalized-selling-service": [
   "ส่งโปรเดียวกันให้ทุกคน VIP ได้เท่าลูกค้าใหม่",
@@ -369,7 +393,19 @@
   "VIP customer service playbook",
   "personalized email at scale",
   "hyper-personalization CRM",
-  "customer preference data collection"
+  "customer preference data collection",
+  "ใช้ AI เลือกข้อเสนอให้ลูกค้าแต่ละคน",
+  "next best action ทำเองด้วยกฎง่าย ๆ",
+  "AI ตอบแชต LINE จำลูกค้า VIP ได้ไหม",
+  "ส่งคูปองเฉพาะคนผ่าน LINE OA",
+  "ขายบน Shopee จะทำ personalization ยังไง",
+  "พนักงานขายใช้ AI สรุปประวัติลูกค้าก่อนโทร",
+  "ซื้อเครื่องมือ AI personalization แล้ววัดผลยังไง",
+  "ลูกค้ารู้สึกโดนตามเพราะข้อความรู้ใจเกินไป",
+  "ทำโปรไฟล์ลูกค้าด้วย AI ผิด PDPA ไหม",
+  "แนะนำสินค้าซื้อคู่กันจากข้อมูลบิล",
+  "VIP ได้ส่วนลดเท่าลูกค้าทั่วไป",
+  "เอาข้อมูลลูกค้าใส่ ChatGPT ได้ไหม"
  ],
  "pricing-discount-optimization": [
   "จัดโปรทีไรยอดพุ่งแต่กำไรหาย",
