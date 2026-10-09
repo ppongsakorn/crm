@@ -8,3 +8,8 @@ next-env.d.ts
 
 # generated from data/knowledge/*.json by `npm run data` (runs before dev/build/typecheck)
 data/knowledge.json
+
+# generated search assets (npm run search:model / search:index)
+public/models/
+public/search/
+.cache/

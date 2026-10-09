@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Catalog, type CatalogDoc } from "@/components/Catalog";
-import { getKnowledge, groups, topics, unquote } from "@/lib/data";
+import { Catalog } from "@/components/Catalog";
+import { groups, topics } from "@/lib/data";
+import { searchDocs } from "@/lib/searchDocs";
 import { aiEnabled } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -9,20 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function TopicsPage() {
-  // Search index built at build time from the book + knowledge layer; only text, no markup.
-  const docs: CatalogDoc[] = topics.map((t) => {
-    const k = getKnowledge(t.slug);
-    return {
-      id: t.slug,
-      name: t.name,
-      en: t.en,
-      tldr: k?.tldr ?? t.intro,
-      whenYouSay: k ? unquote(k.whenYouSay) : "",
-      concepts: k ? k.concepts.map((c) => `${c.term} ${c.desc}`).join(" ") : "",
-      faq: k ? k.faq.map((f) => f.q).join(" ") : "",
-      prompts: t.prompts.join(" "),
-    };
-  });
   return (
     <>
       <div className="page-head">
@@ -32,7 +19,7 @@ export default function TopicsPage() {
           {aiEnabled && " หรือปรึกษา AI"}
         </p>
       </div>
-      <Catalog groups={groups} topics={topics} docs={docs} />
+      <Catalog groups={groups} topics={topics} docs={searchDocs} />
     </>
   );
 }

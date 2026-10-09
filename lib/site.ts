@@ -4,6 +4,8 @@
  * - aiEnabled: false for the static export, which has no server for /api/chat.
  */
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+/** Where the search model and vectors are served from (same as basePath on this site). */
+export const assetBase = basePath;
 export const aiEnabled = process.env.NEXT_PUBLIC_AI_ENABLED !== "false";
 
 export const SITE_NAME = "แผนที่ CRM";

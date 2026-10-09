@@ -1,39 +1,21 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { SemanticStatus } from "@/components/SemanticStatus";
 import { TopicCard } from "@/components/TopicCard";
-import { makeEngine } from "@/lib/search";
+import { useSearch } from "@/components/useSearch";
 import type { Group, GroupId, Topic } from "@/lib/data";
-import { aiEnabled } from "@/lib/site";
+import type { SearchDoc } from "@/lib/search/types";
+import { aiEnabled, assetBase } from "@/lib/site";
 
-export interface CatalogDoc {
-  id: string;
-  name: string;
-  en: string;
-  tldr: string;
-  whenYouSay: string;
-  concepts: string;
-  faq: string;
-  prompts: string;
-}
+const RESULT_LIMIT = 12;
 
-export function Catalog({ groups, topics, docs }: { groups: Group[]; topics: Topic[]; docs: CatalogDoc[] }) {
+export function Catalog({ groups, topics, docs }: { groups: Group[]; topics: Topic[]; docs: SearchDoc[] }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState<GroupId | "all">("all");
-  const engine = useMemo(
-    () =>
-      makeEngine(docs, ["name", "en", "whenYouSay", "tldr", "concepts", "faq", "prompts"], {
-        name: 5,
-        en: 4,
-        whenYouSay: 4,
-        tldr: 3,
-        concepts: 2,
-        faq: 1,
-        prompts: 1,
-      }),
-    [docs],
-  );
-  const meta = useMemo(() => new Map(docs.map((d) => [d.id, d])), [docs]);
+  const { hits, semState, progress } = useSearch(docs, query, assetBase);
+  const bySlug = useMemo(() => new Map(topics.map((t) => [t.slug, t])), [topics]);
+  const meta = useMemo(() => new Map(docs.map((d) => [d.slug, d])), [docs]);
 
   // Deep links like /topics#retain (from the home page) preselect a stage.
   useEffect(() => {
@@ -41,12 +23,13 @@ export function Catalog({ groups, topics, docs }: { groups: Group[]; topics: Top
     if (groups.some((g) => g.id === id)) setActive(id as GroupId);
   }, [groups]);
 
-  const q = query.trim();
-  const hits = q ? engine(q) : null;
-  const order = hits ? new Map(hits.map((h, i) => [h.id, i])) : null;
-  const visible = topics
-    .filter((t) => (active === "all" || t.group === active) && (!order || order.has(t.slug)))
-    .sort((a, b) => (order ? order.get(a.slug)! - order.get(b.slug)! : 0));
+  const inGroup = (t: Topic) => active === "all" || t.group === active;
+  // Only for the first few ms of the very first query; show nothing rather than the full list.
+  const pending = query.trim() !== "" && hits === null;
+  const ranked = hits !== null || pending;
+  const visible = ranked
+    ? (hits ?? []).map((h) => ({ t: bySlug.get(h.slug)!, why: h.why })).filter((r) => r.t && inGroup(r.t)).slice(0, RESULT_LIMIT)
+    : topics.filter(inGroup).map((t) => ({ t, why: undefined }));
 
   return (
     <>
@@ -55,8 +38,8 @@ export function Catalog({ groups, topics, docs }: { groups: Group[]; topics: Top
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="พิมพ์สิ่งที่เจอ เช่น ลูกค้าหาย, คูปอง, PDPA, ต่ออายุ, NPS …"
-          aria-label="ค้นหาหัวข้อ CRM"
+          placeholder="เล่าสิ่งที่เจอ เช่น ลูกค้าหายไปเงียบ ๆ, ส่ง LINE แล้วคนบล็อก, อยากทำ loyalty ใหม่ …"
+          aria-label="ค้นหาหัวข้อ CRM จากสถานการณ์"
         />
         <div className="filters" role="group" aria-label="กรองตามขั้น">
           <button type="button" className="filter" aria-pressed={active === "all"} onClick={() => setActive("all")}>
@@ -76,25 +59,29 @@ export function Catalog({ groups, topics, docs }: { groups: Group[]; topics: Top
           ))}
         </div>
         <div className="count" aria-live="polite">
-          {q
-            ? `${visible.length} หัวข้อที่เกี่ยวข้อง เรียงตามความใกล้เคียง`
-            : active !== "all"
-              ? `พบ ${visible.length} หัวข้อ`
-              : `ทั้งหมด ${topics.length} หัวข้อ ใน ${groups.length} ขั้น`}
+          {pending
+            ? " "
+            : ranked
+              ? `${visible.length} หัวข้อที่เกี่ยวข้องที่สุด เรียงตามความใกล้เคียง`
+              : active !== "all"
+                ? `พบ ${visible.length} หัวข้อ`
+                : `ทั้งหมด ${topics.length} หัวข้อ ใน ${groups.length} ขั้น`}
+          {" "}
+          <SemanticStatus state={semState} progress={progress} />
         </div>
       </div>
 
-      {q ? (
+      {ranked ? (
         <section className="results">
           <div className="grid">
-            {visible.map((t) => (
-              <TopicCard key={t.slug} topic={t} tldr={meta.get(t.slug)?.tldr} whenYouSay={meta.get(t.slug)?.whenYouSay} />
+            {visible.map(({ t, why }) => (
+              <TopicCard key={t.slug} topic={t} tldr={meta.get(t.slug)?.tldr} whenYouSay={meta.get(t.slug)?.when} why={why} />
             ))}
           </div>
         </section>
       ) : (
         groups.map((g) => {
-          const items = visible.filter((t) => t.group === g.id);
+          const items = visible.filter((r) => r.t.group === g.id);
           if (!items.length) return null;
           return (
             <section key={g.id} id={g.id} className={`group g-${g.id}`}>
@@ -106,15 +93,15 @@ export function Catalog({ groups, topics, docs }: { groups: Group[]; topics: Top
               </header>
               <p className="why">{g.why}</p>
               <div className="grid">
-                {items.map((t) => (
-                  <TopicCard key={t.slug} topic={t} tldr={meta.get(t.slug)?.tldr} whenYouSay={meta.get(t.slug)?.whenYouSay} />
+                {items.map(({ t }) => (
+                  <TopicCard key={t.slug} topic={t} tldr={meta.get(t.slug)?.tldr} whenYouSay={meta.get(t.slug)?.when} />
                 ))}
               </div>
             </section>
           );
         })
       )}
-      {!visible.length && (
+      {!visible.length && !pending && (
         <p className="empty">
           ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำอื่นที่อธิบายสถานการณ์
           {aiEnabled && " หรือเล่าให้ที่ปรึกษา AI ฟัง"}

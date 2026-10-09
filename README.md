@@ -55,7 +55,7 @@
 
 ### 📚 เรียนรู้
 - **วงแหวนวงจรชีวิตลูกค้า** หน้าแรก แตะขั้นไหนก็ไปขั้นนั้น
-- **ค้นหาด้วยสถานการณ์** เช่น "ลูกค้าหาย", "คูปอง", "PDPA", "ต่ออายุ" (ตัดคำไทยด้วย `Intl.Segmenter` + จัดอันดับ BM25)
+- **ค้นหาด้วย AI ในเบราว์เซอร์** พิมพ์สถานการณ์ เช่น "คนซื้อแล้วไม่กลับมาอีกเลย" แล้วได้หัวข้อที่ใช่ ทำงาน 3 ชั้น (ค้นคำแบบตัดคำไทย + BM25 · คลังวลีสถานการณ์ 870 วลี · ค้นตามความหมายด้วยโมเดล embedding ภาษาไทยที่รันในเบราว์เซอร์) รวมอันดับด้วย RRF ไม่ส่งข้อความไป server — ชุดทดสอบ 100 คำค้น ได้หัวข้อถูกต้องอันดับแรก 96%
 - **หน้าหัวข้อ** ประกอบด้วย: สรุปสั้น · ศัพท์ที่ต้องรู้ · **ถาม-ตอบ 8–12 ข้อ** (ทุกข้อมี Prompt ต่อยอด) · KPI พร้อมสูตรและค่าอ้างอิง · ขั้นตอนลงมือทำ · ข้อผิดพลาดที่พบบ่อย · **Mega Prompt** · Prompt 20 รายการจากหนังสือ · บริบทตลาดไทย · สิ่งที่ทีมข้อมูลต้องเตรียม · แหล่งอ้างอิง
 
 ### ✂️ Prompt
@@ -66,6 +66,9 @@
 - **หน้า `/advisor`** เล่าสถานการณ์ แล้ว AI จะวินิจฉัยว่าอยู่ขั้นไหน แนะนำหัวข้อไม่เกิน 3 หัวข้อ พร้อมลิงก์และ Prompt ต่อยอดที่ปรับเข้ากับธุรกิจคุณ
 - **AI ประจำแต่ละหน้าหัวข้อ** ช่วยปรับความรู้ให้เข้ากับบริบท เขียน prompt ที่ดีกว่า หรือบอกว่าทีมข้อมูลต้องเตรียมอะไร
 - ตอบเป็นภาษาไทย streaming รองรับตาราง markdown
+
+### 🔌 WebMCP
+ทุกหน้าลงทะเบียนเครื่องมือแบบอ่านอย่างเดียว 6 ตัวผ่าน `document.modelContext` (ร่างมาตรฐาน WebMCP ของ W3C WebML CG): `search_topics`, `list_topics`, `get_topic`, `get_faq`, `get_prompts`, `open_topic` ให้ AI agent ในเบราว์เซอร์ที่รองรับเรียกใช้เว็บนี้เป็นเครื่องมือได้ ทดสอบได้ใน Edge/Chrome Canary ที่เปิด flag WebMCP เบราว์เซอร์ทั่วไปไม่ได้รับผลกระทบ ดูรายละเอียดที่หน้า `/architecture`
 
 ### 📱 ใช้ได้ทุกที่
 รองรับมือถือ dark mode และทุกหน้าเป็น static โหลดเร็ว
@@ -106,12 +109,16 @@ flowchart LR
     CJ[data/crm.json<br/>9 ขั้น · 25 หัวข้อ · 500 prompts] --> APP
     KJ[data/knowledge/*.json<br/>ถาม-ตอบ · KPI · Mega Prompt · แหล่งอ้างอิง] -->|build-knowledge.mjs| KM[data/knowledge.json]
     KM --> APP
+    SP[data/search-phrases.json<br/>870 วลีสถานการณ์] --> APP
+    SP -->|build-search-index.mjs| VX[public/search/vectors.json]
+    VX --> SW
     subgraph APP[Next.js 16 App Router]
         P1["/ (static)"]
         P2["/topics (static, ค้นหาในเบราว์เซอร์)"]
         P3["/topics/[slug] ×25 (SSG)"]
         P4["/prompts (static)"]
-        P5["/advisor (static)"]
+        P5["/advisor · /architecture (static)"]
+        SW["Web Worker: Thai embedding model"]
         API["/api/chat (Node, streaming)"]
     end
     API -->|Anthropic SDK| CL[(Claude API<br/>หรือ Microsoft Foundry)]
@@ -125,12 +132,13 @@ app/
     topics/[slug]/          หน้ารายละเอียดหัวข้อ + AI ประจำหน้า
     prompts/page.tsx        Prompt ทั้ง 500 รายการ
     advisor/page.tsx        หน้าปรึกษา AI
+    architecture/page.tsx   สถาปัตยกรรม การค้นหา และ WebMCP
     updates/page.tsx        ประวัติการอัปเดต
   api/chat/route.server.ts  endpoint สำหรับ stream คำตอบ (เฉพาะโหมด server)
-components/                 Catalog, PromptExplorer, Faq, MegaPrompts, PromptList, Chat, …
+components/                 Catalog (ค้นหา), PromptExplorer, Faq, MegaPrompts, PromptList, Chat, WebMcp, WebMcpBadge, …
 lib/
   data.ts                   อ่านข้อมูลหัวข้อ / ขั้น / ความรู้
-  search/                   ตัดคำไทย + BM25 (MiniSearch)
+  search/                   tokenize (ตัดคำไทย) · lexical (BM25 + วลี) · semantic (เวกเตอร์ int8) · worker · RRF
   prompt.ts                 system prompt ของที่ปรึกษา
   ai.ts                     เลือก provider, model, effort
   rateLimit.ts              จำกัดจำนวนครั้งต่อ IP
@@ -138,12 +146,13 @@ data/
   crm.json                  แหล่งข้อมูลเดียวของหัวข้อและ prompt (จากหนังสือ)
   knowledge/<slug>.json     ชั้นความรู้ต่อหัวข้อ (ค้นคว้าเพิ่ม พร้อมแหล่งอ้างอิง)
   knowledge.json            รวมอัตโนมัติ ไม่เก็บใน git
+  search-phrases.json       วลีสถานการณ์ หัวข้อละ 30–40 วลี
   changelog.json            ประวัติการอัปเดต
-scripts/build-knowledge.mjs รวม knowledge/*.json
-tests/                      ตรวจความครบถ้วนของข้อมูล
+scripts/                    build-knowledge · fetch/build search model (ตัดคลังคำ e5 ให้เหลือ 35MB) · build-search-index · eval-search
+tests/                      ตรวจความครบถ้วนของข้อมูล + search-queries.json (100 คำค้นที่ติดป้ายคำตอบ)
 ```
 
-**Tech stack:** Next.js 16 · React 19 · TypeScript · MiniSearch · Anthropic SDK (`@anthropic-ai/sdk`, `@anthropic-ai/foundry-sdk`) · react-markdown · CSS ล้วน · ฟอนต์ Prompt (Buzzebees brand)
+**Tech stack:** Next.js 16 · React 19 · TypeScript · MiniSearch · Transformers.js (`@huggingface/transformers`, multilingual-e5-small) · Anthropic SDK (`@anthropic-ai/sdk`, `@anthropic-ai/foundry-sdk`) · react-markdown · CSS ล้วน (ไม่ใช้ UI framework) · ฟอนต์ IBM Plex Sans Thai
 
 ---
 
@@ -166,6 +175,11 @@ npm run dev                     # เปิด http://localhost:3000
 | `npm test` | ตรวจข้อมูล: 9 ขั้น, 25 หัวข้อ, 500 prompts, ไฟล์ความรู้ครบทุก field |
 | `npm run typecheck` | ตรวจ TypeScript |
 | `npm run data` | รวม `data/knowledge/*.json` → `data/knowledge.json` (รันให้อัตโนมัติก่อน `dev` / `build` / `typecheck`) |
+| `npm run search:model` | ดาวน์โหลด multilingual-e5-small แล้วตัดคลังคำให้เหลือไทย/อังกฤษ → `public/models/e5-small-th` (ต้องมี Python 3 + `pip install numpy onnx tokenizers wordfreq`) |
+| `npm run search:index` | คำนวณเวกเตอร์ของหัวข้อ คำถาม และวลีทั้งหมด → `public/search/vectors.json` |
+| `npm run search:eval` | ให้คะแนนทุกเอนจินค้นหาด้วย `tests/search-queries.json` |
+
+> ถ้าไม่ได้รัน `search:model` / `search:index` เว็บยังค้นหาได้ด้วยชั้นค้นคำ + คลังวลี เพียงแต่ไม่มีชั้นค้นตามความหมาย (หน้าเว็บแจ้งเองว่า "ใช้ไม่ได้ในเบราว์เซอร์นี้")
 
 > หน้าเว็บทั้งหมดใช้งานได้แม้ไม่มี API key — เฉพาะส่วนแชท AI ที่จะแจ้งว่ายังไม่ได้ตั้งค่า
 
@@ -193,7 +207,7 @@ npm run dev                     # เปิด http://localhost:3000
 
 **ตั้งค่าครั้งแรก (ครั้งเดียว):** Settings → Pages → Build and deployment → Source เลือก **GitHub Actions**
 
-จากนั้นทุกครั้งที่ push เข้า `main` workflow `.github/workflows/pages.yml` จะรัน test → build static → deploy ให้ เว็บจะอยู่ที่ `https://<username>.github.io/<repo>/`
+จากนั้นทุกครั้งที่ push เข้า `main` (หรือ branch `claude/**`) workflow `.github/workflows/pages.yml` จะรัน test → build โมเดลค้นหา → build static → deploy ให้ เว็บจะอยู่ที่ `https://<username>.github.io/<repo>/`
 
 ลอง build แบบ static ในเครื่อง:
 
@@ -223,6 +237,7 @@ docker run -p 3000:3000 -e ANTHROPIC_API_KEY=... crm-knowledge-hub
 
 - **หัวข้อ / prompt จากหนังสือ:** แก้ `data/crm.json` (ต้องมี 20 prompts และ 3 ประโยชน์ต่อหัวข้อ — `npm test` ตรวจให้)
 - **ชั้นความรู้:** แก้ `data/knowledge/<slug>.json` ตาม schema ใน `lib/data.ts` (`Knowledge`) ใส่แหล่งอ้างอิงเป็น URL จริงเสมอ
+- **ค้นหา:** เพิ่มวลีที่คนมักพิมพ์ใน `data/search-phrases.json` และคำค้นทดสอบใน `tests/search-queries.json` แล้วรัน `npm run search:index && npm run search:eval` ดูว่าคะแนนไม่ตก
 - **ประวัติ:** เพิ่มรายการบนสุดของ `data/changelog.json`
 
 ---

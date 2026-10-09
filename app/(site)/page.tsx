@@ -63,7 +63,6 @@ export default function Home() {
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">CRM Knowledge Hub · 500 Prompts</p>
           <h1>
             แผนที่ CRM
             <br />

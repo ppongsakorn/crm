@@ -67,3 +67,21 @@ test("history log is valid and newest first", () => {
     for (const l of c.links ?? []) assert.match(l.href, /^\//, `${c.title} links must be site paths`);
   }
 });
+
+test("search phrases and labelled queries point at real topics", () => {
+  const slugs = new Set(topics.map((t) => t.slug));
+  const phrases = JSON.parse(fs.readFileSync("data/search-phrases.json", "utf8"));
+  for (const [slug, list] of Object.entries(phrases)) {
+    assert.ok(slugs.has(slug), `phrases for unknown topic ${slug}`);
+    assert.ok(Array.isArray(list) && list.length >= 20, `${slug} needs at least 20 phrases`);
+    assert.equal(new Set(list).size, list.length, `${slug} has duplicate phrases`);
+  }
+  const queries = JSON.parse(fs.readFileSync("tests/search-queries.json", "utf8"));
+  assert.ok(queries.length >= 50, "need at least 50 labelled queries");
+  for (const q of queries) {
+    assert.ok(q.q?.trim(), "query text");
+    assert.ok(q.relevant.length > 0, `${q.q} has no relevant topics`);
+    for (const s of q.relevant) assert.ok(slugs.has(s), `${q.q} → unknown topic ${s}`);
+    assert.ok(["easy", "medium", "hard"].includes(q.difficulty), `${q.q} difficulty`);
+  }
+});
