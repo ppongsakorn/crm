@@ -7,7 +7,7 @@ import { Chat } from "@/components/Chat";
 import { Faq } from "@/components/Faq";
 import { MegaPrompts } from "@/components/MegaPrompts";
 import { PromptList } from "@/components/PromptList";
-import { getGroup, getKnowledge, getTopic, topics, topicsIn } from "@/lib/data";
+import { getGroup, getKnowledge, getTopic, topics, topicsIn, unquote } from "@/lib/data";
 import { aiEnabled } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -63,7 +63,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
           {t.name}
           <small>{t.en}</small>
         </h1>
-        {k && <div className="when">{k.whenYouSay}</div>}
+        {k && <div className="when">“{unquote(k.whenYouSay)}”</div>}
         <p className="how">{k?.tldr ?? t.intro}</p>
         <nav className="jump" aria-label="ไปยังส่วน">
           {k && <a href="#faq">ถาม-ตอบ</a>}

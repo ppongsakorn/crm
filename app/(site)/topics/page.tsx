@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Catalog, type CatalogDoc } from "@/components/Catalog";
-import { getKnowledge, groups, topics } from "@/lib/data";
+import { getKnowledge, groups, topics, unquote } from "@/lib/data";
 import { aiEnabled } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function TopicsPage() {
       name: t.name,
       en: t.en,
       tldr: k?.tldr ?? t.intro,
-      whenYouSay: k?.whenYouSay ?? "",
+      whenYouSay: k ? unquote(k.whenYouSay) : "",
       concepts: k ? k.concepts.map((c) => `${c.term} ${c.desc}`).join(" ") : "",
       faq: k ? k.faq.map((f) => f.q).join(" ") : "",
       prompts: t.prompts.join(" "),

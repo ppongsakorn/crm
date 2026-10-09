@@ -11,7 +11,7 @@ export function TopicCard({ topic, tldr, whenYouSay }: { topic: Topic; tldr?: st
         {topic.name}
         <small>{topic.en}</small>
       </h3>
-      {whenYouSay && <div className="when">{whenYouSay}</div>}
+      {whenYouSay && <div className="when">“{whenYouSay}”</div>}
       <p className="how">{tldr ?? topic.intro}</p>
       <div className="src">
         <span>{topic.prompts.length} prompts · หัวข้อที่ {topic.n}</span>
