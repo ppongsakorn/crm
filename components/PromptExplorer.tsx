@@ -9,7 +9,7 @@ import type { Group, GroupId, PromptItem, Topic } from "@/lib/data";
 
 const PAGE = 60;
 
-/** Search, filter and copy any of the 500 prompts in the book. */
+/** Search, filter and copy any prompt on the site (the book's 500 plus prompts for topics added later). */
 export function PromptExplorer({ groups, topics, prompts, mobile = false }: { groups: Group[]; topics: Topic[]; prompts: PromptItem[]; mobile?: boolean }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState<GroupId | "all">("all");

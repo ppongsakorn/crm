@@ -55,7 +55,7 @@ export default function ArchitecturePage() {
 
       <h2>ข้อมูล</h2>
       <p>
-        แหล่งข้อมูลมี 2 ชั้น ชั้นแรกคือ <code>data/crm.json</code> ที่ parse จาก <em>500 CRM Prompts Book</em> (9 ขั้น 25 หัวข้อ 500 prompt) ชั้นที่สองคือ{" "}
+        แหล่งข้อมูลมี 2 ชั้น ชั้นแรกคือ <code>data/crm.json</code> ที่ parse จาก <em>500 CRM Prompts Book</em> (9 ขั้น 25 หัวข้อ 500 prompt) บวกหัวข้อใหม่ที่เพิ่มจากการค้นคว้าปี 2026 ชั้นที่สองคือ{" "}
         <code>data/knowledge/&lt;slug&gt;.json</code> หัวข้อละไฟล์ เป็นผลจากการค้นคว้าเพิ่ม (ถาม-ตอบ KPI ขั้นตอน ข้อผิดพลาด Mega Prompt บริบทไทย สิ่งที่ทีมข้อมูลต้องเตรียม แหล่งอ้างอิง)
         ทุกหน้า render เป็น static ตอน build จึงโหลดเร็วและเปิดได้แม้ไม่มี server
       </p>

@@ -9,7 +9,7 @@ import { MegaPrompts } from "@/components/MegaPrompts";
 import { MTabs } from "@/components/mobile/MTabs";
 import { MTop } from "@/components/mobile/MTop";
 import { PromptList } from "@/components/PromptList";
-import { getGroup, getKnowledge, getTopic, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
+import { getGroup, getKnowledge, getTopic, isBook, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
 
 export const dynamicParams = false;
 
@@ -91,7 +91,7 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
       content: (
         <>
           <p className="m-hint">
-            หมายเลข {t.n}.1–{t.n}.{t.prompts.length} ตาม 500 CRM Prompts Book เติม <mark className="ph">[ช่องว่าง]</mark> ก่อนส่ง
+            {isBook(t) ? `หมายเลข ${t.n}.1–${t.n}.${t.prompts.length} ตาม 500 CRM Prompts Book` : "ชุดเพิ่มเติมจากการค้นคว้าปี 2026"} เติม <mark className="ph">[ช่องว่าง]</mark> ก่อนส่ง
           </p>
           <PromptList n={t.n} prompts={t.prompts} />
         </>
@@ -154,6 +154,7 @@ export default async function MobileTopic({ params }: { params: Promise<{ slug: 
           <span className="m-tag">
             <span className="m-dot" />
             {group.letter}. {group.title}
+            {!isBook(t) && <span className="new-badge">ใหม่ 2026</span>}
           </span>
           <h1>
             {t.emoji} {t.name}

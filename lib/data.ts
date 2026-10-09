@@ -16,9 +16,14 @@ export interface Group {
   why: string;
 }
 
-/** A topic straight from the prompts book: intro, benefits and its 20 prompts. */
+/**
+ * A topic card: intro, benefits and its 20 prompts. Topics 1–25 come from the
+ * 500 CRM Prompts Book; later ones were added from 2025–2026 research.
+ */
 export interface Topic {
   slug: string;
+  /** "book" = from the 500 CRM Prompts Book; "2026" = added from later research. */
+  source?: "book" | "2026";
   n: number;
   emoji: string;
   name: string;
@@ -98,6 +103,9 @@ export function unquote(s: string): string {
 }
 
 export const promptCount = topics.reduce((n, t) => n + t.prompts.length, 0);
+export const isBook = (t: Topic) => t.source !== "2026";
+export const bookPromptCount = topics.filter(isBook).reduce((n, t) => n + t.prompts.length, 0);
+export const newTopics = topics.filter((t) => !isBook(t));
 
 /** Every "what's new" item across topics, in topic order, with its topic. */
 export const allWhatsNew: (WhatsNew & { topic: Topic })[] = topics.flatMap((t) =>

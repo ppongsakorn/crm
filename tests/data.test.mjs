@@ -12,9 +12,11 @@ test("nine lifecycle stages A–I in order", () => {
   for (const g of groups) for (const k of ["title", "en", "question", "sentence", "why"]) assert.ok(g[k], `${g.id} missing ${k}`);
 });
 
-test("25 topics, 500 prompts, every topic complete and uniquely addressable", () => {
-  assert.equal(topics.length, 25);
-  assert.equal(topics.reduce((n, t) => n + t.prompts.length, 0), 500);
+test("book topics stay intact; every topic complete and uniquely addressable", () => {
+  const book = topics.filter((t) => t.source !== "2026");
+  assert.equal(book.length, 25, "the 25 book topics");
+  assert.equal(book.reduce((n, t) => n + t.prompts.length, 0), 500, "the book's 500 prompts");
+  for (const t of topics) assert.ok([undefined, "book", "2026"].includes(t.source), `${t.slug} source`);
   const slugs = new Set();
   topics.forEach((t, i) => {
     assert.match(t.slug, /^[a-z0-9]+(-[a-z0-9]+)*$/, t.name);

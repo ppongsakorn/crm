@@ -8,7 +8,7 @@ import { Faq } from "@/components/Faq";
 import { WhatsNew } from "@/components/WhatsNew";
 import { MegaPrompts } from "@/components/MegaPrompts";
 import { PromptList } from "@/components/PromptList";
-import { getGroup, getKnowledge, getTopic, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
+import { getGroup, getKnowledge, getTopic, isBook, thaiMonth, topics, topicsIn, unquote } from "@/lib/data";
 import { aiEnabled } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -56,6 +56,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
         <span className="tag">
           <span className="dot" />
           ขั้น {group.letter}. {group.title} — {group.question}
+          {!isBook(t) && <span className="new-badge">หัวข้อใหม่ 2026</span>}
         </span>
         <h1>
           <span className="emoji" aria-hidden="true">
@@ -164,9 +165,9 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             </>
           )}
 
-          <h2 id="prompts">Prompt {t.prompts.length} รายการจากหนังสือ</h2>
+          <h2 id="prompts">Prompt {t.prompts.length} รายการ{isBook(t) ? "จากหนังสือ" : " (เพิ่มใหม่ 2026)"}</h2>
           <p className="muted lead">
-            หมายเลข {t.n}.1–{t.n}.{t.prompts.length} ตาม 500 CRM Prompts Book เติม <mark className="ph">[ช่องว่าง]</mark> ให้เป็นบริบทของคุณก่อนส่ง
+            {isBook(t) ? `หมายเลข ${t.n}.1–${t.n}.${t.prompts.length} ตาม 500 CRM Prompts Book` : `หมายเลข ${t.n}.1–${t.n}.${t.prompts.length} ชุดเพิ่มเติมจากการค้นคว้าปี 2026 ไม่ได้อยู่ในหนังสือ`} เติม <mark className="ph">[ช่องว่าง]</mark> ให้เป็นบริบทของคุณก่อนส่ง
           </p>
           <PromptList n={t.n} prompts={t.prompts} />
 

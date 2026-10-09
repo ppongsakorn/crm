@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Topic } from "@/lib/data";
+import { isBook, type Topic } from "@/lib/data";
 
 export function TopicCard({ topic, tldr, whenYouSay, why }: { topic: Topic; tldr?: string; whenYouSay?: string; why?: string }) {
   return (
@@ -9,7 +9,10 @@ export function TopicCard({ topic, tldr, whenYouSay, why }: { topic: Topic; tldr
           {topic.emoji}
         </span>{" "}
         {topic.name}
-        <small>{topic.en}</small>
+        <small>
+          {topic.en}
+          {!isBook(topic) && <span className="new-badge">ใหม่ 2026</span>}
+        </small>
       </h3>
       {whenYouSay && <div className="when">“{whenYouSay}”</div>}
       <p className="how">{tldr ?? topic.intro}</p>

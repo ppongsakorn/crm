@@ -158,7 +158,7 @@ function register(
         name: "get_prompts",
         title: "Prompt ของหัวข้อ",
         description:
-          "Ready-to-use prompts for the topic: the 20 numbered prompts from the 500 CRM Prompts Book (with [placeholders] to fill in) and the longer 'mega prompts' (role, context, task, constraints, output format).",
+          "Ready-to-use prompts for the topic: the 20 numbered prompts (from the 500 CRM Prompts Book for topics 1–25, newly written for topics added in 2026; with [placeholders] to fill in) and the longer 'mega prompts' (role, context, task, constraints, output format).",
         inputSchema: { type: "object", properties: { slug: { type: "string" } }, required: ["slug"] },
         annotations: { readOnlyHint: true },
         execute: async ({ slug }) => {
