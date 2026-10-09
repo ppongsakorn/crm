@@ -140,7 +140,19 @@
   "new user onboarding flow",
   "reduce early churn first 30 days",
   "time to first action",
-  "onboarding drop-off"
+  "onboarding drop-off",
+  "ลูกค้าซื้อจาก Shopee แล้วไม่รู้ว่าเป็นใคร",
+  "ไลฟ์ขายของแล้วลูกค้าไม่กลับมาซื้อซ้ำ",
+  "ทำบัตรสมาชิกใน LINE MINI App",
+  "ให้ลูกค้าสมัครสมาชิกผ่าน LINE Login",
+  "ข้อความต้อนรับเพื่อนใหม่ LINE OA",
+  "QR ในกล่องพัสดุชวนสมัครสมาชิก",
+  "ส่ง SMS ต้อนรับลูกค้ามีลิงก์ได้ไหม",
+  "ขอสิทธิ์แจ้งเตือนแอปตอนไหนดี",
+  "AI ตอบแชตลูกค้าใหม่ใน LINE",
+  "ฟอร์มสมัครสมาชิกให้ถูก PDPA 2026",
+  "ลูกค้ามาจากครีเอเตอร์ไม่ผูกกับแบรนด์",
+  "เปลี่ยนผู้ซื้อ TikTok Shop เป็นสมาชิกแบรนด์"
  ],
  "customer-segmentation": [
   "ส่ง broadcast ไปทั้งฐานแล้วคน unfollow เพิ่ม",
@@ -180,7 +192,19 @@
   "behavioral segmentation",
   "customer persona template",
   "k-means customer clustering",
-  "segment customers by value"
+  "segment customers by value",
+  "ให้ AI แบ่งกลุ่มลูกค้าจากไฟล์ Excel",
+  "สร้าง Segment ใน HubSpot ด้วย AI",
+  "ลูกค้าซื้อผ่าน Shopee แบ่งกลุ่มยังไง",
+  "รวมข้อมูลลูกค้าหน้าร้านกับ LINE และ Shopee",
+  "แบ่งกลุ่มคนที่ซื้อจากไลฟ์",
+  "Customer Data Agent ของ LINE ใช้ทำอะไร",
+  "Predictive segment คืออะไร",
+  "ลูกค้าซื้อครั้งเดียวแล้วหาย ทำ RFM ได้ไหม",
+  "อัปโหลดรายชื่อลูกค้าไปยิงโฆษณา Facebook ผิด PDPA ไหม",
+  "Persona ที่ AI สร้างเชื่อได้แค่ไหน",
+  "ใช้ AI ทำโปรไฟล์ลูกค้าต้องแจ้งอะไรบ้าง",
+  "แบ่งกลุ่มลูกค้าบน LINE OA ด้วย tag"
  ],
  "customer-journey-mapping": [
   "แต่ละทีมบอกว่างานตัวเองดีแต่ลูกค้ายังบ่น",
@@ -217,7 +241,18 @@
   "touchpoint analysis",
   "journey mapping workshop",
   "moments of truth customer experience",
-  "journey analytics drop-off"
+  "journey analytics drop-off",
+  "ลูกค้ารู้จักแบรนด์จาก ChatGPT ใส่ใน Journey ยังไง",
+  "ทำ Customer Journey ของคนที่ซื้อผ่านไลฟ์",
+  "Journey ลูกค้า TikTok ไป Shopee",
+  "AI Overview ทำให้คนไม่เข้าเว็บ",
+  "ตรวจว่า AI พูดถึงแบรนด์เราว่าอะไร",
+  "แชตบอต AI ส่งต่อแอดมินแล้วลูกค้าต้องเล่าซ้ำ",
+  "ถามลูกค้าว่ารู้จักเราจากไหน มีตัวเลือกอะไรบ้าง",
+  "Journey Map แบบ Omnichannel หน้าร้านกับออนไลน์",
+  "Touchpoint ใหม่ปี 2026",
+  "Journey ลูกค้าที่ซื้อบนมาร์เก็ตเพลสแต่ไม่มีข้อมูล",
+  "Service Blueprint ที่มี AI agent"
  ],
  "omnichannel-engagement": [
   "ลูกค้าทักเฟซแล้วมาถามซ้ำในไลน์ต้องถามใหม่ตั้งแต่ต้น",

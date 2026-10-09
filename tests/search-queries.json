@@ -1060,5 +1060,53 @@
   ],
   "difficulty": "easy",
   "kind": "2026"
+ },
+ {
+  "q": "คนที่ซื้อของผ่านไลฟ์ TikTok จะดึงมาเป็นเพื่อนใน LINE ของร้านเราได้ยังไง",
+  "relevant": [
+   "onboarding-activation"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "สมาชิกใหม่สมัครผ่าน LINE แล้วไม่เคยมาใช้คูปองเลย ควรทำอะไรในสัปดาห์แรก",
+  "relevant": [
+   "onboarding-activation"
+  ],
+  "difficulty": "easy",
+  "kind": "2026"
+ },
+ {
+  "q": "ร้านขายบน TikTok Shop กับหน้าร้าน อยากรู้ว่าลูกค้ากลุ่มไหนกลับมาซื้อซ้ำบ่อยสุด ต้องเริ่มจากอะไร",
+  "relevant": [
+   "customer-segmentation"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ระบบ CRM ให้ AI สร้างกลุ่มลูกค้าเองได้ จะรู้ได้ยังไงว่ากลุ่มที่ได้ถูกต้อง",
+  "relevant": [
+   "customer-segmentation"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "คนดูคลิปรีวิวแล้วไปกดซื้อใน Shopee เราจะรู้ได้ยังไงว่าเขาเดินทางผ่านจุดไหนบ้างก่อนซื้อ",
+  "relevant": [
+   "customer-journey-mapping"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "อยากวาดเส้นทางลูกค้าตั้งแต่รู้จักจนซื้อซ้ำ ควรเริ่มจากอะไร",
+  "relevant": [
+   "customer-journey-mapping"
+  ],
+  "difficulty": "easy",
+  "kind": "2026"
  }
 ]
