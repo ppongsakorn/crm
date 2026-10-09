@@ -980,5 +980,37 @@
   ],
   "difficulty": "hard",
   "kind": "2026"
+ },
+ {
+  "q": "แคมเปญคูปองเดือนนี้ช่วยให้ลูกค้าซื้อเพิ่มจริงหรือแค่คนที่จะซื้ออยู่แล้ว จะพิสูจน์ยังไง",
+  "relevant": [
+   "kpi-tracking-reporting"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "รายงานอีเมลบอกคนเปิดเยอะมากแต่ยอดขายไม่ขึ้นเลย ควรดูตัวเลขอะไรแทน",
+  "relevant": [
+   "kpi-tracking-reporting"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "เปิดบอทให้ตอบลูกค้าใน Messenger แล้ว แต่ลูกค้าที่ถามเรื่องเคลมสินค้าค้างอยู่ไม่มีใครรับเรื่อง ต้องตั้งกติกาอะไร",
+  "relevant": [
+   "team-collaboration-productivity"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ผู้บริหารอยากให้ทุกทีมใช้ AI แต่ทีมบ่นว่างานเพิ่มขึ้น ควรเริ่มจัดบทบาทคนกับ AI ยังไง",
+  "relevant": [
+   "team-collaboration-productivity"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
  }
 ]
