@@ -1,126 +1,856 @@
 [
-  {"q": "หา lead ใหม่ยังไง", "relevant": ["lead-generation"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "ยิงแอดได้คนกรอกฟอร์มเยอะ แต่โทรไปไม่มีใครรับสาย", "relevant": ["lead-generation", "team-collaboration-productivity"], "difficulty": "medium", "kind": "situation"},
-  {"q": "lead magnet ideas", "relevant": ["lead-generation"], "difficulty": "easy", "kind": "english"},
-  {"q": "ลีดสกอริ่ง", "relevant": ["lead-generation"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "วางแผนโพสต์เฟซบุ๊ก 30 วัน", "relevant": ["social-media-marketing"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "โพสต์ทุกวัน reach ตก engagement ไม่ขึ้น", "relevant": ["social-media-marketing"], "difficulty": "medium", "kind": "situation"},
-  {"q": "จะจ้าง influencer ยังไงดี", "relevant": ["social-media-marketing", "campaign-planning"], "difficulty": "medium", "kind": "keyword"},
-  {"q": "content calender", "relevant": ["social-media-marketing", "campaign-planning"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "welcome email ลูกค้าใหม่", "relevant": ["onboarding-activation"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "สมัครสมาชิกเยอะ แต่คนกลับมาใช้จริงนิดเดียว", "relevant": ["onboarding-activation", "customer-loyalty-strategy"], "difficulty": "medium", "kind": "situation"},
-  {"q": "onboarding checklist", "relevant": ["onboarding-activation"], "difficulty": "easy", "kind": "english"},
-  {"q": "ทักไลน์ต้อนรับไปแล้วลูกค้าเงียบ", "relevant": ["onboarding-activation"], "difficulty": "hard", "kind": "situation"},
-
-  {"q": "แบ่งกลุ่มลูกค้า", "relevant": ["customer-segmentation"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "broadcast ไปทั้งฐานแล้วคน unfollow เพิ่ม", "relevant": ["customer-segmentation", "omnichannel-engagement"], "difficulty": "medium", "kind": "situation"},
-  {"q": "สร้าง persona ลูกค้า", "relevant": ["customer-segmentation"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "RFM segmentation", "relevant": ["customer-segmentation", "customer-data-analytics"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "customer journey map", "relevant": ["customer-journey-mapping"], "difficulty": "easy", "kind": "english"},
-  {"q": "ไม่รู้ว่าลูกค้าหลุดตรงขั้นตอนไหน", "relevant": ["customer-journey-mapping"], "difficulty": "medium", "kind": "situation"},
-  {"q": "touchpoint คืออะไร", "relevant": ["customer-journey-mapping", "omnichannel-engagement"], "difficulty": "medium", "kind": "jargon"},
-  {"q": "แต่ละทีมบอกงานตัวเองดีหมด แต่ลูกค้ายังบ่น", "relevant": ["customer-journey-mapping", "team-collaboration-productivity"], "difficulty": "hard", "kind": "situation"},
-
-  {"q": "ลูกค้าทักเฟซแล้วมาถามซ้ำในไลน์ ต้องถามข้อมูลใหม่หมด", "relevant": ["omnichannel-engagement"], "difficulty": "medium", "kind": "situation"},
-  {"q": "omnichannel", "relevant": ["omnichannel-engagement"], "difficulty": "easy", "kind": "english"},
-  {"q": "รวมแชททุกช่องทางไว้ที่เดียว", "relevant": ["omnichannel-engagement"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ออมนิแชแนล", "relevant": ["omnichannel-engagement"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "วางแผนแคมเปญการตลาด", "relevant": ["campaign-planning"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "แคมเปญจบแล้วบอกไม่ได้ว่าได้ผลหรือเปล่า", "relevant": ["campaign-planning", "kpi-tracking-reporting"], "difficulty": "medium", "kind": "situation"},
-  {"q": "campaign brief template", "relevant": ["campaign-planning"], "difficulty": "easy", "kind": "english"},
-  {"q": "UTM", "relevant": ["campaign-planning"], "difficulty": "hard", "kind": "jargon"},
-
-  {"q": "personalization", "relevant": ["personalized-selling-service"], "difficulty": "easy", "kind": "english"},
-  {"q": "ลูกค้า VIP ได้ส่วนลดเท่าลูกค้าใหม่", "relevant": ["personalized-selling-service", "customer-loyalty-strategy"], "difficulty": "medium", "kind": "situation"},
-  {"q": "next best action", "relevant": ["personalized-selling-service", "ai-driven-crm"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "ใส่ชื่อในอีเมลอย่างเดียวพอไหม", "relevant": ["personalized-selling-service"], "difficulty": "hard", "kind": "situation"},
-
-  {"q": "ตั้งราคาสินค้ายังไง", "relevant": ["pricing-discount-optimization"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "จัดโปรทีไรยอดพุ่ง แต่ปิดงบแล้วกำไรหาย", "relevant": ["pricing-discount-optimization"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ลูกค้ารอแต่โค้ดลด ไม่ยอมซื้อราคาเต็ม", "relevant": ["pricing-discount-optimization"], "difficulty": "medium", "kind": "situation"},
-  {"q": "price elasticity", "relevant": ["pricing-discount-optimization"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "upsell", "relevant": ["upselling-cross-selling"], "difficulty": "easy", "kind": "english"},
-  {"q": "มีลูกค้าเป็นหมื่นแต่ยอดต่อหัวไม่ขยับ", "relevant": ["upselling-cross-selling"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ซื้อสินค้า A แล้วควรแนะนำอะไรต่อ", "relevant": ["upselling-cross-selling", "personalized-selling-service"], "difficulty": "medium", "kind": "situation"},
-  {"q": "อัพเซล ครอสเซล", "relevant": ["upselling-cross-selling"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "โปรแกรมแนะนำเพื่อน", "relevant": ["referral-advocacy"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "ลูกค้าชมเยอะแต่ไม่มีใครพาเพื่อนมา", "relevant": ["referral-advocacy"], "difficulty": "medium", "kind": "situation"},
-  {"q": "คนแกล้งสมัครเอารางวัลแนะนำเพื่อน", "relevant": ["referral-advocacy"], "difficulty": "hard", "kind": "situation"},
-  {"q": "referal program", "relevant": ["referral-advocacy"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "NPS", "relevant": ["customer-satisfaction-tracking"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "ส่ง survey ทุกเดือนแต่ไม่รู้ว่าคะแนนดีหรือแย่", "relevant": ["customer-satisfaction-tracking"], "difficulty": "medium", "kind": "situation"},
-  {"q": "วัดความพึงพอใจลูกค้า", "relevant": ["customer-satisfaction-tracking"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "CSAT vs CES", "relevant": ["customer-satisfaction-tracking"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "customer health score", "relevant": ["customer-health-scoring"], "difficulty": "easy", "kind": "english"},
-  {"q": "ลูกค้าเพิ่งต่อสัญญาปีก่อน อยู่ๆ ก็ยกเลิก ไม่มีใครเห็นสัญญาณ", "relevant": ["customer-health-scoring", "churn-prediction"], "difficulty": "medium", "kind": "situation"},
-  {"q": "คะแนนสุขภาพลูกค้า", "relevant": ["customer-health-scoring"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "ไฟเขียวเหลืองแดงลูกค้า", "relevant": ["customer-health-scoring"], "difficulty": "hard", "kind": "situation"},
-
-  {"q": "churn", "relevant": ["churn-prediction"], "difficulty": "easy", "kind": "english"},
-  {"q": "ลูกค้าค่อยๆ หายไปทีละคน กว่าจะรู้ยอดก็ตกแล้ว", "relevant": ["churn-prediction", "customer-health-scoring"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ทำนายว่าใครจะเลิกใช้บริการ", "relevant": ["churn-prediction"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "เชิร์น", "relevant": ["churn-prediction"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "ทำนายยอดขาย", "relevant": ["sales-forecasting"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "เซลส์บอกเดือนนี้ปิดได้แน่ สิ้นเดือนยอดหายไปครึ่ง", "relevant": ["sales-forecasting"], "difficulty": "medium", "kind": "situation"},
-  {"q": "MAPE", "relevant": ["sales-forecasting"], "difficulty": "hard", "kind": "jargon"},
-  {"q": "sales forcast", "relevant": ["sales-forecasting"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "loyalty program", "relevant": ["customer-loyalty-strategy"], "difficulty": "easy", "kind": "english"},
-  {"q": "สมาชิกเป็นล้านแต่คนใช้แต้มจริงไม่ถึง 20%", "relevant": ["customer-loyalty-strategy"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ฝ่ายบัญชีบ่นว่าแต้มค้างเป็นหนี้ก้อนโต", "relevant": ["customer-loyalty-strategy"], "difficulty": "hard", "kind": "situation"},
-  {"q": "ระบบสะสมแต้ม", "relevant": ["customer-loyalty-strategy"], "difficulty": "easy", "kind": "keyword"},
-
-  {"q": "ต่ออายุสมาชิก", "relevant": ["renewal-subscription-management"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "บัตรตัดไม่ผ่านแล้วระบบยกเลิกให้เงียบๆ", "relevant": ["renewal-subscription-management", "churn-prediction"], "difficulty": "medium", "kind": "situation"},
-  {"q": "NRR GRR", "relevant": ["renewal-subscription-management"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "dunning", "relevant": ["renewal-subscription-management"], "difficulty": "hard", "kind": "jargon"},
-
-  {"q": "จัดการข้อร้องเรียนลูกค้า", "relevant": ["feedback-complaint-management"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "ลูกค้าขู่จะไปร้อง สคบ", "relevant": ["feedback-complaint-management"], "difficulty": "medium", "kind": "situation"},
-  {"q": "โดนด่าเรื่องเดิมซ้ำทุกเดือน", "relevant": ["feedback-complaint-management"], "difficulty": "hard", "kind": "situation"},
-  {"q": "complaint SLA", "relevant": ["feedback-complaint-management"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "วิเคราะห์ข้อมูลลูกค้า", "relevant": ["customer-data-analytics"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "ข้อมูลอยู่ใน POS CRM LINE แต่ถามว่าลูกค้าที่ดีที่สุดคือใครตอบไม่ได้", "relevant": ["customer-data-analytics", "crm-data-quality-governance"], "difficulty": "medium", "kind": "situation"},
-  {"q": "CLV คำนวณยังไง", "relevant": ["customer-data-analytics"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "cohort analysis", "relevant": ["customer-data-analytics"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "ข้อมูลซ้ำใน CRM", "relevant": ["crm-data-quality-governance"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "ลูกค้าคนเดียวกันมี 3 โปรไฟล์", "relevant": ["crm-data-quality-governance"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ส่ง SMS ไปเบอร์เก่า", "relevant": ["crm-data-quality-governance"], "difficulty": "hard", "kind": "situation"},
-  {"q": "golden record", "relevant": ["crm-data-quality-governance"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "marketing automation", "relevant": ["crm-automation-workflow"], "difficulty": "easy", "kind": "english"},
-  {"q": "ทีมนั่งส่งข้อความมือทุกวัน", "relevant": ["crm-automation-workflow"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ลูกค้าบ่นว่าได้ไลน์ซ้ำวันละสามรอบ", "relevant": ["crm-automation-workflow", "omnichannel-engagement"], "difficulty": "medium", "kind": "situation"},
-  {"q": "abandoned cart flow", "relevant": ["crm-automation-workflow"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "AI CRM", "relevant": ["ai-driven-crm"], "difficulty": "easy", "kind": "english"},
-  {"q": "เจ้านายถามจะเอา AI มาใช้ยังไง ไม่รู้เริ่มตรงไหน", "relevant": ["ai-driven-crm"], "difficulty": "medium", "kind": "situation"},
-  {"q": "กลัว AI ตอบลูกค้ามั่ว", "relevant": ["ai-driven-crm"], "difficulty": "medium", "kind": "situation"},
-  {"q": "agentforce", "relevant": ["ai-driven-crm"], "difficulty": "hard", "kind": "jargon"},
-
-  {"q": "KPI ของงาน CRM", "relevant": ["kpi-tracking-reporting"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "dashboard มีเป็นสิบหน้า แต่ไม่รู้เดือนนี้ต้องทำอะไรต่อ", "relevant": ["kpi-tracking-reporting", "customer-data-analytics"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ตัวเลขการตลาดกับทีมขายไม่เคยตรงกัน", "relevant": ["kpi-tracking-reporting", "crm-data-quality-governance"], "difficulty": "medium", "kind": "situation"},
-  {"q": "north star metric", "relevant": ["kpi-tracking-reporting"], "difficulty": "easy", "kind": "english"},
-
-  {"q": "PDPA", "relevant": ["compliance-data-privacy"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "อยากส่งโปรหาลูกค้าทั้งฐาน แต่ไม่แน่ใจว่าขอ consent ไว้ครอบคลุมไหม", "relevant": ["compliance-data-privacy"], "difficulty": "medium", "kind": "situation"},
-  {"q": "ข้อมูลลูกค้ารั่ว ต้องทำอะไร", "relevant": ["compliance-data-privacy"], "difficulty": "easy", "kind": "keyword"},
-  {"q": "พีดีพีเอ", "relevant": ["compliance-data-privacy"], "difficulty": "hard", "kind": "typo"},
-
-  {"q": "ทีมขายกับการตลาดทะเลาะกันเรื่อง lead", "relevant": ["team-collaboration-productivity", "lead-generation"], "difficulty": "medium", "kind": "situation"},
-  {"q": "RevOps", "relevant": ["team-collaboration-productivity"], "difficulty": "easy", "kind": "jargon"},
-  {"q": "เซลส์ไม่ยอมกรอก CRM", "relevant": ["team-collaboration-productivity", "crm-data-quality-governance"], "difficulty": "medium", "kind": "situation"},
-  {"q": "MQL SQL", "relevant": ["team-collaboration-productivity", "lead-generation"], "difficulty": "easy", "kind": "jargon"}
+ {
+  "q": "หา lead ใหม่ยังไง",
+  "relevant": [
+   "lead-generation"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ยิงแอดได้คนกรอกฟอร์มเยอะ แต่โทรไปไม่มีใครรับสาย",
+  "relevant": [
+   "lead-generation",
+   "team-collaboration-productivity"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "lead magnet ideas",
+  "relevant": [
+   "lead-generation"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ลีดสกอริ่ง",
+  "relevant": [
+   "lead-generation"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "วางแผนโพสต์เฟซบุ๊ก 30 วัน",
+  "relevant": [
+   "social-media-marketing"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "โพสต์ทุกวัน reach ตก engagement ไม่ขึ้น",
+  "relevant": [
+   "social-media-marketing"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "จะจ้าง influencer ยังไงดี",
+  "relevant": [
+   "social-media-marketing",
+   "campaign-planning"
+  ],
+  "difficulty": "medium",
+  "kind": "keyword"
+ },
+ {
+  "q": "content calender",
+  "relevant": [
+   "social-media-marketing",
+   "campaign-planning"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "welcome email ลูกค้าใหม่",
+  "relevant": [
+   "onboarding-activation"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "สมัครสมาชิกเยอะ แต่คนกลับมาใช้จริงนิดเดียว",
+  "relevant": [
+   "onboarding-activation",
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "onboarding checklist",
+  "relevant": [
+   "onboarding-activation"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ทักไลน์ต้อนรับไปแล้วลูกค้าเงียบ",
+  "relevant": [
+   "onboarding-activation"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "แบ่งกลุ่มลูกค้า",
+  "relevant": [
+   "customer-segmentation"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "broadcast ไปทั้งฐานแล้วคน unfollow เพิ่ม",
+  "relevant": [
+   "customer-segmentation",
+   "omnichannel-engagement"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "สร้าง persona ลูกค้า",
+  "relevant": [
+   "customer-segmentation"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "RFM segmentation",
+  "relevant": [
+   "customer-segmentation",
+   "customer-data-analytics"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "customer journey map",
+  "relevant": [
+   "customer-journey-mapping"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ไม่รู้ว่าลูกค้าหลุดตรงขั้นตอนไหน",
+  "relevant": [
+   "customer-journey-mapping"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "touchpoint คืออะไร",
+  "relevant": [
+   "customer-journey-mapping",
+   "omnichannel-engagement"
+  ],
+  "difficulty": "medium",
+  "kind": "jargon"
+ },
+ {
+  "q": "แต่ละทีมบอกงานตัวเองดีหมด แต่ลูกค้ายังบ่น",
+  "relevant": [
+   "customer-journey-mapping",
+   "team-collaboration-productivity"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "ลูกค้าทักเฟซแล้วมาถามซ้ำในไลน์ ต้องถามข้อมูลใหม่หมด",
+  "relevant": [
+   "omnichannel-engagement"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "omnichannel",
+  "relevant": [
+   "omnichannel-engagement"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "รวมแชททุกช่องทางไว้ที่เดียว",
+  "relevant": [
+   "omnichannel-engagement"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ออมนิแชแนล",
+  "relevant": [
+   "omnichannel-engagement"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "วางแผนแคมเปญการตลาด",
+  "relevant": [
+   "campaign-planning"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "แคมเปญจบแล้วบอกไม่ได้ว่าได้ผลหรือเปล่า",
+  "relevant": [
+   "campaign-planning",
+   "kpi-tracking-reporting"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "campaign brief template",
+  "relevant": [
+   "campaign-planning"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "UTM",
+  "relevant": [
+   "campaign-planning"
+  ],
+  "difficulty": "hard",
+  "kind": "jargon"
+ },
+ {
+  "q": "personalization",
+  "relevant": [
+   "personalized-selling-service"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ลูกค้า VIP ได้ส่วนลดเท่าลูกค้าใหม่",
+  "relevant": [
+   "personalized-selling-service",
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "next best action",
+  "relevant": [
+   "personalized-selling-service",
+   "ai-driven-crm"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "ใส่ชื่อในอีเมลอย่างเดียวพอไหม",
+  "relevant": [
+   "personalized-selling-service"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "ตั้งราคาสินค้ายังไง",
+  "relevant": [
+   "pricing-discount-optimization"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "จัดโปรทีไรยอดพุ่ง แต่ปิดงบแล้วกำไรหาย",
+  "relevant": [
+   "pricing-discount-optimization"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ลูกค้ารอแต่โค้ดลด ไม่ยอมซื้อราคาเต็ม",
+  "relevant": [
+   "pricing-discount-optimization"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "price elasticity",
+  "relevant": [
+   "pricing-discount-optimization"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "upsell",
+  "relevant": [
+   "upselling-cross-selling"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "มีลูกค้าเป็นหมื่นแต่ยอดต่อหัวไม่ขยับ",
+  "relevant": [
+   "upselling-cross-selling"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ซื้อสินค้า A แล้วควรแนะนำอะไรต่อ",
+  "relevant": [
+   "upselling-cross-selling",
+   "personalized-selling-service"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "อัพเซล ครอสเซล",
+  "relevant": [
+   "upselling-cross-selling"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "โปรแกรมแนะนำเพื่อน",
+  "relevant": [
+   "referral-advocacy"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ลูกค้าชมเยอะแต่ไม่มีใครพาเพื่อนมา",
+  "relevant": [
+   "referral-advocacy"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "คนแกล้งสมัครเอารางวัลแนะนำเพื่อน",
+  "relevant": [
+   "referral-advocacy"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "referal program",
+  "relevant": [
+   "referral-advocacy"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "NPS",
+  "relevant": [
+   "customer-satisfaction-tracking"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "ส่ง survey ทุกเดือนแต่ไม่รู้ว่าคะแนนดีหรือแย่",
+  "relevant": [
+   "customer-satisfaction-tracking"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "วัดความพึงพอใจลูกค้า",
+  "relevant": [
+   "customer-satisfaction-tracking"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "CSAT vs CES",
+  "relevant": [
+   "customer-satisfaction-tracking"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "customer health score",
+  "relevant": [
+   "customer-health-scoring"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ลูกค้าเพิ่งต่อสัญญาปีก่อน อยู่ๆ ก็ยกเลิก ไม่มีใครเห็นสัญญาณ",
+  "relevant": [
+   "customer-health-scoring",
+   "churn-prediction"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "คะแนนสุขภาพลูกค้า",
+  "relevant": [
+   "customer-health-scoring"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ไฟเขียวเหลืองแดงลูกค้า",
+  "relevant": [
+   "customer-health-scoring"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "churn",
+  "relevant": [
+   "churn-prediction"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ลูกค้าค่อยๆ หายไปทีละคน กว่าจะรู้ยอดก็ตกแล้ว",
+  "relevant": [
+   "churn-prediction",
+   "customer-health-scoring"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ทำนายว่าใครจะเลิกใช้บริการ",
+  "relevant": [
+   "churn-prediction"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "เชิร์น",
+  "relevant": [
+   "churn-prediction"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "ทำนายยอดขาย",
+  "relevant": [
+   "sales-forecasting"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "เซลส์บอกเดือนนี้ปิดได้แน่ สิ้นเดือนยอดหายไปครึ่ง",
+  "relevant": [
+   "sales-forecasting"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "MAPE",
+  "relevant": [
+   "sales-forecasting"
+  ],
+  "difficulty": "hard",
+  "kind": "jargon"
+ },
+ {
+  "q": "sales forcast",
+  "relevant": [
+   "sales-forecasting"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "loyalty program",
+  "relevant": [
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "สมาชิกเป็นล้านแต่คนใช้แต้มจริงไม่ถึง 20%",
+  "relevant": [
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ฝ่ายบัญชีบ่นว่าแต้มค้างเป็นหนี้ก้อนโต",
+  "relevant": [
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "ระบบสะสมแต้ม",
+  "relevant": [
+   "customer-loyalty-strategy"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ต่ออายุสมาชิก",
+  "relevant": [
+   "renewal-subscription-management"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "บัตรตัดไม่ผ่านแล้วระบบยกเลิกให้เงียบๆ",
+  "relevant": [
+   "renewal-subscription-management",
+   "churn-prediction"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "NRR GRR",
+  "relevant": [
+   "renewal-subscription-management"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "dunning",
+  "relevant": [
+   "renewal-subscription-management"
+  ],
+  "difficulty": "hard",
+  "kind": "jargon"
+ },
+ {
+  "q": "จัดการข้อร้องเรียนลูกค้า",
+  "relevant": [
+   "feedback-complaint-management"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ลูกค้าขู่จะไปร้อง สคบ",
+  "relevant": [
+   "feedback-complaint-management"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "โดนด่าเรื่องเดิมซ้ำทุกเดือน",
+  "relevant": [
+   "feedback-complaint-management"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "complaint SLA",
+  "relevant": [
+   "feedback-complaint-management"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "วิเคราะห์ข้อมูลลูกค้า",
+  "relevant": [
+   "customer-data-analytics"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ข้อมูลอยู่ใน POS CRM LINE แต่ถามว่าลูกค้าที่ดีที่สุดคือใครตอบไม่ได้",
+  "relevant": [
+   "customer-data-analytics",
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "CLV คำนวณยังไง",
+  "relevant": [
+   "customer-data-analytics"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "cohort analysis",
+  "relevant": [
+   "customer-data-analytics"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ข้อมูลซ้ำใน CRM",
+  "relevant": [
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "ลูกค้าคนเดียวกันมี 3 โปรไฟล์",
+  "relevant": [
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ส่ง SMS ไปเบอร์เก่า",
+  "relevant": [
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "hard",
+  "kind": "situation"
+ },
+ {
+  "q": "golden record",
+  "relevant": [
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "marketing automation",
+  "relevant": [
+   "crm-automation-workflow"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "ทีมนั่งส่งข้อความมือทุกวัน",
+  "relevant": [
+   "crm-automation-workflow"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ลูกค้าบ่นว่าได้ไลน์ซ้ำวันละสามรอบ",
+  "relevant": [
+   "crm-automation-workflow",
+   "omnichannel-engagement"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "abandoned cart flow",
+  "relevant": [
+   "crm-automation-workflow"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "AI CRM",
+  "relevant": [
+   "ai-driven-crm"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "เจ้านายถามจะเอา AI มาใช้ยังไง ไม่รู้เริ่มตรงไหน",
+  "relevant": [
+   "ai-driven-crm"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "กลัว AI ตอบลูกค้ามั่ว",
+  "relevant": [
+   "ai-driven-crm"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "agentforce",
+  "relevant": [
+   "ai-driven-crm"
+  ],
+  "difficulty": "hard",
+  "kind": "jargon"
+ },
+ {
+  "q": "KPI ของงาน CRM",
+  "relevant": [
+   "kpi-tracking-reporting"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "dashboard มีเป็นสิบหน้า แต่ไม่รู้เดือนนี้ต้องทำอะไรต่อ",
+  "relevant": [
+   "kpi-tracking-reporting",
+   "customer-data-analytics"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ตัวเลขการตลาดกับทีมขายไม่เคยตรงกัน",
+  "relevant": [
+   "kpi-tracking-reporting",
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "north star metric",
+  "relevant": [
+   "kpi-tracking-reporting"
+  ],
+  "difficulty": "easy",
+  "kind": "english"
+ },
+ {
+  "q": "PDPA",
+  "relevant": [
+   "compliance-data-privacy"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "อยากส่งโปรหาลูกค้าทั้งฐาน แต่ไม่แน่ใจว่าขอ consent ไว้ครอบคลุมไหม",
+  "relevant": [
+   "compliance-data-privacy"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "ข้อมูลลูกค้ารั่ว ต้องทำอะไร",
+  "relevant": [
+   "compliance-data-privacy"
+  ],
+  "difficulty": "easy",
+  "kind": "keyword"
+ },
+ {
+  "q": "พีดีพีเอ",
+  "relevant": [
+   "compliance-data-privacy"
+  ],
+  "difficulty": "hard",
+  "kind": "typo"
+ },
+ {
+  "q": "ทีมขายกับการตลาดทะเลาะกันเรื่อง lead",
+  "relevant": [
+   "team-collaboration-productivity",
+   "lead-generation"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "RevOps",
+  "relevant": [
+   "team-collaboration-productivity"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "เซลส์ไม่ยอมกรอก CRM",
+  "relevant": [
+   "team-collaboration-productivity",
+   "crm-data-quality-governance"
+  ],
+  "difficulty": "medium",
+  "kind": "situation"
+ },
+ {
+  "q": "MQL SQL",
+  "relevant": [
+   "team-collaboration-productivity",
+   "lead-generation"
+  ],
+  "difficulty": "easy",
+  "kind": "jargon"
+ },
+ {
+  "q": "ร้านเราขายผ่านแอปช้อปปิ้งเกือบหมด อยากรู้ว่าลูกค้าเก่าเริ่มหายไปหรือยัง ต้องดูตัวเลขอะไร",
+  "relevant": [
+   "churn-prediction"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "อยากให้บอทเลือกเองว่าจะแจกคูปองให้ลูกค้าที่กำลังจะเลิกซื้อคนไหน ต้องตั้งกติกาอะไรก่อน",
+  "relevant": [
+   "churn-prediction"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "อยากรู้ว่าแคมเปญวันคู่เดือนหน้าควรสต๊อกของเท่าไร ยอดปีที่แล้วพุ่งแค่วันเดียว",
+  "relevant": [
+   "sales-forecasting"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ทีมดาต้าใช้ Databricks อยากได้ฟังก์ชัน SQL ที่ทำนายยอดแต่ละสาขาได้เลยไม่ต้องเทรนโมเดล",
+  "relevant": [
+   "sales-forecasting"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ }
 ]
