@@ -948,5 +948,37 @@
   ],
   "difficulty": "hard",
   "kind": "2026"
+ },
+ {
+  "q": "ส่งแบบประเมินหลังบริการไปแต่คนตอบน้อยมาก มีวิธีรู้ความรู้สึกลูกค้าทางอื่นไหม",
+  "relevant": [
+   "customer-satisfaction-tracking"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ดาวร้านบนมาร์เก็ตเพลสลดลงจนยอดขายตก ควรแก้จากตรงไหนก่อน",
+  "relevant": [
+   "customer-satisfaction-tracking"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "อยากรู้ล่วงหน้าว่าสมาชิกคนไหนกำลังจะหายไป โดยดูจากพฤติกรรมในแชทและการซื้อ",
+  "relevant": [
+   "customer-health-scoring"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ยอดขายเกือบทั้งหมดอยู่บนแพลตฟอร์มออนไลน์ จะให้คะแนนความเสี่ยงลูกค้ารายคนยังไงเมื่อไม่รู้ว่าผู้ซื้อเป็นใคร",
+  "relevant": [
+   "customer-health-scoring"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
  }
 ]
