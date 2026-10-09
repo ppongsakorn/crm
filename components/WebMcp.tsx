@@ -28,7 +28,8 @@ function modelContext(): ModelContext | undefined {
   return d.modelContext ?? n.modelContext;
 }
 
-const pageFor = (slug: string) => `${basePath}/topics/${slug}/`;
+const isMobile = () => location.pathname.startsWith(`${basePath}/mobile`);
+const pageFor = (slug: string) => `${basePath}${isMobile() ? `/mobile/t/${slug}/` : `/topics/${slug}/`}`;
 const url = (slug: string) => `${location.origin}${pageFor(slug)}`;
 const GROUPS = ["attract", "activate", "engage", "grow", "measure", "predict", "retain", "listen", "data"];
 

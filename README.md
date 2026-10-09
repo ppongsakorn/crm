@@ -70,8 +70,10 @@
 ### 🔌 WebMCP
 ทุกหน้าลงทะเบียนเครื่องมือแบบอ่านอย่างเดียว 6 ตัวผ่าน `document.modelContext` (ร่างมาตรฐาน WebMCP ของ W3C WebML CG): `search_topics`, `list_topics`, `get_topic`, `get_faq`, `get_prompts`, `open_topic` ให้ AI agent ในเบราว์เซอร์ที่รองรับเรียกใช้เว็บนี้เป็นเครื่องมือได้ ทดสอบได้ใน Edge/Chrome Canary ที่เปิด flag WebMCP เบราว์เซอร์ทั่วไปไม่ได้รับผลกระทบ ดูรายละเอียดที่หน้า `/architecture`
 
-### 📱 ใช้ได้ทุกที่
-รองรับมือถือ dark mode และทุกหน้าเป็น static โหลดเร็ว
+### 📱 แอปมือถือ (`/mobile/`)
+หน้าจอ native แยกจากเว็บเดสก์ท็อป ไม่ใช่แค่ responsive: top bar + แท็บล่าง 5 ปุ่ม, หน้าค้นหาเต็มจอ, หน้ารายชื่อหัวข้อรายขั้น, หน้าหัวข้อแบบแท็บเลื่อน (ถาม-ตอบ · ขั้นตอน · KPI · Mega Prompt · Prompt 20 · ศัพท์ & บริบท), tap target 44px+, safe-area ของ iPhone, input 16px กัน iOS ซูม เปิดจากมือถือ (จอ ≤ 760px) แล้วพาไปหน้าแอปอัตโนมัติ เลือก "เว็บเต็ม" เพื่อกลับเดสก์ท็อป (จำค่าที่เลือกใน localStorage) และมีลิงก์ "เปิดแบบแอปมือถือ" ท้ายหน้าเดสก์ท็อป หน้า `/mobile/*` ตั้ง `noindex` เพราะหน้าเดสก์ท็อปเป็นฉบับหลัก
+
+รองรับ dark mode และทุกหน้าเป็น static โหลดเร็ว
 
 ---
 
@@ -134,8 +136,9 @@ app/
     advisor/page.tsx        หน้าปรึกษา AI
     architecture/page.tsx   สถาปัตยกรรม การค้นหา และ WebMCP
     updates/page.tsx        ประวัติการอัปเดต
+  mobile/                   แอปมือถือ: หน้าแรก, search, prompts, updates, g/[group], t/[slug]
   api/chat/route.server.ts  endpoint สำหรับ stream คำตอบ (เฉพาะโหมด server)
-components/                 Catalog (ค้นหา), PromptExplorer, Faq, MegaPrompts, PromptList, Chat, WebMcp, WebMcpBadge, …
+components/                 mobile/* (MTabBar, MTabs, MTop, MSearch), Catalog (ค้นหา), PromptExplorer, Faq, MegaPrompts, PromptList, Chat, WebMcp, WebMcpBadge, …
 lib/
   data.ts                   อ่านข้อมูลหัวข้อ / ขั้น / ความรู้
   search/                   tokenize (ตัดคำไทย) · lexical (BM25 + วลี) · semantic (เวกเตอร์ int8) · worker · RRF

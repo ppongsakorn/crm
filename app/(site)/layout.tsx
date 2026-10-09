@@ -2,11 +2,14 @@ import Link from "next/link";
 import { JourneyMark } from "@/components/JourneyMark";
 import { WebMcp } from "@/components/WebMcp";
 import { WebMcpBadge } from "@/components/WebMcpBadge";
-import { aiEnabled, SITE_NAME } from "@/lib/site";
+import { mobileRedirectScript } from "@/lib/mobile";
+import { aiEnabled, basePath, SITE_NAME } from "@/lib/site";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      {/* Phones go to the app view unless the visitor chose the full site. Runs before paint. */}
+      <script dangerouslySetInnerHTML={{ __html: mobileRedirectScript(basePath) }} />
       <header className="site-header">
         <div className="wrap">
           <Link href="/" className="brand">
@@ -44,6 +47,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
               crm.buzzebees.com
             </a>
           </p>
+          <a className="to-mobile" href={`${basePath}/mobile/`} data-view="mobile">
+            เปิดแบบแอปมือถือ
+          </a>
       </footer>
     </>
   );

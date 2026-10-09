@@ -10,7 +10,7 @@ import type { Group, GroupId, PromptItem, Topic } from "@/lib/data";
 const PAGE = 60;
 
 /** Search, filter and copy any of the 500 prompts in the book. */
-export function PromptExplorer({ groups, topics, prompts }: { groups: Group[]; topics: Topic[]; prompts: PromptItem[] }) {
+export function PromptExplorer({ groups, topics, prompts, mobile = false }: { groups: Group[]; topics: Topic[]; prompts: PromptItem[]; mobile?: boolean }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState<GroupId | "all">("all");
   const [limit, setLimit] = useState(PAGE);
@@ -71,7 +71,7 @@ export function PromptExplorer({ groups, topics, prompts }: { groups: Group[]; t
               <span className="pn">{p.id}</span>
               <span className="pt">
                 <PromptText text={p.text} />
-                <Link href={`/topics/${t.slug}`} className="pt-topic">
+                <Link href={`${mobile ? "/mobile/t" : "/topics"}/${t.slug}`} className="pt-topic">
                   {t.emoji} {t.name}
                 </Link>
               </span>

@@ -107,6 +107,12 @@ export default function ArchitecturePage() {
         </table>
       </div>
 
+      <h2 id="mobile">แอปมือถือ</h2>
+      <p>
+        <Link href="/mobile">/mobile</Link> เป็นหน้าจอแยกสำหรับมือถือโดยเฉพาะ มี top bar แท็บล่าง หน้าค้นหาเต็มจอ และหน้าหัวข้อแบบแท็บ ไม่ใช่แค่ย่อหน้าเดสก์ท็อปให้พอดีจอ เมื่อเปิดหน้าเดสก์ท็อปบนจอ ≤ 760px สคริปต์เล็ก ๆ จะสลับไปหน้าแอปที่ตรงกันก่อน render
+        และถ้าผู้ใช้เลือก &quot;เว็บเต็ม&quot; จะจำค่านั้นไว้ ค้นหา AI และ WebMCP ทำงานเหมือนกันทั้งสองมุมมอง
+      </p>
+
       <h2>ที่ปรึกษา AI</h2>
       <p>
         {aiEnabled
@@ -116,6 +122,7 @@ export default function ArchitecturePage() {
 
       <h2>โครงสร้างโค้ด</h2>
       <pre className="arch-tree">{`app/(site)/        หน้าแรก · topics · topics/[slug] ×${topics.length} · prompts · advisor · updates · architecture
+app/mobile/        แอปมือถือ: หน้าแรก · search · prompts · updates · g/[group] · t/[slug]
 app/api/chat/      endpoint stream คำตอบ (เฉพาะโหมด server)
 components/        Catalog (ค้นหา) · Faq · MegaPrompts · PromptList · Chat · WebMcp · WebMcpBadge
 lib/search/        tokenize · lexical (BM25 + วลี) · semantic · worker · RRF

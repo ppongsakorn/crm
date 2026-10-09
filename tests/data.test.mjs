@@ -85,3 +85,24 @@ test("search phrases and labelled queries point at real topics", () => {
     assert.ok(["easy", "medium", "hard"].includes(q.difficulty), `${q.q} difficulty`);
   }
 });
+
+test("mobile app routes map to and from the desktop pages", async () => {
+  const { toMobilePath, toDesktopPath } = await import("../lib/mobile.ts");
+  assert.equal(toMobilePath("/"), "/mobile/");
+  assert.equal(toMobilePath("/topics/"), "/mobile/search/");
+  assert.equal(toMobilePath("/topics/", "#retain"), "/mobile/g/retain/");
+  assert.equal(toMobilePath("/topics/", "#nonsense"), "/mobile/search/");
+  assert.equal(toMobilePath("/topics/churn-prediction/"), "/mobile/t/churn-prediction/");
+  assert.equal(toMobilePath("/prompts/"), "/mobile/prompts/");
+  assert.equal(toMobilePath("/updates/"), "/mobile/updates/");
+  assert.equal(toMobilePath("/architecture/"), null);
+  assert.equal(toMobilePath("/advisor/"), null);
+  assert.equal(toDesktopPath("/mobile/t/churn-prediction/"), "/topics/churn-prediction/");
+  assert.equal(toDesktopPath("/mobile/g/retain/"), "/topics/#retain");
+  assert.equal(toDesktopPath("/mobile/prompts/"), "/prompts/");
+  assert.equal(toDesktopPath("/mobile/"), "/");
+  // every topic has a mobile screen, and the mapping survives a round trip
+  for (const t of topics) assert.equal(toDesktopPath(toMobilePath(`/topics/${t.slug}/`)), `/topics/${t.slug}/`);
+  // the redirect script is built from toMobilePath's source, so it must be self-contained
+  assert.doesNotMatch(toMobilePath.toString(), /\b(KEY|import|require)\b/);
+});
