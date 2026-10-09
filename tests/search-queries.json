@@ -1108,5 +1108,37 @@
   ],
   "difficulty": "easy",
   "kind": "2026"
+ },
+ {
+  "q": "จ่ายค่าคอมให้นักรีวิวไปเยอะ อยากรู้ว่ายอดขายเพิ่มจริงหรือแค่ลูกค้าเดิมกดผ่านลิงก์",
+  "relevant": [
+   "creator-affiliate-marketing"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "เลือกนาโนอินฟลูเอนเซอร์มารีวิวสินค้ายังไงดี",
+  "relevant": [
+   "creator-affiliate-marketing"
+  ],
+  "difficulty": "easy",
+  "kind": "2026"
+ },
+ {
+  "q": "ลองถาม Gemini ว่าคลินิกไหนดีในย่านเรา แต่ไม่มีชื่อคลินิกเราเลย ต้องแก้ตรงไหน",
+  "relevant": [
+   "ai-search-geo"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "คนเปลี่ยนไปค้นหาด้วยแชตบอต ทีม CRM ต้องปรับตัวยังไง",
+  "relevant": [
+   "ai-search-geo"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
  }
 ]
