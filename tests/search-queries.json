@@ -1012,5 +1012,53 @@
   ],
   "difficulty": "hard",
   "kind": "2026"
+ },
+ {
+  "q": "แพลตฟอร์มเก็บค่าคอมแพงขึ้น โปรลด 20% ที่เคยทำยังคุ้มอยู่หรือเปล่า",
+  "relevant": [
+   "pricing-discount-optimization"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ไลฟ์สดแจกโค้ดลดราคาแล้วขายได้เยอะแต่ไม่มีกำไร ต้องวางแผนยังไง",
+  "relevant": [
+   "pricing-discount-optimization"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "ลูกค้าซื้อผ่านมาร์เก็ตเพลสแล้วเราติดต่อเขาไม่ได้ จะชวนซื้อชิ้นที่สองยังไง",
+  "relevant": [
+   "upselling-cross-selling"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "ตั้งบอท AI ในเพจให้แนะนำสินค้าเสริมแบบไม่น่ารำคาญต้องทำยังไง",
+  "relevant": [
+   "upselling-cross-selling"
+  ],
+  "difficulty": "hard",
+  "kind": "2026"
+ },
+ {
+  "q": "จ้างนาโนอินฟลูเอนเซอร์รีวิวสินค้า ต้องบอกคนดูว่าเป็นงานจ้างหรือเปล่า",
+  "relevant": [
+   "referral-advocacy"
+  ],
+  "difficulty": "medium",
+  "kind": "2026"
+ },
+ {
+  "q": "โปรแกรมชวนเพื่อนได้เครดิตแต่มีคนสมัครปลอมเยอะมาก ควรตั้งเงื่อนไขยังไง",
+  "relevant": [
+   "referral-advocacy"
+  ],
+  "difficulty": "easy",
+  "kind": "2026"
  }
 ]
