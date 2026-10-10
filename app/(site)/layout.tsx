@@ -38,15 +38,12 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <a href="https://github.com/ppongsakorn/prompts-book-template-thai" target="_blank" rel="noopener noreferrer">
               500 CRM Prompts Book (Thai Version)
             </a>{" "}
-            โดย <b>BUZZEBEES</b> · หัวข้อใหม่ที่เพิ่มหลังจากนั้นมาจากการค้นคว้าปี 2026 · ส่วนความรู้ถาม-ตอบ ค้นคว้าเพิ่มเติมจากแหล่งสาธารณะและให้ลิงก์อ้างอิงไว้ท้ายแต่ละหัวข้อ · ตัวเลข benchmark เป็นค่าอ้างอิง
+            · หัวข้อใหม่ที่เพิ่มหลังจากนั้นมาจากการค้นคว้าปี 2026 · ส่วนความรู้ถาม-ตอบ ค้นคว้าเพิ่มเติมจากแหล่งสาธารณะและให้ลิงก์อ้างอิงไว้ท้ายแต่ละหัวข้อ · ตัวเลข benchmark เป็นค่าอ้างอิง
             ควรตรวจกับข้อมูลของธุรกิจคุณเอง
             {aiEnabled && " · คำแนะนำจาก AI เป็นข้อมูลประกอบการตัดสินใจ ไม่ใช่คำตัดสินแทนคุณ"}
           </p>
           <p className="footer-links">
-            <Link href="/topics">หัวข้อทั้งหมด</Link> · <Link href="/trends">เทรนด์ 2025–2026</Link> · <Link href="/prompts">Prompt ทั้งหมด</Link> · <Link href="/updates">ประวัติการอัปเดต</Link> · <Link href="/architecture">สถาปัตยกรรมระบบ</Link> ·{" "}
-            <a href="https://crm.buzzebees.com/" target="_blank" rel="noopener noreferrer">
-              crm.buzzebees.com
-            </a>
+            <Link href="/topics">หัวข้อทั้งหมด</Link> · <Link href="/trends">เทรนด์ 2025–2026</Link> · <Link href="/prompts">Prompt ทั้งหมด</Link> · <Link href="/updates">ประวัติการอัปเดต</Link> · <Link href="/architecture">สถาปัตยกรรมระบบ</Link>
           </p>
           <a className="to-mobile" href={`${basePath}/mobile/`} data-view="mobile">
             เปิดแบบแอปมือถือ

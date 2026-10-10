@@ -5,7 +5,7 @@
 
 เว็บไซต์สำหรับเรียนรู้และ**นำ CRM ไปใช้จริง** จัด 31 หัวข้อตาม *วงจรชีวิตลูกค้า 9 ขั้น* (ไม่ใช่ตามฟีเจอร์ซอฟต์แวร์) ทุกหัวข้ออธิบายแบบ**ถาม-ตอบ** มี KPI ขั้นตอนลงมือทำ ข้อผิดพลาดที่พบบ่อย และ **Prompt ต่อยอด** ให้คัดลอกไปใช้กับ AI ได้ทันที พร้อม**ที่ปรึกษา AI** ที่รู้จักทุกหัวข้อในเว็บ
 
-หัวข้อที่ 1–25 และ prompt 500 รายการแรก เรียบเรียงจาก [500 CRM Prompts Book (Thai Version)](https://github.com/ppongsakorn/prompts-book-template-thai/blob/main/crm-prompts-books-template.md) โดย Buzzebees · อีก 6 หัวข้อเพิ่มใหม่จากการค้นคว้าปี 2026 · โครงสร้างเว็บต่อยอดจาก [เข็มทิศกรอบความคิด](https://github.com/ppongsakorn/management-framework)
+หัวข้อที่ 1–25 และ prompt 500 รายการแรก เรียบเรียงจาก [500 CRM Prompts Book (Thai Version)](https://github.com/ppongsakorn/prompts-book-template-thai/blob/main/crm-prompts-books-template.md) · อีก 6 หัวข้อเพิ่มใหม่จากการค้นคว้าปี 2026 · โครงสร้างเว็บต่อยอดจาก [เข็มทิศกรอบความคิด](https://github.com/ppongsakorn/management-framework)
 
 ---
 
@@ -268,7 +268,7 @@ docker run -p 3000:3000 -e ANTHROPIC_API_KEY=... crm-knowledge-hub
 
 ## ลิขสิทธิ์และเครดิต
 
-- โครงสร้างหัวข้อและ prompt 500 รายการ: *500 CRM Prompts Book (Thai Version)* โดย Buzzebees
+- โครงสร้างหัวข้อและ prompt 500 รายการ: *500 CRM Prompts Book (Thai Version)*
 - ส่วนความรู้ถาม-ตอบ เรียบเรียงใหม่จากแหล่งสาธารณะ และให้ลิงก์อ้างอิงไว้ท้ายแต่ละหัวข้อ · ตัวเลข benchmark เป็นค่าอ้างอิงจากแหล่งที่ระบุ ควรตรวจกับข้อมูลของธุรกิจคุณเอง
 - ชื่อผลิตภัณฑ์และเครื่องมือที่กล่าวถึงเป็นเครื่องหมายการค้าของเจ้าของ
 - คำแนะนำจาก AI เป็นข้อมูลประกอบการตัดสินใจ ไม่ใช่คำตัดสินแทนคุณ
