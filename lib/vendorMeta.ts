@@ -92,3 +92,20 @@ export const vendorHost = (v: Pick<Vendor, "url">): string => {
     return "";
   }
 };
+
+/** A deeper company write-up shown in a dialog from the vendor's cards (data/profiles.json, keyed by host). */
+export interface CompanyProfile {
+  name: string;
+  legalName?: string;
+  founded?: string;
+  hq?: string;
+  summary: string;
+  companyClaims?: string;
+  products: { name: string; what: string; url: string }[];
+  integrations?: string[];
+  clients?: { name: string; source: string }[];
+  news?: { date: string; title: string; url: string }[];
+  watchOut?: string[];
+  sources?: string[];
+  disclosure?: string;
+}

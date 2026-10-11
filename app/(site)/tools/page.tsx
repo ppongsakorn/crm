@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ToolsCatalog } from "@/components/ToolsCatalog";
-import { logos, TOOL_SECTIONS, TOOLS_DISCLAIMER, toolCategories, vendorCount } from "@/lib/vendors";
+import { logos, profiles, TOOL_SECTIONS, TOOLS_DISCLAIMER, toolCategories, vendorCount } from "@/lib/vendors";
 
 export const metadata: Metadata = {
   title: "เครื่องมือและผู้ให้บริการ CRM",
@@ -19,7 +19,7 @@ export default function ToolsPage() {
         </p>
         <p className="tools-disclaimer">{TOOLS_DISCLAIMER}</p>
       </div>
-      <ToolsCatalog sections={TOOL_SECTIONS} categories={toolCategories} logos={logos} />
+      <ToolsCatalog sections={TOOL_SECTIONS} categories={toolCategories} logos={logos} profiles={profiles} />
     </>
   );
 }

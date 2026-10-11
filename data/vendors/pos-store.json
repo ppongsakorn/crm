@@ -78,6 +78,52 @@
       "source": "https://www.pospos.co/package"
     },
     {
+      "name": "B-POS (Buzzebees)",
+      "company": "บริษัท บัซซี่บีส์ จำกัด (BUZZEBEES CO., LTD.)",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://crm.buzzebees.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "store",
+        "service"
+      ],
+      "priceTier": "low",
+      "priceNote": "B-POS Standard 490 บาท/เดือน และ Premium 890 บาท/เดือน (ค่าซอฟต์แวร์ ฮาร์ดแวร์ซื้อแยก) แผนร้านใหญ่ขอใบเสนอราคา ตามหน้าเว็บที่เปิด ต.ค. 2026",
+      "thai": "ภาษาไทย ทีมไทย เชื่อม LINE OA ผ่าน LINE LIFF ให้ลูกค้าสะสมแต้มด้วยเบอร์โทรหรือ QR รับออเดอร์ Grab และ LINE MAN และรับเงินผ่าน QR หรือ E-Wallet",
+      "goodFor": "ร้านอาหาร คาเฟ่ และร้านบริการที่มีหลายสาขาหรือแฟรนไชส์ และอยากผูกการขายหน้าร้านกับแต้มบน LINE OA",
+      "watchOut": "ระบบแต้มอยู่ใน CRM PLUS ซึ่งมีหน้าราคาแยก ควรถามราคารวมก่อน และการทดลองใช้ต้องติดต่อทีมงาน",
+      "source": "https://crm.buzzebees.com/b-pos/",
+      "productUrl": "https://crm.buzzebees.com/b-pos/",
+      "products": [
+        {
+          "name": "CRM PLUS",
+          "url": "https://crm.buzzebees.com/crmplus/",
+          "what": "ระบบสมาชิกและสะสมแต้มสำเร็จรูปบน LINE OA และเว็บไซต์สำหรับร้านค้า SME มีระดับสมาชิก ชวนเพื่อน ส่งข้อความเฉพาะกลุ่ม และ Dashboard"
+        },
+        {
+          "name": "B-POS",
+          "url": "https://crm.buzzebees.com/b-pos/",
+          "what": "โปรแกรมขายหน้าร้านบนคลาวด์สำหรับร้านอาหาร คาเฟ่ และร้านค้าปลีก มีสต็อก รับออเดอร์เดลิเวอรี รับเงิน QR/E-Wallet และเชื่อมกับ CRM PLUS ได้"
+        },
+        {
+          "name": "E-Payment",
+          "url": "https://crm.buzzebees.com/e-payment/",
+          "what": "ให้ร้านค้ารับเงินจากหลาย E-Wallet ในระบบเดียว เช่น PromptPay, TrueMoney Wallet, ShopeePay และ Alipay"
+        },
+        {
+          "name": "B-Giftcard",
+          "url": "https://crm.buzzebees.com/b-giftcard/",
+          "what": "ระบบบัตรของขวัญดิจิทัลของร้าน ลูกค้าซื้อด้วยเบอร์โทรและส่งให้เพื่อนได้ ร้านรับชำระผ่าน Merchant App หรือ B-POS"
+        }
+      ],
+      "disclosure": "ผู้จัดทำเว็บไซต์นี้ทำงานที่ Buzzebees การ์ดนี้ใช้เกณฑ์เดียวกับผู้ให้บริการรายอื่น และอ้างอิงจากหน้าเว็บทางการ"
+    },
+    {
       "name": "Loyverse POS",
       "company": "Loyverse Commerce Ltd.",
       "origin": "intl",

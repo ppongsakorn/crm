@@ -1,6 +1,7 @@
 import raw from "@/data/vendors.json";
 import logoMap from "@/data/logos.json";
-import { vendorHost, type ToolCategory, type ToolRef } from "@/lib/vendorMeta";
+import profileMap from "@/data/profiles.json";
+import { vendorHost, type CompanyProfile, type ToolCategory, type ToolRef } from "@/lib/vendorMeta";
 
 export * from "@/lib/vendorMeta";
 
@@ -39,3 +40,6 @@ export function toolRefs(): Record<string, ToolRef> {
 
 /** host → file in public/logos (scripts/fetch-logos.py). */
 export const logos = logoMap as Record<string, string>;
+
+/** host → company profile, for the few vendors researched in depth. */
+export const profiles = profileMap as Record<string, CompanyProfile>;

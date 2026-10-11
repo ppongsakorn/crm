@@ -103,6 +103,54 @@
       "productUrl": "https://zwiz.app/th/zrmz"
     },
     {
+      "name": "Buzzebees",
+      "company": "บริษัท บัซซี่บีส์ จำกัด (BUZZEBEES CO., LTD.)",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://crm.buzzebees.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "store",
+        "online",
+        "service"
+      ],
+      "priceTier": "low",
+      "priceNote": "CRM PLUS สำหรับร้านค้า: Basic Plus 2,990 บาท/เดือน และ Premium 5,990 บาท/เดือน (รวม VAT) ทดลอง Premium ฟรี 15 วัน ตามหน้าราคาที่เปิด ต.ค. 2026 แต่ FAQ หน้าเดียวกันเขียนว่าเริ่ม 1,290 บาท ระบบ Loyalty สำหรับองค์กรและแผน Enterprise ติดต่อฝ่ายขาย",
+      "thai": "บริษัทไทย เว็บและทีมภาษาไทย ทำระบบสมาชิก สะสมแต้ม และแลกรางวัลบน LINE OA ได้ ทั้ง CRM PLUS และระบบองค์กร หรือทำเป็นแอปของแบรนด์",
+      "goodFor": "องค์กรที่อยากได้ระบบสมาชิกพร้อมของรางวัลจากผู้ให้บริการเดียว และร้านหลายสาขาที่อยากได้ระบบแต้มบน LINE OA แบบสำเร็จรูป",
+      "watchOut": "ระบบองค์กรขายแบบโปรเจกต์ ต้องพัฒนาก่อนใช้และไม่บอกราคา ส่วน CRM PLUS จำกัดจำนวนสมาชิกและสาขาตามแพ็กเกจ",
+      "source": "https://crm.buzzebees.com/customer-loyalty-program/",
+      "productUrl": "https://crm.buzzebees.com/customer-loyalty-program/",
+      "products": [
+        {
+          "name": "CRM Loyalty & Marketing Solutions",
+          "url": "https://crm.buzzebees.com/customer-loyalty-program/",
+          "what": "รับออกแบบและพัฒนาระบบสมาชิก สะสมแต้ม Gamification และแลกของรางวัลให้แบรนด์ ใช้งานผ่านแอปของแบรนด์ LINE OA หรือ SMS ก็ได้ เหมาะกับองค์กรขนาดกลางถึงใหญ่"
+        },
+        {
+          "name": "Rewards & Privileges Management (BEES Rewards)",
+          "url": "https://crm.buzzebees.com/rewards-and-privileges-management/",
+          "what": "จัดหาของรางวัลและสิทธิพิเศษให้โปรแกรมสมาชิก เช่น e-Voucher เติมเงิน ของส่งถึงบ้าน และโอนแต้ม BEES Rewards เป็นแค็ตตาล็อกให้แบรนด์เลือกของเองแบบจ่ายเมื่อมีการแลก (Pay-Per-Redeem)"
+        },
+        {
+          "name": "CRM PLUS",
+          "url": "https://crm.buzzebees.com/crmplus/",
+          "what": "ระบบสมาชิกและสะสมแต้มสำเร็จรูปบน LINE OA และเว็บไซต์สำหรับร้านค้า SME มีระดับสมาชิก ชวนเพื่อน ส่งข้อความเฉพาะกลุ่ม และ Dashboard"
+        },
+        {
+          "name": "B-Giftcard",
+          "url": "https://crm.buzzebees.com/b-giftcard/",
+          "what": "ระบบบัตรของขวัญดิจิทัลของร้าน ลูกค้าซื้อด้วยเบอร์โทรและส่งให้เพื่อนได้ ร้านรับชำระผ่าน Merchant App หรือ B-POS"
+        }
+      ],
+      "disclosure": "ผู้จัดทำเว็บไซต์นี้ทำงานที่ Buzzebees การ์ดนี้ใช้เกณฑ์เดียวกับผู้ให้บริการรายอื่น และอ้างอิงจากหน้าเว็บทางการ"
+    },
+    {
       "name": "Smile.io",
       "company": "Smile.io",
       "origin": "intl",

@@ -189,7 +189,7 @@ test("tools catalogue: every category complete, Thai and international, own comp
     assert.equal(c.id, id);
     for (const k of ["name", "en", "what", "whenNeeded", "freeStart"]) assert.ok(c[k]?.trim(), `${id} ${k}`);
     assert.ok(c.chooseBy.length >= 3, `${id} chooseBy`);
-    assert.ok(c.vendors.length >= 5 && c.vendors.length <= 9, `${id} vendor count`);
+    assert.ok(c.vendors.length >= 5 && c.vendors.length <= 10, `${id} vendor count`);
     const names = new Set();
     for (const v of c.vendors) {
       const w = `${id}/${v.name}`;

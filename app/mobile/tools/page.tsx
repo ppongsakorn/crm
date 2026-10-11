@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { MTop } from "@/components/mobile/MTop";
 import { ToolsCatalog } from "@/components/ToolsCatalog";
-import { logos, TOOL_SECTIONS, TOOLS_DISCLAIMER, toolCategories, vendorCount } from "@/lib/vendors";
+import { logos, profiles, TOOL_SECTIONS, TOOLS_DISCLAIMER, toolCategories, vendorCount } from "@/lib/vendors";
 
 export const metadata: Metadata = { title: "เครื่องมือและผู้ให้บริการ CRM" };
 
@@ -17,7 +17,7 @@ export default function MobileTools() {
           </p>
           <p className="tools-disclaimer">{TOOLS_DISCLAIMER}</p>
         </header>
-        <ToolsCatalog sections={TOOL_SECTIONS} categories={toolCategories} logos={logos} mobile />
+        <ToolsCatalog sections={TOOL_SECTIONS} categories={toolCategories} logos={logos} profiles={profiles} mobile />
       </main>
     </>
   );

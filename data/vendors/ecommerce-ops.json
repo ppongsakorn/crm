@@ -78,6 +78,35 @@
       "source": "https://package.shipnity.com/"
     },
     {
+      "name": "Buzzebees E-Commerce Enabler",
+      "company": "บริษัท บัซซี่บีส์ จำกัด (BUZZEBEES CO., LTD.)",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://crm.buzzebees.com/",
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "enterprise",
+      "priceNote": "ไม่แสดงราคาบนเว็บ ติดต่อฝ่ายขาย (ต.ค. 2026)",
+      "thai": "บริษัทไทย ดูแลร้านบน Shopee, Lazada และ TikTok Shop และทำช่องทางขายของแบรนด์บน LINE OA เว็บไซต์ หรือแอป",
+      "goodFor": "แบรนด์ที่อยากจ้างทีมดูแลร้านบน Marketplace ทั้งหน้าร้าน โฆษณา แพ็กของ และ Live แล้วต่อข้อมูลเข้าระบบสมาชิก",
+      "watchOut": "เป็นบริการจ้างดูแลมากกว่าซอฟต์แวร์ที่สมัครใช้เอง และหน้าเว็บไม่บอกราคาหรือเงื่อนไขสัญญา",
+      "source": "https://crm.buzzebees.com/e-commerce-service/",
+      "productUrl": "https://crm.buzzebees.com/e-commerce-service/",
+      "products": [
+        {
+          "name": "E-Commerce Enabler Service",
+          "url": "https://crm.buzzebees.com/e-commerce-service/",
+          "what": "รับดูแลร้านบน Shopee, Lazada และ TikTok Shop ทั้งหน้าร้าน ออเดอร์ สต็อก โฆษณา แพ็กของ และ Live Stream มีระบบ Seller Center รวมออเดอร์หลายช่องทาง และรับทำช่องทางขายของแบรนด์เอง (BRAND.com)"
+        }
+      ],
+      "disclosure": "ผู้จัดทำเว็บไซต์นี้ทำงานที่ Buzzebees การ์ดนี้ใช้เกณฑ์เดียวกับผู้ให้บริการรายอื่น และอ้างอิงจากหน้าเว็บทางการ"
+    },
+    {
       "name": "BigSeller",
       "company": "Shenzhen Douxun Technology Co., Ltd.",
       "origin": "intl",

@@ -5,7 +5,7 @@ import type { Knowledge, Topic } from "@/lib/data";
 import type { Change } from "@/lib/changelog";
 import { basePath } from "@/lib/site";
 import type { BusinessType } from "@/lib/paths";
-import type { Size } from "@/lib/vendorMeta";
+import { vendorHost, type Size } from "@/lib/vendorMeta";
 
 /**
  * WebMCP (W3C WebML CG draft): registers the site's search and content as
@@ -48,7 +48,7 @@ export function WebMcp() {
     const ac = new AbortController();
     let cancelled = false;
     (async () => {
-      const [{ topics, getKnowledge, groups }, { searchDocs }, { phraseEngine }, phrasesMod, { makeEngine }, prompts, changelogMod, { starterPath }, { toolCategories, TOOLS_DISCLAIMER }] = await Promise.all([
+      const [{ topics, getKnowledge, groups }, { searchDocs }, { phraseEngine }, phrasesMod, { makeEngine }, prompts, changelogMod, { starterPath }, { toolCategories, TOOLS_DISCLAIMER, profiles }] = await Promise.all([
         import("@/lib/data"),
         import("@/lib/searchDocs"),
         import("@/lib/search/lexical"),
@@ -62,7 +62,7 @@ export function WebMcp() {
       if (cancelled) return;
       const knowledge: Record<string, Knowledge> = Object.fromEntries(topics.map((t) => [t.slug, getKnowledge(t.slug)]).filter(([, k]) => k) as [string, Knowledge][]);
       const search = phraseEngine(searchDocs, phrasesMod.default as Record<string, string[]>);
-      register(ctx, ac.signal, topics, knowledge, search, { groups, makeEngine, prompts, changelog: changelogMod.default as Change[], starterPath, toolCategories, TOOLS_DISCLAIMER });
+      register(ctx, ac.signal, topics, knowledge, search, { groups, makeEngine, prompts, changelog: changelogMod.default as Change[], starterPath, toolCategories, TOOLS_DISCLAIMER, profiles });
     })().catch((e) => console.warn("WebMCP setup failed", e));
     return () => {
       cancelled = true;
@@ -86,9 +86,10 @@ function register(
     starterPath: import("@/lib/paths").JourneyPath;
     toolCategories: import("@/lib/vendors").ToolCategory[];
     TOOLS_DISCLAIMER: string;
+    profiles: Record<string, import("@/lib/vendorMeta").CompanyProfile>;
   },
 ) {
-  const { groups, makeEngine, prompts, changelog, starterPath, toolCategories, TOOLS_DISCLAIMER } = extra;
+  const { groups, makeEngine, prompts, changelog, starterPath, toolCategories, TOOLS_DISCLAIMER, profiles } = extra;
   {
     const bySlug = new Map(topics.map((t) => [t.slug, t]));
     const summary = (t: Topic) => {
@@ -418,13 +419,15 @@ function register(
               freeStart: c.freeStart,
               note: c.note,
               url: `${page}#${c.id}`,
-              vendors: c.vendors.filter(
+              vendors: c.vendors
+                .filter(
                 (v) =>
                   (!origin || v.origin === origin) &&
                   (!businessType || v.types.includes(businessType as BusinessType)) &&
                   (!size || v.size.includes(size as Size)) &&
                   (!freeOnly || v.priceTier === "free"),
-              ),
+                )
+                .map((v) => ({ ...v, companyProfile: profiles[vendorHost(v)] })),
             })),
           };
         },

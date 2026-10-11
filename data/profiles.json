@@ -1,0 +1,270 @@
+{
+ "crm.buzzebees.com": {
+  "name": "Buzzebees",
+  "legalName": "บริษัท บัซซี่บีส์ จำกัด (BUZZEBEES CO., LTD.) เลขทะเบียนนิติบุคคล 0105555078063",
+  "founded": "2012 (จดทะเบียน 30 พ.ค. 2012)",
+  "hq": "อาคารวงศ์วานิช คอมเพล็กซ์ บี ชั้น 25–26 ถนนพระราม 9 ห้วยขวาง กรุงเทพฯ 10310",
+  "summary": "Buzzebees (บริษัท บัซซี่บีส์ จำกัด) เป็นบริษัทไทยที่ก่อตั้งในปี 2012 มีสำนักงานใหญ่ที่ถนนพระราม 9 กรุงเทพฯ งานหลักคือออกแบบและพัฒนาระบบสมาชิก สะสมแต้ม และแลกของรางวัลให้แบรนด์และองค์กร พร้อมจัดหาของรางวัลจากเครือข่ายร้านค้าพันธมิตร บริษัทยังรับดูแลร้านบน Shopee, Lazada และ TikTok Shop และทำ Affiliate Marketing ภายใต้ชื่อ MEDIABUZZ สำหรับร้านค้า SME มีเครื่องมือสำเร็จรูปคือ CRM PLUS บน LINE OA และ B-POS ซึ่งแสดงราคารายเดือนบนเว็บ ส่วนงานองค์กรต้องขอใบเสนอราคา",
+  "products": [
+   {
+    "name": "CRM Loyalty & Marketing Solutions",
+    "url": "https://crm.buzzebees.com/customer-loyalty-program/",
+    "what": "รับออกแบบและพัฒนาระบบสมาชิก สะสมแต้ม Gamification และแลกของรางวัลให้แบรนด์ ใช้งานผ่านแอปของแบรนด์ LINE OA หรือ SMS ก็ได้ เหมาะกับองค์กรขนาดกลางถึงใหญ่"
+   },
+   {
+    "name": "Rewards & Privileges Management (BEES Rewards)",
+    "url": "https://crm.buzzebees.com/rewards-and-privileges-management/",
+    "what": "จัดหาของรางวัลและสิทธิพิเศษให้โปรแกรมสมาชิก เช่น e-Voucher เติมเงิน ของส่งถึงบ้าน และโอนแต้ม BEES Rewards เป็นแค็ตตาล็อกให้แบรนด์เลือกของเองแบบจ่ายเมื่อมีการแลก (Pay-Per-Redeem)"
+   },
+   {
+    "name": "BEES' Benefit",
+    "url": "https://crm.buzzebees.com/beesbenefit/",
+    "what": "ระบบแต้มและสวัสดิการสำหรับพนักงาน ฝ่าย HR ให้แต้มจากกิจกรรมหรือผลงาน แล้วพนักงานนำแต้มไปแลกของรางวัล ใช้ผ่าน LINE OA หรือแอปได้"
+   },
+   {
+    "name": "Customer Data Platform (CDP)",
+    "url": "https://crm.buzzebees.com/customer-data-platform/",
+    "what": "รวมข้อมูลพฤติกรรมลูกค้าจากหลายช่องทางเพื่อใช้ทำโปรโมชันและแคมเปญเฉพาะกลุ่ม หน้าเว็บให้รายละเอียดสั้นมาก และขายร่วมกับระบบ Loyalty ขององค์กร"
+   },
+   {
+    "name": "BUZZEBEES Technology (CMS, Rule-Based Engine, User Management)",
+    "url": "https://crm.buzzebees.com/technology/",
+    "what": "ระบบหลังบ้านที่อยู่ใต้แพลตฟอร์ม Loyalty ใช้ตั้งแคมเปญ กำหนดเงื่อนไขแต้มตามพฤติกรรมหรือการซื้อ และดูข้อมูลลูกค้ารายคนเพื่อแบ่งกลุ่ม"
+   },
+   {
+    "name": "E-Commerce Enabler Service",
+    "url": "https://crm.buzzebees.com/e-commerce-service/",
+    "what": "รับดูแลร้านบน Shopee, Lazada และ TikTok Shop ทั้งหน้าร้าน ออเดอร์ สต็อก โฆษณา แพ็กของ และ Live Stream มีระบบ Seller Center รวมออเดอร์หลายช่องทาง และรับทำช่องทางขายของแบรนด์เอง (BRAND.com)"
+   },
+   {
+    "name": "CRM PLUS",
+    "url": "https://crm.buzzebees.com/crmplus/",
+    "what": "ระบบสมาชิกและสะสมแต้มสำเร็จรูปบน LINE OA และเว็บไซต์สำหรับร้านค้า SME มีระดับสมาชิก ชวนเพื่อน ส่งข้อความเฉพาะกลุ่ม และ Dashboard"
+   },
+   {
+    "name": "B-POS",
+    "url": "https://crm.buzzebees.com/b-pos/",
+    "what": "โปรแกรมขายหน้าร้านบนคลาวด์สำหรับร้านอาหาร คาเฟ่ และร้านค้าปลีก มีสต็อก รับออเดอร์เดลิเวอรี รับเงิน QR/E-Wallet และเชื่อมกับ CRM PLUS ได้"
+   },
+   {
+    "name": "E-Payment",
+    "url": "https://crm.buzzebees.com/e-payment/",
+    "what": "ให้ร้านค้ารับเงินจากหลาย E-Wallet ในระบบเดียว เช่น PromptPay, TrueMoney Wallet, ShopeePay และ Alipay"
+   },
+   {
+    "name": "B-Giftcard",
+    "url": "https://crm.buzzebees.com/b-giftcard/",
+    "what": "ระบบบัตรของขวัญดิจิทัลของร้าน ลูกค้าซื้อด้วยเบอร์โทรและส่งให้เพื่อนได้ ร้านรับชำระผ่าน Merchant App หรือ B-POS"
+   },
+   {
+    "name": "MEDIABUZZ (Affiliate Marketing Agency)",
+    "url": "https://crm.buzzebees.com/affiliate/",
+    "what": "บริการ Affiliate Marketing จับคู่แบรนด์กับเครือข่ายอินฟลูเอนเซอร์ คิดค่าบริการตามยอดขายที่เกิดขึ้นจริง"
+   }
+  ],
+  "integrations": [
+   "LINE Official Account: ระบบสมาชิก สะสมแต้ม และแลกรางวัลผ่าน LINE OA (CRM PLUS และระบบองค์กร)",
+   "LINE LIFF: B-POS ให้ลูกค้าสะสมแต้มหรือใช้คูปองผ่านหน้า LINE OA ของร้าน",
+   "แอปมือถือของแบรนด์ (ทำใหม่หรือเชื่อมแอปเดิม) และเว็บไซต์",
+   "SMS: ส่ง e-Voucher หรือสิทธิพิเศษโดยไม่ต้องมีแอป",
+   "POS หน้าร้าน: B-POS เชื่อมกับ CRM PLUS และระบบองค์กรระบุว่าเชื่อม Offline POS ได้",
+   "Marketplace: Shopee, Lazada และ TikTok Shop (บริการ E-Commerce และ Seller Center)",
+   "เดลิเวอรี: Grab และ LINE MAN (B-POS)",
+   "การชำระเงิน: PromptPay, TrueMoney Wallet, Dolfin Wallet, ShopeePay, Alipay, บัตรเครดิต และ Dynamic QR ของ KBank (B-POS แผนองค์กร)",
+   "API และการเชื่อม CDP (CRM PLUS แพ็กเกจ Premium และแผนองค์กร)",
+   "เครือข่ายของรางวัลและบริการโอนแต้ม (Point Transfer) และให้สมาชิก Royal Orchid Plus ใช้ไมล์แลกบัตรกำนัลผ่านเครือข่ายของ Buzzebees"
+  ],
+  "clients": [
+   {
+    "name": "Singha (น้ำดื่มสิงห์ / Singha Rewards)",
+    "source": "https://crm.buzzebees.com/our-clients/singha-drinking-water/"
+   },
+   {
+    "name": "Samsung (Galaxy Gift)",
+    "source": "https://crm.buzzebees.com/our-clients/samsung-galaxy-gift/"
+   },
+   {
+    "name": "Lotus's (เดิม Tesco Lotus)",
+    "source": "https://crm.buzzebees.com/our-clients/tesco-lotus/"
+   },
+   {
+    "name": "Allianz Ayudhya",
+    "source": "https://crm.buzzebees.com/our-clients/allianz-ayudhya/"
+   },
+   {
+    "name": "Bangchak",
+    "source": "https://crm.buzzebees.com/our-clients/bangchak/"
+   },
+   {
+    "name": "Burger King",
+    "source": "https://crm.buzzebees.com/our-clients/burger-king/"
+   },
+   {
+    "name": "Krungsri Credit Card",
+    "source": "https://crm.buzzebees.com/our-clients/krungsri-credit-card/"
+   },
+   {
+    "name": "Mega Bangna",
+    "source": "https://crm.buzzebees.com/our-clients/mega-bangna/"
+   },
+   {
+    "name": "Ocean Life (ไทยสมุทรประกันชีวิต)",
+    "source": "https://crm.buzzebees.com/our-clients/ocean-life-insurance/"
+   },
+   {
+    "name": "Mead Johnson",
+    "source": "https://crm.buzzebees.com/our-clients/mead-johnson/"
+   },
+   {
+    "name": "ไปรษณีย์ไทย (POST Family)",
+    "source": "https://crm.buzzebees.com/blog/2026/08/19/thailand-post-post-family-martech-award-2026/"
+   },
+   {
+    "name": "GDH (GDH CIRCLES)",
+    "source": "https://crm.buzzebees.com/blog/2026/09/17/buzzebees-gdh-circles-fan-engagement-crm/"
+   },
+   {
+    "name": "Pepsi (PEPSI MITRCHUANKIN)",
+    "source": "https://crm.buzzebees.com/blog/2026/08/27/pepsi-mitrchuankin-martech-awards-2026/"
+   },
+   {
+    "name": "guardian Malaysia (MYguardian Rewards)",
+    "source": "https://crm.buzzebees.com/blog/2026/08/27/myguardian-rewards-loyalty-programme-award-2026/"
+   },
+   {
+    "name": "I.P. One",
+    "source": "https://crm.buzzebees.com/blog/2026/08/26/ip-one-buzzebees-ecommerce-full-funnel-growth/"
+   },
+   {
+    "name": "Food Passion (BEES' Benefit)",
+    "source": "https://crm.buzzebees.com/blog/2025/03/25/%e0%b8%9f%e0%b8%b9%e0%b9%89%e0%b8%94%e0%b9%81%e0%b8%9e%e0%b8%8a%e0%b8%8a%e0%b8%b1%e0%b9%88%e0%b8%99-%e0%b8%9c%e0%b8%99%e0%b8%b6%e0%b8%81-buzzebees-%e0%b9%80%e0%b8%9b%e0%b8%b4/"
+   },
+   {
+    "name": "โรงแรมสุโขทัย กรุงเทพฯ (BEES' Benefit)",
+    "source": "https://crm.buzzebees.com/blog/2025/06/20/%e0%b9%82%e0%b8%a3%e0%b8%87%e0%b9%81%e0%b8%a3%e0%b8%a1%e0%b8%aa%e0%b8%b8%e0%b9%82%e0%b8%82%e0%b8%97%e0%b8%b1%e0%b8%a2-%e0%b8%81%e0%b8%a3%e0%b8%b8%e0%b8%87%e0%b9%80%e0%b8%97%e0%b8%9e%e0%b8%af-%e0%b8%88/"
+   },
+   {
+    "name": "AIA (แอป AIA+ ร่วมกับ FPT)",
+    "source": "https://fptsoftware.com/newsroom/news-and-press-releases/news/fpt-forges-partnership-with-thai-loyalty-platform-leader-buzzebees"
+   },
+   {
+    "name": "Dutch Mill, JCB, Syngenta, Abbott (คำรับรองบนหน้าแรก)",
+    "source": "https://crm.buzzebees.com/"
+   }
+  ],
+  "news": [
+   {
+    "date": "2024-07",
+    "title": "เปิดตัว BEES' Benefit แพลตฟอร์มแต้มและสวัสดิการพนักงาน",
+    "url": "https://crm.buzzebees.com/blog/2024/07/09/buzzebees-beesbenefit-hr-platform/"
+   },
+   {
+    "date": "2024-07",
+    "title": "เปิดตัวธุรกิจ Affiliate Marketing ชื่อ MEDIABUZZ",
+    "url": "https://crm.buzzebees.com/blog/2024/07/09/buzzebees-open-house-2024/"
+   },
+   {
+    "date": "2025-03",
+    "title": "จับมือ Royal Orchid Plus ของการบินไทย ให้สมาชิกใช้ไมล์แลกบัตรกำนัลและคูปอง",
+    "url": "https://crm.buzzebees.com/blog/2025/03/05/%e0%b8%a3%e0%b8%ad%e0%b8%a2%e0%b8%b1%e0%b8%a5-%e0%b8%ad%e0%b8%ad%e0%b8%a3%e0%b9%8c%e0%b8%84%e0%b8%b4%e0%b8%94-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%aa-%e0%b8%88%e0%b8%b1%e0%b8%9a%e0%b8%a1%e0%b8%b7/"
+   },
+   {
+    "date": "2025-03",
+    "title": "Food Passion ใช้ BEES' Benefit ทำ HR Engagement Solution",
+    "url": "https://crm.buzzebees.com/blog/2025/03/25/%e0%b8%9f%e0%b8%b9%e0%b9%89%e0%b8%94%e0%b9%81%e0%b8%9e%e0%b8%8a%e0%b8%8a%e0%b8%b1%e0%b9%88%e0%b8%99-%e0%b8%9c%e0%b8%99%e0%b8%b6%e0%b8%81-buzzebees-%e0%b9%80%e0%b8%9b%e0%b8%b4/"
+   },
+   {
+    "date": "2025-05",
+    "title": "ลงนามความร่วมมือกับ FPT เพื่อขยายงานในอาเซียน",
+    "url": "https://fptsoftware.com/newsroom/news-and-press-releases/news/fpt-forges-partnership-with-thai-loyalty-platform-leader-buzzebees"
+   },
+   {
+    "date": "2025-06",
+    "title": "MEDIABUZZ ได้รางวัล Thailand Affiliate of the Year จาก Lazada SEA Awards 2025",
+    "url": "https://crm.buzzebees.com/blog/2025/06/02/mediabuzz-%e0%b8%84%e0%b8%a7%e0%b9%89%e0%b8%b2%e0%b8%a3%e0%b8%b2%e0%b8%87%e0%b8%a7%e0%b8%b1%e0%b8%a5-thailand-affiliate-of-the-year-%e0%b9%81%e0%b8%a5%e0%b8%b0-top-partner-3-%e0%b8%9b%e0%b8%a3/"
+   },
+   {
+    "date": "2025-06",
+    "title": "โรงแรมสุโขทัย กรุงเทพฯ ใช้ BEES' Benefit ดูแลสวัสดิการพนักงาน",
+    "url": "https://crm.buzzebees.com/blog/2025/06/20/%e0%b9%82%e0%b8%a3%e0%b8%87%e0%b9%81%e0%b8%a3%e0%b8%a1%e0%b8%aa%e0%b8%b8%e0%b9%82%e0%b8%82%e0%b8%97%e0%b8%b1%e0%b8%a2-%e0%b8%81%e0%b8%a3%e0%b8%b8%e0%b8%87%e0%b9%80%e0%b8%97%e0%b8%9e%e0%b8%af-%e0%b8%88/"
+   },
+   {
+    "date": "2026-02",
+    "title": "ประกาศกลยุทธ์ 'Beyond Loyalty' ใส่ AI Engine ในระบบ (THE STANDARD รายงานรายได้ปี 2025 ที่ 3.15 พันล้านบาท)",
+    "url": "https://thestandard.co/buzzbees-ai-digital-infrastructure-2026/"
+   },
+   {
+    "date": "2026-06",
+    "title": "ได้รางวัล Silver จาก Thailand's MarTech Awards 2026 จากงาน PEPSI MITRCHUANKIN",
+    "url": "https://www.marketingoops.com/pr-news/pepsi-x-buzzebees/"
+   },
+   {
+    "date": "2026-08",
+    "title": "ไปรษณีย์ไทยยกระดับ POST Family ร่วมกับ Buzzebees ได้รางวัล Gold จาก MARTECH EXPO 2026",
+    "url": "https://crm.buzzebees.com/blog/2026/08/19/thailand-post-post-family-martech-award-2026/"
+   },
+   {
+    "date": "2026-08",
+    "title": "ได้รางวัล Best Technology Utilization of the Year จาก Global MarTech Integration Day 2026 (งาน Fordago)",
+    "url": "https://crm.buzzebees.com/blog/2026/08/24/buzzebees-best-technology-utilization-fordago-2026/"
+   },
+   {
+    "date": "2026-08",
+    "title": "MYguardian Rewards ที่ใช้เทคโนโลยี Buzzebees ได้รางวัล Loyalty Programme of the Year – Malaysia",
+    "url": "https://crm.buzzebees.com/blog/2026/08/27/myguardian-rewards-loyalty-programme-award-2026/"
+   },
+   {
+    "date": "2026-09",
+    "title": "ได้รางวัล The Sauciest Tech Scaleup จาก Techsauce Awards 2026",
+    "url": "https://crm.buzzebees.com/blog/2026/09/07/buzzebees-the-sauciest-tech-scaleup-techsauce-awards-2026/"
+   },
+   {
+    "date": "2026-09",
+    "title": "GDH เปิด GDH CIRCLES แพลตฟอร์ม CRM แฟนหนัง ร่วมกับ Buzzebees",
+    "url": "https://crm.buzzebees.com/blog/2026/09/17/buzzebees-gdh-circles-fan-engagement-crm/"
+   },
+   {
+    "date": "2026-10",
+    "title": "ได้รางวัล 2026 Thailand Lazada Partner – Overall Performance Award ปีที่ 3 ติดต่อกัน",
+    "url": "https://crm.buzzebees.com/blog/2026/10/07/buzzebees-lazada-partner-award-2026/"
+   },
+   {
+    "date": "2026-10",
+    "title": "ได้รางวัลชนะเลิศด้านเศรษฐกิจ เวทีรางวัลนวัตกรรมแห่งชาติ 2569 (NIA Awards)",
+    "url": "https://crm.buzzebees.com/blog/2026/10/09/buzzebees-national-innovation-awards-2026/"
+   }
+  ],
+  "watchOut": [
+   "งานฝั่งองค์กรขายแบบโปรเจกต์ ต้องออกแบบและพัฒนาระบบก่อนเปิดใช้ และไม่เปิดเผยราคา",
+   "ราคาที่เปิดเผยมีเฉพาะ CRM PLUS และ B-POS สำหรับร้านค้า SME",
+   "หน้าราคา CRM PLUS แสดงตัวเลขไม่ตรงกัน (ตาราง 2,990 บาท แต่ FAQ เขียนเริ่ม 1,290 บาท) ควรขอใบเสนอราคา",
+   "ตัวเลขอย่าง 200 ล้านบัญชี 2,000 แพลตฟอร์ม และเครือข่ายร้านค้า 30,000 สาขา เป็นตัวเลขที่บริษัทระบุเอง",
+   "กรณีศึกษาหลายรายในหน้า Our Clients ไม่มีวันที่ และบางรายใช้ชื่อแบรนด์เดิม เช่น Tesco Lotus",
+   "หน้า CDP บนเว็บมีรายละเอียดน้อย จึงควรขอดูเดโมและขอบเขตข้อมูลก่อนตัดสินใจ"
+  ],
+  "companyClaims": "ตามที่บริษัทระบุ: มีผู้ใช้ในระบบกว่า 200 ล้านบัญชี มากกว่า 2,000 แพลตฟอร์มที่เปิดใช้งาน ทำงานกับกว่า 500 แบรนด์ และดำเนินงานใน 6 ประเทศ (ไทย มาเลเซีย เวียดนาม อินโดนีเซีย ลาว ฟิลิปปินส์)",
+  "sources": [
+   "https://crm.buzzebees.com/",
+   "https://crm.buzzebees.com/about-us/",
+   "https://crm.buzzebees.com/our-clients/",
+   "https://crm.buzzebees.com/partners/",
+   "https://crm.buzzebees.com/customer-loyalty-program/",
+   "https://crm.buzzebees.com/rewards-and-privileges-management/",
+   "https://crm.buzzebees.com/crmplus/",
+   "https://crm.buzzebees.com/b-pos/",
+   "https://crm.buzzebees.com/e-commerce-service/",
+   "https://crm.buzzebees.com/e-payment/",
+   "https://crm.buzzebees.com/b-giftcard/",
+   "https://crm.buzzebees.com/beesbenefit/",
+   "https://crm.buzzebees.com/customer-data-platform/",
+   "https://crm.buzzebees.com/technology/",
+   "https://crm.buzzebees.com/affiliate/",
+   "https://data.creden.co/company/general/0105555078063",
+   "https://thestandard.co/buzzbees-ai-digital-infrastructure-2026/",
+   "https://www.marketingoops.com/pr-news/buzzebees-full-funnel-2026/",
+   "https://www.marketingoops.com/pr-news/pepsi-x-buzzebees/",
+   "https://fptsoftware.com/newsroom/news-and-press-releases/news/fpt-forges-partnership-with-thai-loyalty-platform-leader-buzzebees"
+  ],
+  "disclosure": "ผู้จัดทำเว็บไซต์นี้ทำงานที่ Buzzebees การ์ดนี้ใช้เกณฑ์เดียวกับผู้ให้บริการรายอื่น และอ้างอิงจากหน้าเว็บทางการ"
+ }
+}

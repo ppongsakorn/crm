@@ -2,8 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { BusinessType } from "@/lib/paths";
+import { CompanyProfileDialog } from "@/components/CompanyProfileDialog";
 import { basePath } from "@/lib/site";
-import { CATEGORY_EMOJI, CATEGORY_SHORT, SIZE_LABEL, TIER_LABEL, vendorHost, type Origin, type PriceTier, type Size, type ToolCategory, type Vendor } from "@/lib/vendorMeta";
+import { CATEGORY_EMOJI, CATEGORY_SHORT, SIZE_LABEL, TIER_LABEL, vendorHost, type CompanyProfile, type Origin, type PriceTier, type Size, type ToolCategory, type Vendor } from "@/lib/vendorMeta";
 
 const TYPE_KEY = "crm-path-type"; // shared with the starter path
 const TYPES: { id: BusinessType; label: string }[] = [
@@ -30,7 +31,7 @@ export function VendorLogo({ v, logos }: { v: Vendor; logos: Record<string, stri
 }
 
 /** One provider: the essentials up front, the rest folded away. */
-export function VendorCard({ v, logos }: { v: Vendor; logos: Record<string, string> }) {
+export function VendorCard({ v, logos, onProfile }: { v: Vendor; logos: Record<string, string>; onProfile?: (host: string) => void }) {
   const page = v.productUrl ?? v.url;
   return (
     <article className={`vcard${v.disclosure ? " disclosed" : ""}`}>
@@ -47,6 +48,11 @@ export function VendorCard({ v, logos }: { v: Vendor; logos: Record<string, stri
         </div>
       </header>
       {v.disclosure && <p className="vc-disclosure">{v.disclosure}</p>}
+      {onProfile && (
+        <button type="button" className="vc-profile" onClick={() => onProfile(vendorHost(v))}>
+          ข้อมูลบริษัทเต็ม: ผลิตภัณฑ์ ลูกค้า ข่าว ›
+        </button>
+      )}
       <p className="vc-good">{v.goodFor}</p>
       <p className="vc-price">{v.priceNote}</p>
       <details className="vc-more">
@@ -102,11 +108,11 @@ export function VendorCard({ v, logos }: { v: Vendor; logos: Record<string, stri
   );
 }
 
-function Grid({ vendors, logos }: { vendors: Vendor[]; logos: Record<string, string> }) {
+function Grid({ vendors, logos, profiles, onProfile }: { vendors: Vendor[]; logos: Record<string, string>; profiles: Record<string, CompanyProfile>; onProfile: (host: string) => void }) {
   return (
     <div className="vgrid">
       {vendors.map((v) => (
-        <VendorCard key={v.name} v={v} logos={logos} />
+        <VendorCard key={v.name} v={v} logos={logos} onProfile={profiles[vendorHost(v)] ? onProfile : undefined} />
       ))}
     </div>
   );
@@ -118,7 +124,20 @@ function Grid({ vendors, logos }: { vendors: Vendor[]; logos: Record<string, str
  * (origin, business type, size, free plan); counts update everywhere. The open
  * category lives in the URL hash so /tools#crm-core links straight to it.
  */
-export function ToolsCatalog({ sections, categories, logos, mobile = false }: { sections: { title: string; ids: string[] }[]; categories: ToolCategory[]; logos: Record<string, string>; mobile?: boolean }) {
+export function ToolsCatalog({
+  sections,
+  categories,
+  logos,
+  profiles = {},
+  mobile = false,
+}: {
+  sections: { title: string; ids: string[] }[];
+  categories: ToolCategory[];
+  logos: Record<string, string>;
+  profiles?: Record<string, CompanyProfile>;
+  mobile?: boolean;
+}) {
+  const [profile, setProfile] = useState<string | null>(null);
   const [q, setQ] = useState("");
   const [origin, setOrigin] = useState<Origin | null>(null);
   const [type, setType] = useState<BusinessType | null>(null);
@@ -190,6 +209,9 @@ export function ToolsCatalog({ sections, categories, logos, mobile = false }: { 
 
   return (
     <div className="tools" ref={top}>
+      {profile && profiles[profile] && (
+        <CompanyProfileDialog profile={profiles[profile]} logo={logos[profile] ? `${basePath}/logos/${logos[profile]}` : undefined} onClose={() => setProfile(null)} />
+      )}
       <div className="tools-bar">
         <label className="tools-search">
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
@@ -282,7 +304,7 @@ export function ToolsCatalog({ sections, categories, logos, mobile = false }: { 
                         {CATEGORY_EMOJI[id]} {byId[id].name} <small>{shown[id].length} รายการ ›</small>
                       </button>
                     </h2>
-                    <Grid vendors={shown[id]} logos={logos} />
+                    <Grid vendors={shown[id]} logos={logos} profiles={profiles} onProfile={setProfile} />
                   </section>
                 ))
             )
@@ -402,7 +424,7 @@ export function ToolsCatalog({ sections, categories, logos, mobile = false }: { 
                       <h3>
                         {title} <small>{vs.length}</small>
                       </h3>
-                      <Grid vendors={vs} logos={logos} />
+                      <Grid vendors={vs} logos={logos} profiles={profiles} onProfile={setProfile} />
                     </section>
                   ) : null,
                 )
