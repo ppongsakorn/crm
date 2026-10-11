@@ -20,6 +20,12 @@ export interface Vendor {
   goodFor: string;
   watchOut: string;
   source: string;
+  /** Official page of the product that fits this category (falls back to url). */
+  productUrl?: string;
+  /** Product lines worth naming, each with its own page. */
+  products?: { name: string; what: string; url: string }[];
+  /** Conflict-of-interest note shown on the card, e.g. the site author's employer. */
+  disclosure?: string;
 }
 
 /** One kind of software a business uses for CRM, with the providers to compare (data/vendors/<id>.json). */
@@ -47,5 +53,42 @@ export interface ToolRef {
   id: string;
   name: string;
   count: number;
-  vendors: Pick<Vendor, "name" | "url" | "origin" | "country" | "priceTier" | "types" | "size">[];
+  vendors: (Pick<Vendor, "name" | "url" | "productUrl" | "origin" | "country" | "priceTier" | "types" | "size"> & { logo?: string })[];
 }
+
+/** Icon and short tab label per category, for the catalogue's navigation. */
+export const CATEGORY_EMOJI: Record<string, string> = {
+  "crm-core": "🗂️",
+  "pos-store": "🧾",
+  "ecommerce-ops": "📦",
+  "consent-pdpa": "🔐",
+  "chat-commerce": "💬",
+  messaging: "✉️",
+  loyalty: "🎁",
+  helpdesk: "🎧",
+  feedback: "⭐",
+  "data-analytics": "📊",
+  "ai-assistants": "🤖",
+};
+export const CATEGORY_SHORT: Record<string, string> = {
+  "crm-core": "CRM",
+  "pos-store": "POS",
+  "ecommerce-ops": "ร้านออนไลน์",
+  "consent-pdpa": "PDPA",
+  "chat-commerce": "แชต/LINE OA",
+  messaging: "อีเมล/SMS",
+  loyalty: "สะสมแต้ม",
+  helpdesk: "Helpdesk",
+  feedback: "เสียงลูกค้า",
+  "data-analytics": "ข้อมูล",
+  "ai-assistants": "AI",
+};
+
+/** Host used to look up a vendor's logo in data/logos.json. */
+export const vendorHost = (v: Pick<Vendor, "url">): string => {
+  try {
+    return new URL(v.url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+};

@@ -176,7 +176,7 @@ test("starter journey path is complete and points at real topics", () => {
   }
 });
 
-test("tools catalogue: every category complete, Thai and international, no Buzzebees", () => {
+test("tools catalogue: every category complete, Thai and international, own company disclosed", () => {
   const CATS = ["crm-core", "pos-store", "ecommerce-ops", "consent-pdpa", "chat-commerce", "messaging", "loyalty", "helpdesk", "feedback", "data-analytics", "ai-assistants"];
   const files = fs.readdirSync("data/vendors").filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
   assert.deepEqual(files.sort(), [...CATS].sort(), "data/vendors/*.json must match TOOL_SECTIONS in lib/vendors.ts");
@@ -185,7 +185,6 @@ test("tools catalogue: every category complete, Thai and international, no Buzze
   let th = 0;
   for (const id of CATS) {
     const raw = fs.readFileSync(`data/vendors/${id}.json`, "utf8");
-    assert.doesNotMatch(raw, /buzzebees/i, `${id} must not list Buzzebees`);
     const c = JSON.parse(raw);
     assert.equal(c.id, id);
     for (const k of ["name", "en", "what", "whenNeeded", "freeStart"]) assert.ok(c[k]?.trim(), `${id} ${k}`);
@@ -202,9 +201,17 @@ test("tools catalogue: every category complete, Thai and international, no Buzze
       assert.ok(v.types.length && v.types.every((x) => ["online", "store", "service"].includes(x)), `${w} types`);
       for (const k of ["country", "priceNote", "thai", "goodFor", "watchOut"]) assert.ok(v[k]?.trim(), `${w} ${k}`);
       for (const k of ["url", "source"]) assert.match(v[k], /^https:\/\//, `${w} ${k}`);
+      if (v.productUrl) assert.match(v.productUrl, /^https:\/\//, `${w} productUrl`);
+      for (const p of v.products ?? []) assert.ok(p.name && p.what && /^https:\/\//.test(p.url), `${w} product ${p.name}`);
+      // the site author works at Buzzebees: its entries must say so on the card
+      if (/buzzebees/i.test(v.name + (v.company ?? ""))) assert.match(v.disclosure ?? "", /Buzzebees/, `${w} needs a disclosure`);
       if (v.origin === "th") th++;
     }
     assert.ok(c.vendors.some((v) => v.origin === "th") || c.note, `${id}: no Thai vendor and no note explaining why`);
   }
   assert.ok(th >= 15, `only ${th} Thai vendors in the catalogue`);
+  // every logo in the map exists on disk
+  const logos = JSON.parse(fs.readFileSync("data/logos.json", "utf8"));
+  for (const [host, f] of Object.entries(logos)) assert.ok(fs.existsSync(`public/logos/${f}`), `logo for ${host} missing`);
+  assert.ok(Object.keys(logos).length >= 60, "most vendors should have a logo");
 });

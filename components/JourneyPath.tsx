@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FillablePrompt } from "@/components/FillablePrompt";
 import { JourneyMap, type StageState } from "@/components/JourneyMap";
 import type { BusinessType, JourneyPath as Path } from "@/lib/paths";
+import { basePath } from "@/lib/site";
 import { TIER_LABEL, type ToolRef } from "@/lib/vendorMeta";
 
 export interface TopicRef {
@@ -220,7 +221,8 @@ export function JourneyPath({ path, topics, tools = {}, mobile = false }: { path
                                   <div key={o} className="jt-row">
                                     <span>{o === "th" ? "ในประเทศ" : "ต่างประเทศ"}</span>
                                     {list.map((v) => (
-                                      <a key={v.name} className="jt-vendor" href={v.url} target="_blank" rel="noopener noreferrer nofollow">
+                                      <a key={v.name} className="jt-vendor" href={v.productUrl ?? v.url} target="_blank" rel="noopener noreferrer nofollow">
+                                        {v.logo && <img src={`${basePath}/logos/${v.logo}`} alt="" width={18} height={18} loading="lazy" />}
                                         {v.name}
                                         <small>{TIER_LABEL[v.priceTier]}</small>
                                       </a>

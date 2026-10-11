@@ -1,5 +1,6 @@
 import raw from "@/data/vendors.json";
-import type { ToolCategory, ToolRef } from "@/lib/vendorMeta";
+import logoMap from "@/data/logos.json";
+import { vendorHost, type ToolCategory, type ToolRef } from "@/lib/vendorMeta";
 
 export * from "@/lib/vendorMeta";
 
@@ -30,8 +31,11 @@ export function toolRefs(): Record<string, ToolRef> {
         id: c.id,
         name: c.name,
         count: c.vendors.length,
-        vendors: c.vendors.map(({ name, url, origin, country, priceTier, types, size }) => ({ name, url, origin, country, priceTier, types, size })),
+        vendors: c.vendors.map(({ name, url, productUrl, origin, country, priceTier, types, size }) => ({ name, url, productUrl, origin, country, priceTier, types, size, logo: logos[vendorHost({ url })] })),
       },
     ]),
   );
 }
+
+/** host → file in public/logos (scripts/fetch-logos.py). */
+export const logos = logoMap as Record<string, string>;
