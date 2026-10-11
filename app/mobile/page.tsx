@@ -37,7 +37,7 @@ export default function MobileHome() {
         <Link href="/mobile/tools" className="m-card m-path m-tools">
           <b>ต้องใช้ระบบอะไรบ้าง</b>
           <small>
-            ซอฟต์แวร์และผู้ให้บริการ CRM {vendorCount} ราย ทั้งไทยและต่างประเทศ ใน {toolCategories.length} หมวด
+            ซอฟต์แวร์และผู้ให้บริการ CRM {vendorCount} รายการ ทั้งไทยและต่างประเทศ ใน {toolCategories.length} หมวด
           </small>
           <span>ดูเครื่องมือ ›</span>
         </Link>

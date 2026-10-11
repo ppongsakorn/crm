@@ -13,7 +13,7 @@ export default function MobileTools() {
         <header className="m-head">
           <h1>เครื่องมือและผู้ให้บริการ CRM</h1>
           <p>
-            {toolCategories.length} หมวด {vendorCount} ผู้ให้บริการ ไทยและต่างประเทศ
+            {toolCategories.length} หมวด {vendorCount} รายการ ไทยและต่างประเทศ
           </p>
           <p className="tools-disclaimer">{TOOLS_DISCLAIMER}</p>
         </header>

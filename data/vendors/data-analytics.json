@@ -1,0 +1,218 @@
+{
+  "id": "data-analytics",
+  "name": "วิเคราะห์ข้อมูลลูกค้า Dashboard และ CDP",
+  "en": "Customer analytics, dashboards and CDP",
+  "what": "รวมข้อมูลลูกค้าจากเว็บ แอป LINE OA POS และมาร์เก็ตเพลสให้เป็นโปรไฟล์เดียว แล้วแสดงผลเป็น dashboard เพื่อดูยอดซื้อซ้ำ การแบ่งกลุ่ม และผลแคมเปญ CDP ยังส่งกลุ่มลูกค้ากลับไปใช้ยิงข้อความหรือโฆษณาได้",
+  "whenNeeded": "เริ่มจากเครื่องมือฟรีอย่าง GA4 และ Data Studio ได้ทันทีที่มีเว็บหรือร้านออนไลน์ CDP หรือ data warehouse ควรเริ่มเมื่อข้อมูลลูกค้ากระจายหลายระบบจนจับคนเดียวกันไม่ได้ และมีคนดูแลข้อมูลอย่างน้อย 1 คน",
+  "chooseBy": [
+    "เชื่อมแหล่งข้อมูลที่ใช้จริงได้ไหม เช่น LINE OA, POS, Shopee, Lazada, เว็บไซต์ และ CRM",
+    "รวมตัวตนลูกค้าด้วยเบอร์โทร LINE UID หรือรหัสสมาชิกได้ และเก็บสถานะ consent ไปพร้อมข้อมูล",
+    "โมเดลค่าใช้จ่าย เช่น ต่อผู้ใช้ ต่อโปรไฟล์ ต่อ MTU หรือคิดตาม compute ซึ่งคาดเดายากกว่า",
+    "ทีมต้องมีทักษะ SQL หรือวิศวกรข้อมูลแค่ไหน และมีพาร์ทเนอร์ไทยช่วยติดตั้งไหม",
+    "ส่งกลุ่มลูกค้ากลับไปใช้ในช่องทางการตลาดหรือ AI agent ได้ (activation / reverse ETL)"
+  ],
+  "freeStart": "Google Analytics, Data Studio และ Power BI Desktop ใช้ฟรี Segment มีแผนฟรี 1,000 MTU ส่วนทีมที่มีคนเขียน SQL ใช้ Apache Superset ซึ่งเป็นโอเพนซอร์สได้โดยไม่เสียค่าไลเซนส์ แต่ต้องดูแลเซิร์ฟเวอร์เอง",
+  "note": "แนวโน้มปี 2025–2026 คือย้ายจาก CDP สำเร็จรูปไปเป็นข้อมูลรวมศูนย์บน warehouse/lakehouse แล้วส่งต่อไปใช้งาน ผู้ขาย CRM รายใหญ่ก็ทำชั้นข้อมูลของตัวเอง (Salesforce Data 360, HubSpot Data Hub) ผู้ให้บริการไทยมี CDP ที่ออกแบบสำหรับ LINE OA และมาร์เก็ตเพลส และบริษัทที่ปรึกษาด้านข้อมูล ส่วน Looker Studio ถูกเปลี่ยนชื่อกลับเป็น Data Studio แล้ว (โดเมน lookerstudio.google.com พาไปที่ datastudio.google.com)",
+  "vendors": [
+    {
+      "name": "Google Analytics 4",
+      "company": "Google",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://marketingplatform.google.com/about/analytics/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
+      "priceTier": "free",
+      "priceNote": "ใช้ฟรี; รุ่นเสียเงิน Analytics 360 ต้องติดต่อฝ่ายขาย (หน้าทางการ ต.ค. 2026)",
+      "thai": "หน้าจอรองรับภาษาไทยตามการตั้งค่าภาษาของบัญชี Google",
+      "goodFor": "ทุกธุรกิจที่มีเว็บไซต์หรือแอป และอยากรู้ว่าลูกค้ามาจากช่องทางไหนและซื้ออะไร",
+      "watchOut": "เป็นข้อมูลพฤติกรรมเว็บ/แอป ไม่ใช่โปรไฟล์ลูกค้ารายคน และต้องตั้งค่าแบนเนอร์คุกกี้และ consent ให้ถูกต้อง",
+      "source": "https://marketingplatform.google.com/about/analytics/"
+    },
+    {
+      "name": "Data Studio (เดิมชื่อ Looker Studio)",
+      "company": "Google",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://datastudio.google.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
+      "priceTier": "free",
+      "priceNote": "ใช้ฟรี (หน้าทางการ ต.ค. 2026)",
+      "thai": "หน้าจอรองรับภาษาไทยตามการตั้งค่าภาษาของบัญชี Google และใช้ข้อความภาษาไทยในรายงานได้",
+      "goodFor": "SME ที่อยากทำ dashboard ยอดขายและผลแคมเปญจาก Google Sheets, GA4 หรือฐานข้อมูลโดยไม่ต้องลงทุน",
+      "watchOut": "connector ของพาร์ทเนอร์บางรายเก็บเงินแยก และรายงานช้าลงเมื่อข้อมูลมาก",
+      "source": "https://datastudio.google.com/overview"
+    },
+    {
+      "name": "Microsoft Power BI",
+      "company": "Microsoft",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "store",
+        "service",
+        "online"
+      ],
+      "priceTier": "low",
+      "priceNote": "Power BI Desktop และบัญชีฟรีใช้ได้แต่แชร์รายงานไม่ได้; Pro US$14 ต่อผู้ใช้ต่อเดือน (จ่ายรายปี); Premium Per User US$24 (หน้าราคา ต.ค. 2026 ราคาอาจต่างตามประเทศ)",
+      "thai": "หน้าจอรองรับภาษาไทย; หน้าราคาระบุว่าราคาอาจต่างตามสกุลเงินและประเทศ",
+      "goodFor": "องค์กรที่ใช้ Microsoft 365 และ Excel อยู่แล้ว และต้องการ dashboard ที่แชร์ในทีมได้",
+      "watchOut": "การแชร์รายงานต้องซื้อไลเซนส์ทั้งผู้สร้างและผู้ดู (ยกเว้นซื้อ capacity ระดับใหญ่)",
+      "source": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing"
+    },
+    {
+      "name": "Databricks",
+      "company": "Databricks, Inc.",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://www.databricks.com/",
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
+      "priceTier": "enterprise",
+      "priceNote": "จ่ายตามการใช้งานเป็น DBU ต่อวินาที ไม่มีค่าแรกเข้า ราคาต่อ DBU ดูในตารางราคาของแต่ละคลาวด์; มี Free Edition และทดลองฟรี (หน้าราคา ต.ค. 2026)",
+      "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด; ใช้ผ่าน AWS, Azure หรือ Google Cloud",
+      "goodFor": "องค์กรที่มีทีมข้อมูลและต้องการรวมข้อมูลลูกค้า ทำโมเดล AI และสร้าง AI agent บน lakehouse เดียว",
+      "watchOut": "ค่าใช้จ่ายขึ้นกับ compute ที่ใช้จริงและค่าคลาวด์แยกต่างหาก ถ้าไม่ตั้งการควบคุมงบอาจบานปลาย",
+      "source": "https://www.databricks.com/product/pricing"
+    },
+    {
+      "name": "Snowflake",
+      "company": "Snowflake Inc.",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://www.snowflake.com/",
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
+      "priceTier": "enterprise",
+      "priceNote": "คิดตามการใช้งาน compute และค่าเก็บข้อมูลรายเดือน มีแบบ on-demand และซื้อ capacity ล่วงหน้า ราคาต่อ credit ดูในตาราง Consumption; มีปุ่มเริ่มใช้ฟรี (หน้าราคา ต.ค. 2026)",
+      "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด",
+      "goodFor": "องค์กรที่ต้องการ data warehouse กลางสำหรับข้อมูลลูกค้าและแชร์ข้อมูลกับพาร์ทเนอร์",
+      "watchOut": "ต้องมีวิศวกรข้อมูลดูแล และค่า compute ผันผวนตามปริมาณการค้นหา",
+      "source": "https://www.snowflake.com/en/pricing-options/"
+    },
+    {
+      "name": "Segment",
+      "company": "Twilio",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://segment.com/",
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "mid",
+      "priceNote": "แผนฟรี 1,000 MTU 2 แหล่งข้อมูล; Team เริ่ม US$120 ต่อเดือน 10,000 MTU; Business และ CDP ติดต่อฝ่ายขาย (หน้าราคา ระบุว่าเป็นราคา ณ ส.ค. 2026)",
+      "thai": "ไม่พบข้อมูลยืนยันภาษาไทยหรือ connector LINE OA สำเร็จรูปในหน้าที่เปิด",
+      "goodFor": "ธุรกิจออนไลน์และแอปที่ต้องเก็บ event ลูกค้าครั้งเดียวแล้วส่งต่อไปหลายเครื่องมือ",
+      "watchOut": "ค่าบริการขึ้นตามจำนวนผู้ใช้ที่ติดตาม (MTU) จึงแพงขึ้นเร็วเมื่อทราฟฟิกโต และเหมาะกับทีมที่มีนักพัฒนา",
+      "source": "https://www.twilio.com/en-us/products/connections/pricing"
+    },
+    {
+      "name": "Salesforce Data 360",
+      "company": "Salesforce, Inc.",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://www.salesforce.com/data/",
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
+      "priceTier": "enterprise",
+      "priceNote": "ลูกค้า Salesforce เปิดใช้ฟรีได้แบบจำกัดพื้นที่และ credits; Flex Credits US$500 ต่อ 100,000 credits; แบบโปรไฟล์ US$240 ต่อ 1,000 โปรไฟล์ต่อปี; นำเข้าข้อมูลฟรี (หน้าราคา ต.ค. 2026)",
+      "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด; มีพาร์ทเนอร์ Salesforce ในไทย",
+      "goodFor": "องค์กรที่ใช้ Salesforce อยู่แล้วและต้องการรวมโปรไฟล์ลูกค้าเพื่อใช้กับ Agentforce และแคมเปญ",
+      "watchOut": "ผูกกับระบบนิเวศ Salesforce และการคิด credits ต้องประมาณการใช้งานให้ดีก่อนซื้อ",
+      "source": "https://www.salesforce.com/data/pricing/"
+    },
+    {
+      "name": "UniSight",
+      "company": "บริษัท วันม๊อบบี้ จำกัด",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://www.unisight.asia/",
+      "size": [
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "store",
+        "online"
+      ],
+      "priceTier": "mid",
+      "priceNote": "ไม่แสดงราคา ต้องนัดเดโม (ต.ค. 2026)",
+      "thai": "ออกแบบสำหรับธุรกิจไทย หน้าจอภาษาไทย มีฟีเจอร์จัดการ LINE OA และ Rich Menu ตามกลุ่มลูกค้า",
+      "goodFor": "ค้าปลีกและแบรนด์ไทยที่อยากรวมข้อมูล LINE OA กับข้อมูลการขาย แล้วแบ่งกลุ่มยิงแคมเปญอัตโนมัติ",
+      "watchOut": "เป็นผลิตภัณฑ์ใหม่ (เปิดตัวบน Product Hunt ปี 2026) ควรขอดูลูกค้าอ้างอิงและเงื่อนไขส่งออกข้อมูลก่อนตัดสินใจ",
+      "source": "https://www.unisight.asia/cdp/"
+    },
+    {
+      "name": "Predictive (Sourcesible CDP)",
+      "company": "Predictive Co., Ltd.",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://predictive.co.th/",
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
+      "priceTier": "enterprise",
+      "priceNote": "ไม่แสดงราคา ติดต่อฝ่ายขาย (ต.ค. 2026)",
+      "thai": "บริษัทไทย ทีมที่ปรึกษาคนไทย เป็นพาร์ทเนอร์ด้าน Google Marketing และ Cloud Platform",
+      "goodFor": "องค์กรที่ต้องการที่ปรึกษาวางระบบวัดผล dashboard และ composable CDP บนคลาวด์ของตัวเอง",
+      "watchOut": "เป็นงานบริการแบบโครงการ ต้องกำหนดขอบเขตและการส่งมอบความรู้ให้ทีมภายในชัดเจน",
+      "source": "https://predictive.co.th/"
+    }
+  ]
+}

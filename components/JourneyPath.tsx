@@ -178,7 +178,7 @@ export function JourneyPath({ path, topics, tools = {}, mobile = false }: { path
                           const c = tools[x.category];
                           if (!c) return null;
                           const vs = c.vendors.filter(fits);
-                          const rows = (["th", "intl"] as const).map((o) => [o, vs.filter((v) => v.origin === o).slice(0, 4)] as const);
+                          const rows = (["th", "intl"] as const).map((o) => [o, vs.filter((v) => v.origin === o).slice(0, mobile ? 3 : 4)] as const);
                           return (
                             <div key={x.category} className="journey-tool">
                               <b>{c.name}</b>

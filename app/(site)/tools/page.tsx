@@ -14,7 +14,7 @@ export default function ToolsPage() {
       <div className="page-head">
         <h1>เครื่องมือและผู้ให้บริการ CRM</h1>
         <p>
-          {toolCategories.length} หมวด {vendorCount} ผู้ให้บริการ ทั้งในประเทศและต่างประเทศ แต่ละหมวดบอกว่าควรเริ่มใช้เมื่อไร เลือกอย่างไร และเริ่มฟรีได้ไหม
+          {toolCategories.length} หมวด {vendorCount} รายการ ทั้งในประเทศและต่างประเทศ แต่ละหมวดบอกว่าควรเริ่มใช้เมื่อไร เลือกอย่างไร และเริ่มฟรีได้ไหม
           ถ้าเพิ่งเริ่ม ดู<Link href="/path">เส้นทางเริ่มต้น</Link>ก่อนว่าขั้นไหนต้องใช้อะไร
         </p>
         <p className="tools-disclaimer">{TOOLS_DISCLAIMER}</p>

@@ -136,3 +136,9 @@
 .m-screen .tools-section > h2 { font-size: 18px; }
 .m-screen .tools-jump { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 14px; padding: 0 16px; }
 .m-screen .tools-jump .chip { white-space: nowrap; }
+.journey.mobile .jt-row { gap: 5px; }
+.journey.mobile .jt-row > span { flex-basis: 100%; min-width: 0; margin-top: 2px; }
+.journey.mobile .jt-vendor { font-size: 13px; padding: 5px 9px; min-height: 34px; display: inline-flex; align-items: center; }
+.journey.mobile .jt-vendor small { font-size: 11px; margin-left: 3px; }
+.journey.mobile .journey-body { padding: 0 10px 12px; }
+.journey.mobile .journey-tool { padding: 10px; }
