@@ -2,8 +2,15 @@ import raw from "@/data/paths.json";
 
 export type BusinessType = "online" | "store" | "service";
 
+export type Landmark = "camp" | "gate" | "village" | "signpost" | "tower" | "echo" | "castle" | "summit";
+
 export interface PathStep {
   id: string;
+  /** Adventure-map name of the stage, e.g. "ค่ายฐาน". */
+  place: string;
+  icon: Landmark;
+  /** Lifecycle group whose colour the stage takes (data/crm.json groups). */
+  stage: string;
   when: string;
   title: string;
   goal: string;

@@ -486,7 +486,9 @@ mark.ph.filled { background: color-mix(in srgb, var(--engage) 16%, transparent);
 .journey-cols section { background: var(--bg); border-radius: 10px; padding: 10px 12px; }
 .journey-cols h3 { margin: 0 0 6px; }
 .journey-face { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; }
-.journey-face li::marker { content: "“ "; color: var(--ink2); }
+.journey-face { list-style: none; padding-left: 0; }
+.journey-face li { padding-left: 14px; position: relative; }
+.journey-face li::before { content: ""; position: absolute; left: 2px; top: 0.7em; width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
 .journey-todo { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 14.5px; }
 .journey-todo label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
 .journey-todo input { margin-top: 5px; width: 16px; height: 16px; accent-color: var(--engage); flex: none; }
@@ -550,3 +552,69 @@ mark.ph.filled { background: color-mix(in srgb, var(--engage) 16%, transparent);
 .jt-vendor { font-size: 13px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); text-decoration: none; }
 .jt-vendor small { color: var(--ink2); margin-left: 4px; }
 .jt-more { font-size: 13px; color: var(--accent); }
+
+/* adventure map of the starter path */
+.jmap { margin: 0 0 18px; }
+.jmap svg { display: block; width: 100%; height: auto; font-family: inherit; }
+.jm-ground { fill: color-mix(in srgb, var(--activate-bg) 55%, var(--paper)); stroke: var(--line); }
+.jm-dot { fill: color-mix(in srgb, var(--ink2) 22%, transparent); }
+.jm-tree path:first-child { fill: color-mix(in srgb, var(--engage) 38%, var(--paper)); }
+.jm-trunk { stroke: color-mix(in srgb, var(--attract) 45%, var(--ink2)); stroke-width: 3; fill: none; }
+.jm-hill { fill: color-mix(in srgb, var(--engage) 16%, var(--paper)); }
+.jm-peak path { fill: color-mix(in srgb, var(--data) 30%, var(--paper)); }
+.jm-peak .jm-snow { fill: var(--paper); }
+.jm-lake { fill: color-mix(in srgb, var(--measure) 22%, var(--paper)); }
+.jm-wave { fill: none; stroke: color-mix(in srgb, var(--measure) 50%, var(--paper)); stroke-width: 1.5; }
+.jm-compass circle { fill: none; stroke: color-mix(in srgb, var(--ink2) 45%, transparent); }
+.jm-compass path { fill: color-mix(in srgb, var(--ink2) 35%, transparent); }
+.jm-compass .jm-north { fill: var(--predict); }
+.jm-compass text { font-size: 11px; font-weight: 700; fill: var(--ink2); }
+.jm-trail-bed { fill: none; stroke: color-mix(in srgb, var(--attract) 14%, var(--paper)); stroke-width: 16; stroke-linecap: round; }
+.jm-trail { fill: none; stroke: color-mix(in srgb, var(--ink2) 55%, transparent); stroke-width: 3; stroke-dasharray: 2 9; stroke-linecap: round; animation: jm-march 1.6s linear infinite; }
+.jm-trail.walked { stroke: var(--engage); stroke-width: 5; stroke-dasharray: none; animation: none; }
+@keyframes jm-march { to { stroke-dashoffset: -22; } }
+.jm-flag path { fill: color-mix(in srgb, var(--predict) 25%, transparent); stroke: var(--predict); stroke-width: 2.5; stroke-linejoin: round; }
+.jm-flag text, .jm-finish text { font-size: 13px; font-weight: 700; fill: var(--ink2); }
+.jm-stop { cursor: pointer; }
+.jm-stop:focus { outline: none; }
+.jm-stop:focus-visible .jm-ring-bg { stroke: var(--ink); stroke-width: 3; }
+.jm-ring-bg { fill: var(--paper); stroke: color-mix(in srgb, var(--c) 30%, var(--line)); stroke-width: 2; }
+.jm-ring { fill: none; stroke: var(--c); stroke-width: 4; stroke-linecap: round; }
+.jm-disc { fill: var(--cbg); stroke: var(--c); stroke-width: 2; transition: transform 0.2s; transform-box: fill-box; transform-origin: center; }
+.jm-glyph { fill: none; stroke: var(--c); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.jm-stop.done .jm-disc { fill: var(--c); }
+.jm-stop.done .jm-glyph { stroke: #fff; }
+.jm-stop.ahead .jm-disc { fill: var(--paper); stroke: color-mix(in srgb, var(--c) 45%, var(--line)); stroke-dasharray: 3 3; }
+.jm-stop.ahead .jm-glyph { stroke: color-mix(in srgb, var(--c) 60%, var(--ink2)); }
+.jm-stop:hover .jm-disc { transform: scale(1.08); }
+.jm-halo { fill: color-mix(in srgb, var(--c) 18%, transparent); transform-box: fill-box; transform-origin: center; animation: jm-pulse 2.2s ease-in-out infinite; }
+@keyframes jm-pulse { 50% { transform: scale(1.18); opacity: 0.45; } }
+.jm-check circle { fill: var(--engage); stroke: var(--paper); stroke-width: 2; }
+.jm-check path { fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.jm-num { font-size: 12.5px; font-weight: 700; fill: var(--c); }
+.jm-place { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.jm-stop.ahead .jm-place { fill: var(--ink2); }
+.jm-here rect { fill: var(--ink); }
+.jm-here text { font-size: 12.5px; font-weight: 700; fill: var(--bg); }
+.jmap figcaption { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; font-size: 13px; color: var(--ink2); margin-top: 8px; }
+.jmap figcaption span { display: inline-flex; align-items: center; gap: 6px; }
+.lg { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 2px solid var(--engage); }
+.lg.done { background: var(--engage); }
+.lg.current { background: var(--accent-bg); border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent); }
+.lg.ahead { border-style: dashed; border-color: var(--ink2); }
+@media (prefers-reduced-motion: reduce) { .jm-trail, .jm-halo { animation: none; } }
+
+/* quest-style stage cards */
+.journey-dot { border-color: var(--c); color: var(--c); }
+.journey-step.current .journey-dot { background: var(--c); border-color: var(--c); }
+.journey-step.current .journey-card { border-color: var(--c); }
+.journey-when { color: var(--c); }
+.journey-place { font-size: 12.5px; font-weight: 700; color: var(--ink2); }
+.journey-place b { font-size: inherit; color: var(--c); }
+.journey-card { scroll-margin-top: 8px; }
+.journey-goal::before { content: "เป้าหมาย: "; font-weight: 600; color: var(--ink); }
+.journey-stage-bar { height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: 6px; }
+.journey-stage-bar i { display: block; height: 100%; background: var(--c); }
+.journey-cleared { margin: 0; font-size: 14.5px; background: var(--engage-bg); color: var(--engage); border-radius: 10px; padding: 8px 12px; font-weight: 600; }
+.journey-win { text-align: center; background: var(--engage-bg); border: 1px solid color-mix(in srgb, var(--engage) 35%, var(--line)); border-radius: 14px; padding: 16px; margin: 16px 0 0; }
+.journey-win b { display: block; font-size: 19px; color: var(--engage); }

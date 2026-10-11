@@ -370,6 +370,7 @@ function register(
             url: `${location.origin}${basePath}${location.pathname.startsWith(`${basePath}/mobile`) ? "/mobile/path/" : "/path/"}`,
             steps: starterPath.steps.map((s, i) => ({
               step: i + 1,
+              place: s.place,
               when: s.when,
               title: s.title,
               goal: s.goal,

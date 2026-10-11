@@ -161,7 +161,9 @@ test("starter journey path is complete and points at real topics", () => {
   for (const s of path.steps) {
     assert.ok(!ids.has(s.id), `duplicate step ${s.id}`);
     ids.add(s.id);
-    for (const k of ["when", "title", "goal", "skipForNow", "readyWhen", "prompt"]) assert.ok(s[k]?.trim(), `${s.id} ${k}`);
+    for (const k of ["when", "title", "goal", "skipForNow", "readyWhen", "prompt", "place"]) assert.ok(s[k]?.trim(), `${s.id} ${k}`);
+    assert.ok(GROUP_IDS.includes(s.stage), `${s.id} stage colour`);
+    assert.ok(["camp", "gate", "village", "signpost", "tower", "echo", "castle", "summit"].includes(s.icon), `${s.id} landmark icon`);
     assert.ok(s.youWillFace.length >= 3 && s.doThis.length >= 3, `${s.id} lists`);
     for (const k of ["online", "store", "service"]) assert.ok(s.byType[k]?.trim(), `${s.id} byType.${k}`);
     for (const t of s.topics) assert.ok(slugs.has(t), `${s.id} → unknown topic ${t}`);
