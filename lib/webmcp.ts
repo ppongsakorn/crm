@@ -11,5 +11,6 @@ export const WEBMCP_TOOLS = [
   "get_related_topics",
   "list_trends",
   "list_updates",
+  "get_starter_path",
   "open_topic",
 ] as const;

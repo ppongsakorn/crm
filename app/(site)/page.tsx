@@ -2,6 +2,7 @@ import Link from "next/link";
 import { allWhatsNew, groups, promptCount, THEME_LABEL, THEMES, topics, topicsIn, type GroupId } from "@/lib/data";
 import { aiEnabled, basePath } from "@/lib/site";
 import { changelog, thaiDate } from "@/lib/changelog";
+import { starterPath } from "@/lib/paths";
 
 const RING = groups.filter((g) => g.id !== "data");
 const CORE = groups.find((g) => g.id === "data")!;
@@ -92,6 +93,18 @@ export default function Home() {
           </div>
         </div>
         <Journey />
+      </section>
+
+      <section className="panel path-band">
+        <div>
+          <h2>เพิ่งเริ่มทำ CRM? เริ่มจากเส้นทางนี้</h2>
+          <p>
+            {starterPath.steps.length} ขั้นตั้งแต่{starterPath.steps[0].when}ถึง{starterPath.steps[starterPath.steps.length - 1].when} บอกว่าจะเจออะไร ควรทำอะไร และยังไม่ต้องทำอะไร พร้อมติ๊กเก็บความคืบหน้า
+          </p>
+        </div>
+        <Link href="/path" className="btn primary">
+          ดูเส้นทางเริ่มต้น →
+        </Link>
       </section>
 
       <section className="panel router">

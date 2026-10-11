@@ -46,7 +46,7 @@ export function WebMcp() {
     const ac = new AbortController();
     let cancelled = false;
     (async () => {
-      const [{ topics, getKnowledge, groups }, { searchDocs }, { phraseEngine }, phrasesMod, { makeEngine }, prompts, changelogMod] = await Promise.all([
+      const [{ topics, getKnowledge, groups }, { searchDocs }, { phraseEngine }, phrasesMod, { makeEngine }, prompts, changelogMod, { starterPath }] = await Promise.all([
         import("@/lib/data"),
         import("@/lib/searchDocs"),
         import("@/lib/search/lexical"),
@@ -54,11 +54,12 @@ export function WebMcp() {
         import("@/lib/search"),
         import("@/lib/prompts"),
         import("@/data/changelog.json"),
+        import("@/lib/paths"),
       ]);
       if (cancelled) return;
       const knowledge: Record<string, Knowledge> = Object.fromEntries(topics.map((t) => [t.slug, getKnowledge(t.slug)]).filter(([, k]) => k) as [string, Knowledge][]);
       const search = phraseEngine(searchDocs, phrasesMod.default as Record<string, string[]>);
-      register(ctx, ac.signal, topics, knowledge, search, { groups, makeEngine, prompts, changelog: changelogMod.default as Change[] });
+      register(ctx, ac.signal, topics, knowledge, search, { groups, makeEngine, prompts, changelog: changelogMod.default as Change[], starterPath });
     })().catch((e) => console.warn("WebMCP setup failed", e));
     return () => {
       cancelled = true;
@@ -79,9 +80,10 @@ function register(
     makeEngine: typeof import("@/lib/search").makeEngine;
     prompts: typeof import("@/lib/prompts");
     changelog: Change[];
+    starterPath: import("@/lib/paths").JourneyPath;
   },
 ) {
-  const { groups, makeEngine, prompts, changelog } = extra;
+  const { groups, makeEngine, prompts, changelog, starterPath } = extra;
   {
     const bySlug = new Map(topics.map((t) => [t.slug, t]));
     const summary = (t: Topic) => {
@@ -341,6 +343,39 @@ function register(
             topicsUpdated: topics
               .filter((t) => (knowledge[t.slug]?.updatedAt ?? "") >= d.slice(0, 7))
               .map((t) => ({ slug: t.slug, name: t.name, updatedAt: knowledge[t.slug]?.updatedAt ?? null, addedIn2026: t.source === "2026" })),
+          };
+        },
+      },
+      {
+        name: "get_starter_path",
+        title: "เส้นทางเริ่มต้นสำหรับเจ้าของธุรกิจ",
+        description:
+          "A time-ordered starter path for a small-business owner beginning CRM (first weeks to first year): for each step, what they will face, what to do, what to skip for now, when they are ready to move on, advice per business type (online, store, service), topics to read and a starter prompt. Use it when the user is new to CRM or asks where to start.",
+        inputSchema: {
+          type: "object",
+          properties: { businessType: { type: "string", enum: ["online", "store", "service"], description: "Optional: keep only this business type's advice" } },
+        },
+        annotations: { readOnlyHint: true },
+        execute: async ({ businessType }) => {
+          const bt = businessType === "online" || businessType === "store" || businessType === "service" ? businessType : null;
+          return {
+            title: starterPath.title,
+            audience: starterPath.audience,
+            intro: starterPath.intro,
+            url: `${location.origin}${basePath}${location.pathname.startsWith(`${basePath}/mobile`) ? "/mobile/path/" : "/path/"}`,
+            steps: starterPath.steps.map((s, i) => ({
+              step: i + 1,
+              when: s.when,
+              title: s.title,
+              goal: s.goal,
+              youWillFace: s.youWillFace,
+              doThis: s.doThis,
+              skipForNow: s.skipForNow,
+              readyWhen: s.readyWhen,
+              adviceByType: bt ? { [bt]: s.byType[bt] } : s.byType,
+              topics: s.topics.map((slug) => ({ slug, url: url(slug) })),
+              prompt: s.prompt,
+            })),
           };
         },
       },

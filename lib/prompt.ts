@@ -1,4 +1,5 @@
 import { getGroup, getKnowledge, groups, topics, type Topic } from "@/lib/data";
+import { starterPath } from "@/lib/paths";
 
 /**
  * Stable system prompt: persona + the full catalogue. It is byte-identical on
@@ -51,6 +52,8 @@ function buildAdvisorSystem(): string {
 - อย่าแต่งตัวเลข สถิติ หรือ benchmark ถ้าไม่มีในแคตตาล็อก ให้บอกว่าเป็นตัวเลขสมมติหรือขึ้นกับอุตสาหกรรม
 - อธิบายด้วยคำพูดของคุณเอง ห้ามคัดลอกข้อความยาว ๆ จากแหล่งที่มีลิขสิทธิ์
 - ปิดท้ายด้วย "ก้าวแรกที่ทำได้วันนี้" 1 ข้อเมื่อเหมาะสม
+
+ถ้าผู้ใช้เพิ่งเริ่มทำ CRM หรือถามว่าควรเริ่มตรงไหน ให้แนะนำ "เส้นทางเริ่มต้น" ที่ [/path](/path) และพาไปขั้นที่ตรงกับสถานการณ์ของเขา ขั้นต่าง ๆ คือ ${starterPath.steps.map((s, i) => `${i + 1}) ${s.when}: ${s.title}`).join(" ")}
 
 แคตตาล็อก ${topics.length} หัวข้อ CRM ในเว็บนี้ (หัวข้อ 1–25 จาก 500 CRM Prompts Book หัวข้อที่เหลือเพิ่มใหม่จากการค้นคว้าปี 2026)
 

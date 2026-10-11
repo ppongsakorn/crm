@@ -457,3 +457,48 @@ mark.ph.filled { background: color-mix(in srgb, var(--engage) 16%, transparent);
 .profile-note { margin: 10px 0 0; font-size: 12.5px; color: var(--ink2); }
 .profile-clear { margin-left: 8px; background: none; border: 0; color: var(--predict); cursor: pointer; font-size: 12.5px; text-decoration: underline; }
 .profile.compact { margin: 0 0 12px; }
+
+/* starter journey path */
+.journey-setup { display: grid; gap: 10px; margin: 8px 0 18px; }
+.journey-types { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.journey-label { font-size: 14px; color: var(--ink2); margin-right: 4px; }
+.journey-types button { font-size: 14px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); cursor: pointer; }
+.journey-types button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.journey-progress { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: var(--ink2); }
+.journey-progress .bar { flex: 1; max-width: 360px; height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.journey-progress .bar i { display: block; height: 100%; background: var(--engage); transition: width 0.3s; }
+.journey-steps { list-style: none; margin: 0; padding: 0 0 0 4px; display: grid; gap: 12px; position: relative; }
+.journey-steps::before { content: ""; position: absolute; left: 21px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.journey-step { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; position: relative; }
+.journey-dot { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: var(--paper); border: 2px solid var(--accent); color: var(--accent); z-index: 1; }
+.journey-step.current .journey-dot { background: var(--accent); color: #fff; }
+.journey-step.complete .journey-dot { background: var(--engage); border-color: var(--engage); color: #fff; }
+.journey-card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
+.journey-step.current .journey-card { border-color: var(--accent); }
+.journey-card summary { cursor: pointer; list-style: none; padding: 12px 14px; display: grid; gap: 2px; }
+.journey-card summary::-webkit-details-marker { display: none; }
+.journey-when { font-size: 12.5px; font-weight: 700; color: var(--accent); letter-spacing: 0.02em; }
+.journey-card summary b { font-size: 17px; line-height: 1.4; }
+.journey-goal { font-size: 14px; color: var(--ink2); }
+.journey-body { padding: 0 14px 14px; display: grid; gap: 10px; }
+.journey-body h3 { font-size: 14px; margin: 6px 0 0; color: var(--ink); }
+.journey-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.journey-cols section { background: var(--bg); border-radius: 10px; padding: 10px 12px; }
+.journey-cols h3 { margin: 0 0 6px; }
+.journey-face { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; }
+.journey-face li::marker { content: "“ "; color: var(--ink2); }
+.journey-todo { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 14.5px; }
+.journey-todo label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.journey-todo input { margin-top: 5px; width: 16px; height: 16px; accent-color: var(--engage); flex: none; }
+.journey-todo input:checked + span { color: var(--ink2); text-decoration: line-through; }
+.journey-type { background: var(--accent-bg); border-radius: 10px; padding: 10px 12px; font-size: 14.5px; }
+.journey-type p { margin: 0 0 4px; } .journey-type p:last-child { margin: 0; }
+.journey-skip, .journey-ready { margin: 0; font-size: 14.5px; }
+.journey-skip b { color: var(--predict); margin-right: 6px; }
+.journey-ready b { color: var(--engage); margin-right: 6px; }
+.journey-topics { display: flex; flex-wrap: wrap; gap: 6px; }
+.journey-topics .chip { text-decoration: none; font-size: 13.5px; padding: 4px 10px; }
+.path-band { margin: 0 0 24px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; border-left: 4px solid var(--engage); }
+.path-band h2 { margin: 0 0 4px; font-size: 19px; }
+.path-band p { margin: 0; color: var(--ink2); }
+@media (max-width: 640px) { .path-band { grid-template-columns: 1fr; } }

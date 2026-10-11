@@ -110,6 +110,8 @@ test("mobile app routes map to and from the desktop pages", async () => {
   assert.equal(toMobilePath("/updates/"), "/mobile/updates/");
   assert.equal(toMobilePath("/trends/"), "/mobile/trends/");
   assert.equal(toDesktopPath("/mobile/trends/"), "/trends/");
+  assert.equal(toMobilePath("/path/"), "/mobile/path/");
+  assert.equal(toDesktopPath("/mobile/path/"), "/path/");
   assert.equal(toMobilePath("/architecture/"), null);
   assert.equal(toMobilePath("/advisor/"), null);
   assert.equal(toDesktopPath("/mobile/t/churn-prediction/"), "/topics/churn-prediction/");
@@ -146,4 +148,21 @@ test("prompt filling maps the business profile and keeps unknown placeholders", 
   const share = (list) => list.filter((p) => placeholders(p).some((ph) => fieldFor(ph))).length / list.length;
   assert.ok(share(site) > 0.4, `profile helps only ${(share(site) * 100).toFixed(0)}% of all prompts`);
   assert.ok(share(book) > 0.2, `profile helps only ${(share(book) * 100).toFixed(0)}% of book prompts`);
+});
+
+test("starter journey path is complete and points at real topics", () => {
+  const path = JSON.parse(fs.readFileSync("data/paths.json", "utf8"));
+  const slugs = new Set(topics.map((t) => t.slug));
+  assert.deepEqual(path.businessTypes.map((b) => b.id), ["online", "store", "service"]);
+  assert.ok(path.steps.length >= 6 && path.steps.length <= 8, "6-8 steps");
+  const ids = new Set();
+  for (const s of path.steps) {
+    assert.ok(!ids.has(s.id), `duplicate step ${s.id}`);
+    ids.add(s.id);
+    for (const k of ["when", "title", "goal", "skipForNow", "readyWhen", "prompt"]) assert.ok(s[k]?.trim(), `${s.id} ${k}`);
+    assert.ok(s.youWillFace.length >= 3 && s.doThis.length >= 3, `${s.id} lists`);
+    for (const k of ["online", "store", "service"]) assert.ok(s.byType[k]?.trim(), `${s.id} byType.${k}`);
+    for (const t of s.topics) assert.ok(slugs.has(t), `${s.id} → unknown topic ${t}`);
+    assert.match(s.prompt, /\[[^\]]+\]/, `${s.id} prompt needs placeholders`);
+  }
 });

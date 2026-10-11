@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MTop } from "@/components/mobile/MTop";
 import { WebMcpBadge } from "@/components/WebMcpBadge";
 import { changelog, thaiDate } from "@/lib/changelog";
+import { starterPath } from "@/lib/paths";
 import { allWhatsNew, groups, promptCount, THEME_LABEL, THEMES, topics, topicsIn } from "@/lib/data";
 
 export default function MobileHome() {
@@ -23,6 +24,14 @@ export default function MobileHome() {
           </Link>
           <WebMcpBadge />
         </section>
+
+        <Link href="/mobile/path" className="m-card m-path">
+          <b>เพิ่งเริ่มทำ CRM? เริ่มจากเส้นทางนี้</b>
+          <small>
+            {starterPath.steps.length} ขั้น บอกว่าจะเจออะไร ควรทำอะไร และติ๊กเก็บความคืบหน้าได้
+          </small>
+          <span>ดูเส้นทางเริ่มต้น ›</span>
+        </Link>
 
         {allWhatsNew.length > 0 && (
           <Link href="/mobile/trends" className="m-card m-trends">

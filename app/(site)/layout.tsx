@@ -18,6 +18,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           </Link>
           <nav className="nav" aria-label="หลัก">
             <WebMcpBadge />
+            <Link href="/path">เริ่มต้น</Link>
             <Link href="/topics">หัวข้อ</Link>
             <Link href="/trends">เทรนด์ 2026</Link>
             <Link href="/prompts">Prompts</Link>
@@ -43,7 +44,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             {aiEnabled && " · คำแนะนำจาก AI เป็นข้อมูลประกอบการตัดสินใจ ไม่ใช่คำตัดสินแทนคุณ"}
           </p>
           <p className="footer-links">
-            <Link href="/topics">หัวข้อทั้งหมด</Link> · <Link href="/trends">เทรนด์ 2025–2026</Link> · <Link href="/prompts">Prompt ทั้งหมด</Link> · <Link href="/updates">ประวัติการอัปเดต</Link> · <Link href="/architecture">สถาปัตยกรรมระบบ</Link>
+            <Link href="/path">เส้นทางเริ่มต้น</Link> · <Link href="/topics">หัวข้อทั้งหมด</Link> · <Link href="/trends">เทรนด์ 2025–2026</Link> · <Link href="/prompts">Prompt ทั้งหมด</Link> · <Link href="/updates">ประวัติการอัปเดต</Link> · <Link href="/architecture">สถาปัตยกรรมระบบ</Link>
           </p>
           <a className="to-mobile" href={`${basePath}/mobile/`} data-view="mobile">
             เปิดแบบแอปมือถือ

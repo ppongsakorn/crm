@@ -124,3 +124,10 @@
 .m-app .profile-grid { grid-template-columns: 1fr; }
 .m-app .fp-form input, .m-app .profile input { font-size: 16px; min-height: 44px; }
 .m-app .fp-actions .copy { min-height: 38px; }
+.journey.mobile .journey-types button { min-height: 40px; font-size: 15px; }
+.journey.mobile .journey-card summary { min-height: 56px; }
+.journey.mobile .journey-todo label { min-height: 36px; }
+.journey.mobile .journey-todo input { width: 20px; height: 20px; margin-top: 3px; }
+.m-path { margin-top: 16px; border-left: 4px solid var(--engage); }
+.m-path small { font-size: 13px; color: var(--ink2); }
+.m-path span { font-size: 14px; color: var(--accent); font-weight: 600; }
