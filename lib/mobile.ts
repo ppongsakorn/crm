@@ -23,6 +23,7 @@ export function toMobilePath(path: string, hash = ""): string | null {
   if (p === "/prompts") return "/mobile/prompts/";
   if (p === "/trends") return "/mobile/trends/";
   if (p === "/path") return "/mobile/path/";
+  if (p === "/tools") return "/mobile/tools/";
   if (p === "/updates") return "/mobile/updates/";
   return null;
 }
@@ -38,6 +39,7 @@ export function toDesktopPath(path: string): string {
   if (p.endsWith("/mobile/prompts")) return "/prompts/";
   if (p.endsWith("/mobile/trends")) return "/trends/";
   if (p.endsWith("/mobile/path")) return "/path/";
+  if (p.endsWith("/mobile/tools")) return "/tools/";
   if (p.endsWith("/mobile/updates")) return "/updates/";
   return "/";
 }

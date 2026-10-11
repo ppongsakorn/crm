@@ -4,6 +4,7 @@ import { MTop } from "@/components/mobile/MTop";
 import { ProfilePanel } from "@/components/ProfilePanel";
 import { topics } from "@/lib/data";
 import { starterPath } from "@/lib/paths";
+import { toolRefs } from "@/lib/vendors";
 
 export const metadata: Metadata = { title: starterPath.title };
 
@@ -18,7 +19,7 @@ export default function MobilePath() {
           <p>{starterPath.intro}</p>
         </header>
         <ProfilePanel compact />
-        <JourneyPath path={starterPath} topics={refs} mobile />
+        <JourneyPath path={starterPath} topics={refs} tools={toolRefs()} mobile />
       </main>
     </>
   );

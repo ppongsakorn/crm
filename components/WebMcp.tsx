@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import type { Knowledge, Topic } from "@/lib/data";
 import type { Change } from "@/lib/changelog";
 import { basePath } from "@/lib/site";
+import type { BusinessType } from "@/lib/paths";
+import type { Size } from "@/lib/vendorMeta";
 
 /**
  * WebMCP (W3C WebML CG draft): registers the site's search and content as
@@ -46,7 +48,7 @@ export function WebMcp() {
     const ac = new AbortController();
     let cancelled = false;
     (async () => {
-      const [{ topics, getKnowledge, groups }, { searchDocs }, { phraseEngine }, phrasesMod, { makeEngine }, prompts, changelogMod, { starterPath }] = await Promise.all([
+      const [{ topics, getKnowledge, groups }, { searchDocs }, { phraseEngine }, phrasesMod, { makeEngine }, prompts, changelogMod, { starterPath }, { toolCategories, TOOLS_DISCLAIMER }] = await Promise.all([
         import("@/lib/data"),
         import("@/lib/searchDocs"),
         import("@/lib/search/lexical"),
@@ -55,11 +57,12 @@ export function WebMcp() {
         import("@/lib/prompts"),
         import("@/data/changelog.json"),
         import("@/lib/paths"),
+        import("@/lib/vendors"),
       ]);
       if (cancelled) return;
       const knowledge: Record<string, Knowledge> = Object.fromEntries(topics.map((t) => [t.slug, getKnowledge(t.slug)]).filter(([, k]) => k) as [string, Knowledge][]);
       const search = phraseEngine(searchDocs, phrasesMod.default as Record<string, string[]>);
-      register(ctx, ac.signal, topics, knowledge, search, { groups, makeEngine, prompts, changelog: changelogMod.default as Change[], starterPath });
+      register(ctx, ac.signal, topics, knowledge, search, { groups, makeEngine, prompts, changelog: changelogMod.default as Change[], starterPath, toolCategories, TOOLS_DISCLAIMER });
     })().catch((e) => console.warn("WebMCP setup failed", e));
     return () => {
       cancelled = true;
@@ -81,9 +84,11 @@ function register(
     prompts: typeof import("@/lib/prompts");
     changelog: Change[];
     starterPath: import("@/lib/paths").JourneyPath;
+    toolCategories: import("@/lib/vendors").ToolCategory[];
+    TOOLS_DISCLAIMER: string;
   },
 ) {
-  const { groups, makeEngine, prompts, changelog, starterPath } = extra;
+  const { groups, makeEngine, prompts, changelog, starterPath, toolCategories, TOOLS_DISCLAIMER } = extra;
   {
     const bySlug = new Map(topics.map((t) => [t.slug, t]));
     const summary = (t: Topic) => {
@@ -350,7 +355,7 @@ function register(
         name: "get_starter_path",
         title: "เส้นทางเริ่มต้นสำหรับเจ้าของธุรกิจ",
         description:
-          "A time-ordered starter path for a small-business owner beginning CRM (first weeks to first year): for each step, what they will face, what to do, what to skip for now, when they are ready to move on, advice per business type (online, store, service), topics to read and a starter prompt. Use it when the user is new to CRM or asks where to start.",
+          "A time-ordered starter path for a small-business owner beginning CRM (first weeks to first year): for each step, what they will face, what to do, what to skip for now, when they are ready to move on, advice per business type (online, store, service), topics to read, the software categories the step needs (see list_tools) and a starter prompt. Use it when the user is new to CRM or asks where to start.",
         inputSchema: {
           type: "object",
           properties: { businessType: { type: "string", enum: ["online", "store", "service"], description: "Optional: keep only this business type's advice" } },
@@ -374,7 +379,51 @@ function register(
               readyWhen: s.readyWhen,
               adviceByType: bt ? { [bt]: s.byType[bt] } : s.byType,
               topics: s.topics.map((slug) => ({ slug, url: url(slug) })),
+              tools: s.tools ?? [],
               prompt: s.prompt,
+            })),
+          };
+        },
+      },
+      {
+        name: "list_tools",
+        title: "เครื่องมือและผู้ให้บริการ CRM",
+        description:
+          "Software and service providers a Thai business can use for CRM, Thai (origin th) and international (intl), grouped by category (crm-core, chat-commerce, messaging, loyalty, pos-store, ecommerce-ops, consent-pdpa, helpdesk, feedback, data-analytics, ai-assistants). Each category says when it is needed, how to choose and how to start free; each vendor has size fit, business-type fit, price tier and note, Thai/LINE support, who it suits, what to watch out for, and a source URL. Neutral research, no sponsorship; prices change, so confirm with the vendor.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            category: { type: "string", description: "Optional category id" },
+            origin: { type: "string", enum: ["th", "intl"], description: "Optional: Thai or international providers only" },
+            businessType: { type: "string", enum: ["online", "store", "service"] },
+            size: { type: "string", enum: ["micro", "sme", "mid", "enterprise"] },
+            freeOnly: { type: "boolean", description: "Only vendors with a usable free plan" },
+          },
+        },
+        annotations: { readOnlyHint: true, untrustedContentHint: true },
+        execute: async ({ category, origin, businessType, size, freeOnly }) => {
+          const page = `${location.origin}${basePath}${isMobile() ? "/mobile/tools/" : "/tools/"}`;
+          const cats = toolCategories.filter((c) => !category || c.id === category);
+          if (category && !cats.length) return { error: `unknown category: ${category}`, categories: toolCategories.map((c) => c.id) };
+          return {
+            note: TOOLS_DISCLAIMER,
+            categories: cats.map((c) => ({
+              id: c.id,
+              name: c.name,
+              en: c.en,
+              what: c.what,
+              whenNeeded: c.whenNeeded,
+              chooseBy: c.chooseBy,
+              freeStart: c.freeStart,
+              note: c.note,
+              url: `${page}#${c.id}`,
+              vendors: c.vendors.filter(
+                (v) =>
+                  (!origin || v.origin === origin) &&
+                  (!businessType || v.types.includes(businessType as BusinessType)) &&
+                  (!size || v.size.includes(size as Size)) &&
+                  (!freeOnly || v.priceTier === "free"),
+              ),
             })),
           };
         },

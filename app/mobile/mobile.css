@@ -131,3 +131,8 @@
 .m-path { margin-top: 16px; border-left: 4px solid var(--engage); }
 .m-path small { font-size: 13px; color: var(--ink2); }
 .m-path span { font-size: 14px; color: var(--accent); font-weight: 600; }
+.m-tools { border-left-color: var(--measure); margin-top: 10px; }
+.m-screen .tool-cat { padding: 12px; border-radius: 12px; }
+.m-screen .tools-section > h2 { font-size: 18px; }
+.m-screen .tools-jump { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 14px; padding: 0 16px; }
+.m-screen .tools-jump .chip { white-space: nowrap; }

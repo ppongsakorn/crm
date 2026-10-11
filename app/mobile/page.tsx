@@ -3,6 +3,7 @@ import { MTop } from "@/components/mobile/MTop";
 import { WebMcpBadge } from "@/components/WebMcpBadge";
 import { changelog, thaiDate } from "@/lib/changelog";
 import { starterPath } from "@/lib/paths";
+import { toolCategories, vendorCount } from "@/lib/vendors";
 import { allWhatsNew, groups, promptCount, THEME_LABEL, THEMES, topics, topicsIn } from "@/lib/data";
 
 export default function MobileHome() {
@@ -31,6 +32,14 @@ export default function MobileHome() {
             {starterPath.steps.length} ขั้น บอกว่าจะเจออะไร ควรทำอะไร และติ๊กเก็บความคืบหน้าได้
           </small>
           <span>ดูเส้นทางเริ่มต้น ›</span>
+        </Link>
+
+        <Link href="/mobile/tools" className="m-card m-path m-tools">
+          <b>ต้องใช้ระบบอะไรบ้าง</b>
+          <small>
+            ซอฟต์แวร์และผู้ให้บริการ CRM {vendorCount} ราย ทั้งไทยและต่างประเทศ ใน {toolCategories.length} หมวด
+          </small>
+          <span>ดูเครื่องมือ ›</span>
         </Link>
 
         {allWhatsNew.length > 0 && (

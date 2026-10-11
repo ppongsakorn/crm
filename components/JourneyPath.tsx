@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FillablePrompt } from "@/components/FillablePrompt";
 import type { BusinessType, JourneyPath as Path } from "@/lib/paths";
+import { TIER_LABEL, type ToolRef } from "@/lib/vendorMeta";
 
 export interface TopicRef {
   slug: string;
@@ -20,7 +21,7 @@ const DONE_KEY = "crm-path-done";
  * (shows type-specific advice) and tick actions off; both are remembered in
  * this browser only.
  */
-export function JourneyPath({ path, topics, mobile = false }: { path: Path; topics: Record<string, TopicRef>; mobile?: boolean }) {
+export function JourneyPath({ path, topics, tools = {}, mobile = false }: { path: Path; topics: Record<string, TopicRef>; tools?: Record<string, ToolRef>; mobile?: boolean }) {
   const [type, setType] = useState<BusinessType | null>(null);
   const [done, setDone] = useState<Record<string, number[]>>({});
   const [loaded, setLoaded] = useState(false);
@@ -58,6 +59,9 @@ export function JourneyPath({ path, topics, mobile = false }: { path: Path; topi
   const isDone = (s: Path["steps"][number]) => (done[s.id]?.length ?? 0) >= s.doThis.length;
   const current = path.steps.find((s) => !isDone(s))?.id;
   const topicHref = (slug: string) => (mobile ? `/mobile/t/${slug}` : `/topics/${slug}`);
+  const toolsHref = (id: string) => (mobile ? `/mobile/tools#${id}` : `/tools#${id}`);
+  // A starting business: show options that fit a small shop and, if chosen, its type.
+  const fits = (v: ToolRef["vendors"][number]) => (v.size.includes("micro") || v.size.includes("sme")) && (!type || v.types.includes(type));
 
   return (
     <div className={`journey${mobile ? " mobile" : ""}`}>
@@ -165,6 +169,44 @@ export function JourneyPath({ path, topics, mobile = false }: { path: Path; topi
                       ) : null;
                     })}
                   </div>
+
+                  {s.tools && s.tools.some((x) => tools[x.category]) && (
+                    <>
+                      <h3>เครื่องมือที่ใช้ในขั้นนี้</h3>
+                      <div className="journey-tools">
+                        {s.tools.map((x) => {
+                          const c = tools[x.category];
+                          if (!c) return null;
+                          const vs = c.vendors.filter(fits);
+                          const rows = (["th", "intl"] as const).map((o) => [o, vs.filter((v) => v.origin === o).slice(0, 4)] as const);
+                          return (
+                            <div key={x.category} className="journey-tool">
+                              <b>{c.name}</b>
+                              <p>{x.why}</p>
+                              {rows.map(([o, list]) =>
+                                list.length ? (
+                                  <div key={o} className="jt-row">
+                                    <span>{o === "th" ? "ในประเทศ" : "ต่างประเทศ"}</span>
+                                    {list.map((v) => (
+                                      <a key={v.name} className="jt-vendor" href={v.url} target="_blank" rel="noopener noreferrer nofollow">
+                                        {v.name}
+                                        <small>{TIER_LABEL[v.priceTier]}</small>
+                                      </a>
+                                    ))}
+                                  </div>
+                                ) : null,
+                              )}
+                              <div className="jt-row">
+                                <Link className="jt-more" href={toolsHref(c.id)}>
+                                  เทียบทั้ง {c.count} ราย พร้อมราคาและข้อควรรู้ ›
+                                </Link>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </>
+                  )}
 
                   <h3>Prompt สำหรับขั้นนี้</h3>
                   <FillablePrompt text={s.prompt} block />

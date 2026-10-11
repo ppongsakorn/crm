@@ -112,6 +112,8 @@ test("mobile app routes map to and from the desktop pages", async () => {
   assert.equal(toDesktopPath("/mobile/trends/"), "/trends/");
   assert.equal(toMobilePath("/path/"), "/mobile/path/");
   assert.equal(toDesktopPath("/mobile/path/"), "/path/");
+  assert.equal(toMobilePath("/tools/"), "/mobile/tools/");
+  assert.equal(toDesktopPath("/mobile/tools/"), "/tools/");
   assert.equal(toMobilePath("/architecture/"), null);
   assert.equal(toMobilePath("/advisor/"), null);
   assert.equal(toDesktopPath("/mobile/t/churn-prediction/"), "/topics/churn-prediction/");
@@ -164,5 +166,43 @@ test("starter journey path is complete and points at real topics", () => {
     for (const k of ["online", "store", "service"]) assert.ok(s.byType[k]?.trim(), `${s.id} byType.${k}`);
     for (const t of s.topics) assert.ok(slugs.has(t), `${s.id} → unknown topic ${t}`);
     assert.match(s.prompt, /\[[^\]]+\]/, `${s.id} prompt needs placeholders`);
+    assert.ok(s.tools?.length, `${s.id} should recommend tools`);
+    for (const t of s.tools) {
+      assert.ok(fs.existsSync(`data/vendors/${t.category}.json`), `${s.id} → unknown tool category ${t.category}`);
+      assert.ok(t.why?.trim(), `${s.id} ${t.category} why`);
+    }
   }
+});
+
+test("tools catalogue: every category complete, Thai and international, no Buzzebees", () => {
+  const CATS = ["crm-core", "pos-store", "ecommerce-ops", "consent-pdpa", "chat-commerce", "messaging", "loyalty", "helpdesk", "feedback", "data-analytics", "ai-assistants"];
+  const files = fs.readdirSync("data/vendors").filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
+  assert.deepEqual(files.sort(), [...CATS].sort(), "data/vendors/*.json must match TOOL_SECTIONS in lib/vendors.ts");
+  const src = fs.readFileSync("lib/vendors.ts", "utf8");
+  for (const c of CATS) assert.ok(src.includes(`"${c}"`), `${c} missing from TOOL_SECTIONS`);
+  let th = 0;
+  for (const id of CATS) {
+    const raw = fs.readFileSync(`data/vendors/${id}.json`, "utf8");
+    assert.doesNotMatch(raw, /buzzebees/i, `${id} must not list Buzzebees`);
+    const c = JSON.parse(raw);
+    assert.equal(c.id, id);
+    for (const k of ["name", "en", "what", "whenNeeded", "freeStart"]) assert.ok(c[k]?.trim(), `${id} ${k}`);
+    assert.ok(c.chooseBy.length >= 3, `${id} chooseBy`);
+    assert.ok(c.vendors.length >= 5 && c.vendors.length <= 9, `${id} vendor count`);
+    const names = new Set();
+    for (const v of c.vendors) {
+      const w = `${id}/${v.name}`;
+      assert.ok(!names.has(v.name.toLowerCase()), `${w} duplicate`);
+      names.add(v.name.toLowerCase());
+      assert.ok(["th", "intl"].includes(v.origin), `${w} origin`);
+      assert.ok(["free", "low", "mid", "enterprise"].includes(v.priceTier), `${w} priceTier`);
+      assert.ok(v.size.length && v.size.every((x) => ["micro", "sme", "mid", "enterprise"].includes(x)), `${w} size`);
+      assert.ok(v.types.length && v.types.every((x) => ["online", "store", "service"].includes(x)), `${w} types`);
+      for (const k of ["country", "priceNote", "thai", "goodFor", "watchOut"]) assert.ok(v[k]?.trim(), `${w} ${k}`);
+      for (const k of ["url", "source"]) assert.match(v[k], /^https:\/\//, `${w} ${k}`);
+      if (v.origin === "th") th++;
+    }
+    assert.ok(c.vendors.some((v) => v.origin === "th") || c.note, `${id}: no Thai vendor and no note explaining why`);
+  }
+  assert.ok(th >= 15, `only ${th} Thai vendors in the catalogue`);
 });

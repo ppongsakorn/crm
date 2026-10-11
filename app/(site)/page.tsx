@@ -3,6 +3,7 @@ import { allWhatsNew, groups, promptCount, THEME_LABEL, THEMES, topics, topicsIn
 import { aiEnabled, basePath } from "@/lib/site";
 import { changelog, thaiDate } from "@/lib/changelog";
 import { starterPath } from "@/lib/paths";
+import { toolCategories, vendorCount } from "@/lib/vendors";
 
 const RING = groups.filter((g) => g.id !== "data");
 const CORE = groups.find((g) => g.id === "data")!;
@@ -104,6 +105,17 @@ export default function Home() {
         </div>
         <Link href="/path" className="btn primary">
           ดูเส้นทางเริ่มต้น →
+        </Link>
+      </section>
+      <section className="panel path-band tools-band">
+        <div>
+          <h2>ต้องใช้ระบบอะไรบ้าง</h2>
+          <p>
+            ซอฟต์แวร์และผู้ให้บริการ CRM {vendorCount} ราย ทั้งไทยและต่างประเทศ ใน {toolCategories.length} หมวด บอกว่าควรเริ่มใช้เมื่อไร เลือกอย่างไร เริ่มฟรีได้ไหม และข้อควรรู้ของแต่ละเจ้า
+          </p>
+        </div>
+        <Link href="/tools" className="btn">
+          ดูเครื่องมือ →
         </Link>
       </section>
 

@@ -13,6 +13,8 @@ export interface PathStep {
   readyWhen: string;
   byType: Record<BusinessType, string>;
   topics: string[];
+  /** Software categories (data/vendors) this step needs, and why. */
+  tools?: { category: string; why: string }[];
   prompt: string;
 }
 

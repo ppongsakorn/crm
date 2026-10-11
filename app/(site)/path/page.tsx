@@ -3,6 +3,7 @@ import { JourneyPath, type TopicRef } from "@/components/JourneyPath";
 import { ProfilePanel } from "@/components/ProfilePanel";
 import { topics } from "@/lib/data";
 import { starterPath } from "@/lib/paths";
+import { toolRefs } from "@/lib/vendors";
 
 export const metadata: Metadata = {
   title: starterPath.title,
@@ -19,7 +20,7 @@ export default function PathPage() {
         <p>{starterPath.intro}</p>
       </div>
       <ProfilePanel compact />
-      <JourneyPath path={starterPath} topics={refs} />
+      <JourneyPath path={starterPath} topics={refs} tools={toolRefs()} />
     </>
   );
 }
