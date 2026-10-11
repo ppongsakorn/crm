@@ -20,8 +20,17 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://cookiewow.com/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Small ฿259 ต่อเดือน หรือ ฿2,400 ต่อปี (รวม VAT) 100,000 pageviews 10 โดเมน; มีบริการฟรีสำหรับเว็บเล็กและทดลองฟรี แต่หน้าเว็บไม่ระบุขีดจำกัด (ต.ค. 2026)",
       "thai": "บริษัทไทย หน้าจอภาษาไทย แบนเนอร์รองรับไทย อังกฤษ จีน และญี่ปุ่น",
@@ -35,8 +44,16 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://consentwow.com/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Small ฿1,490 ต่อเดือน (รวม VAT) 1,000 consents ต่อเดือน 1 ผู้ใช้ เก็บบันทึก 1 ปี; Medium ฿4,990; จ่ายรายปีลด 5% (หน้าเว็บ ต.ค. 2026)",
       "thai": "หน้าจอภาษาไทย เบอร์ติดต่อกรุงเทพฯ มีแชตซัพพอร์ต",
@@ -50,8 +67,17 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://pdpaform.com/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "แผนฟรี 1 ผู้ใช้ 1 ฟอร์ม 50 คำขอต่อเดือน; Small Business ฿500 ต่อเดือน หรือ ฿5,000 ต่อปี (รวม VAT) (หน้าเว็บ ต.ค. 2026)",
       "thai": "บริษัทไทย หน้าจอภาษาไทย ออกแบบตาม PDPA",
@@ -65,8 +91,15 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://pdpa.pro/",
-      "size": ["micro", "sme"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "สร้างนโยบายความเป็นส่วนตัวไทย/อังกฤษได้ฟรี; ฉบับพรีเมียม ฿2,500 ต่อฉบับ จ่ายครั้งเดียว รวม VAT (หน้าเว็บ ต.ค. 2026)",
       "thai": "หน้าจอภาษาไทย มีแบบนโยบายตาม PDPA และตัวเลือก GDPR/CCPA",
@@ -80,14 +113,21 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.onetrust.com/",
-      "size": ["enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "enterprise",
       "priceNote": "ไม่แสดงราคา ขอใบเสนอราคา คิดตามการใช้งาน เช่น จำนวนผู้ดูแล ผู้เข้าชม หรือโปรไฟล์ข้อมูล (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันหน้าจอภาษาไทยหรือทีมไทยในหน้าที่เปิด",
       "goodFor": "องค์กรใหญ่และบริษัทข้ามชาติที่ต้องจัดการ consent, คำขอใช้สิทธิ, ROPA และความเสี่ยงผู้ให้บริการหลายประเทศในระบบเดียว",
       "watchOut": "ราคาและงานติดตั้งระดับองค์กร ต้องมีทีมดูแลต่อเนื่อง เกินความจำเป็นสำหรับ SME",
-      "source": "https://www.onetrust.com/pricing/"
+      "source": "https://www.onetrust.com/pricing/",
+      "productUrl": "https://www.onetrust.com/solutions/consent-and-preferences/"
     },
     {
       "name": "CookieYes",
@@ -95,8 +135,16 @@
       "origin": "intl",
       "country": "สหราชอาณาจักร",
       "url": "https://www.cookieyes.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "แผนฟรี 5,000 pageviews ต่อเดือนต่อโดเมน; Basic US$10 ต่อโดเมนต่อเดือน หรือ US$100 ต่อปี; รองรับ Google Consent Mode v2 และเป็น Google Certified CMP ทุกแผน (หน้าราคา ต.ค. 2026)",
       "thai": "หน้าราคาไม่พูดถึง PDPA ไทย; ภาษาไทยบนแบนเนอร์ต้องตรวจสอบเอง",
@@ -110,8 +158,16 @@
       "origin": "intl",
       "country": "เดนมาร์ก/เยอรมนี",
       "url": "https://www.cookiebot.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "แผนฟรีไม่เกิน 50 หน้าย่อย 1 โดเมน; Premium Lite €7 ต่อโดเมนต่อเดือน; Usercentrics Advanced สำหรับองค์กรต้องติดต่อฝ่ายขาย (หน้าราคา ต.ค. 2026)",
       "thai": "หน้าราคาไม่พูดถึงประเทศไทยหรือ PDPA; แผนฟรีใช้ได้ 1 ภาษา",
@@ -125,8 +181,16 @@
       "origin": "intl",
       "country": "ไอซ์แลนด์",
       "url": "https://www.cookiehub.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "แผนฟรี 1,000 sessions ต่อเดือน; Starter €6 ต่อเดือน 5,000 sessions; เป็น Google Certified CMP รองรับ Consent Mode v2 (หน้าราคา ต.ค. 2026)",
       "thai": "มีหน้าอธิบาย PDPA ไทย แต่ไม่พบข้อมูลยืนยันแบนเนอร์ภาษาไทยในหน้าที่เปิด",

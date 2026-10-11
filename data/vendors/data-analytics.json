@@ -59,7 +59,8 @@
       "thai": "หน้าจอรองรับภาษาไทยตามการตั้งค่าภาษาของบัญชี Google และใช้ข้อความภาษาไทยในรายงานได้",
       "goodFor": "SME ที่อยากทำ dashboard ยอดขายและผลแคมเปญจาก Google Sheets, GA4 หรือฐานข้อมูลโดยไม่ต้องลงทุน",
       "watchOut": "connector ของพาร์ทเนอร์บางรายเก็บเงินแยก และรายงานช้าลงเมื่อข้อมูลมาก",
-      "source": "https://datastudio.google.com/overview"
+      "source": "https://datastudio.google.com/overview",
+      "productUrl": "https://datastudio.google.com/overview"
     },
     {
       "name": "Microsoft Power BI",
@@ -82,7 +83,8 @@
       "thai": "หน้าจอรองรับภาษาไทย; หน้าราคาระบุว่าราคาอาจต่างตามสกุลเงินและประเทศ",
       "goodFor": "องค์กรที่ใช้ Microsoft 365 และ Excel อยู่แล้ว และต้องการ dashboard ที่แชร์ในทีมได้",
       "watchOut": "การแชร์รายงานต้องซื้อไลเซนส์ทั้งผู้สร้างและผู้ดู (ยกเว้นซื้อ capacity ระดับใหญ่)",
-      "source": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing"
+      "source": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+      "productUrl": "https://www.microsoft.com/th-th/power-platform/products/power-bi"
     },
     {
       "name": "Databricks",
@@ -104,7 +106,8 @@
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด; ใช้ผ่าน AWS, Azure หรือ Google Cloud",
       "goodFor": "องค์กรที่มีทีมข้อมูลและต้องการรวมข้อมูลลูกค้า ทำโมเดล AI และสร้าง AI agent บน lakehouse เดียว",
       "watchOut": "ค่าใช้จ่ายขึ้นกับ compute ที่ใช้จริงและค่าคลาวด์แยกต่างหาก ถ้าไม่ตั้งการควบคุมงบอาจบานปลาย",
-      "source": "https://www.databricks.com/product/pricing"
+      "source": "https://www.databricks.com/product/pricing",
+      "productUrl": "https://www.databricks.com/product/platform"
     },
     {
       "name": "Snowflake",
@@ -126,7 +129,8 @@
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด",
       "goodFor": "องค์กรที่ต้องการ data warehouse กลางสำหรับข้อมูลลูกค้าและแชร์ข้อมูลกับพาร์ทเนอร์",
       "watchOut": "ต้องมีวิศวกรข้อมูลดูแล และค่า compute ผันผวนตามปริมาณการค้นหา",
-      "source": "https://www.snowflake.com/en/pricing-options/"
+      "source": "https://www.snowflake.com/en/pricing-options/",
+      "productUrl": "https://www.snowflake.com/en/product/platform/"
     },
     {
       "name": "Segment",
@@ -147,7 +151,8 @@
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยหรือ connector LINE OA สำเร็จรูปในหน้าที่เปิด",
       "goodFor": "ธุรกิจออนไลน์และแอปที่ต้องเก็บ event ลูกค้าครั้งเดียวแล้วส่งต่อไปหลายเครื่องมือ",
       "watchOut": "ค่าบริการขึ้นตามจำนวนผู้ใช้ที่ติดตาม (MTU) จึงแพงขึ้นเร็วเมื่อทราฟฟิกโต และเหมาะกับทีมที่มีนักพัฒนา",
-      "source": "https://www.twilio.com/en-us/products/connections/pricing"
+      "source": "https://www.twilio.com/en-us/products/connections/pricing",
+      "productUrl": "https://www.twilio.com/en-us/segment"
     },
     {
       "name": "Salesforce Data 360",
@@ -169,7 +174,8 @@
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด; มีพาร์ทเนอร์ Salesforce ในไทย",
       "goodFor": "องค์กรที่ใช้ Salesforce อยู่แล้วและต้องการรวมโปรไฟล์ลูกค้าเพื่อใช้กับ Agentforce และแคมเปญ",
       "watchOut": "ผูกกับระบบนิเวศ Salesforce และการคิด credits ต้องประมาณการใช้งานให้ดีก่อนซื้อ",
-      "source": "https://www.salesforce.com/data/pricing/"
+      "source": "https://www.salesforce.com/data/pricing/",
+      "productUrl": "https://www.salesforce.com/th/data/"
     },
     {
       "name": "UniSight",
@@ -212,7 +218,8 @@
       "thai": "บริษัทไทย ทีมที่ปรึกษาคนไทย เป็นพาร์ทเนอร์ด้าน Google Marketing และ Cloud Platform",
       "goodFor": "องค์กรที่ต้องการที่ปรึกษาวางระบบวัดผล dashboard และ composable CDP บนคลาวด์ของตัวเอง",
       "watchOut": "เป็นงานบริการแบบโครงการ ต้องกำหนดขอบเขตและการส่งมอบความรู้ให้ทีมภายในชัดเจน",
-      "source": "https://predictive.co.th/"
+      "source": "https://predictive.co.th/",
+      "productUrl": "https://predictive.co.th/services/customer-data-platform/"
     }
   ]
 }

@@ -20,14 +20,23 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.zendesk.com/th/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "service", "store"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "service",
+        "store"
+      ],
       "priceTier": "mid",
       "priceNote": "Support Team เริ่ม US$19 ต่อเอเจนต์ต่อเดือน (จ่ายรายปี) หรือ US$25 (รายเดือน); Suite Team US$55 (รายปี); AI คิดตามเคสที่ AI ปิดได้เอง มีโควตาให้ 5–10 เคสต่อเอเจนต์ เกินแล้ว US$1.50–2.00 ต่อเคส; ทดลองฟรี 14 วัน (หน้าราคา ต.ค. 2026)",
       "thai": "หน้าราคาระบุช่องทาง LINE ในแผน Suite; มีเว็บไซต์ภาษาไทย แต่ไม่พบข้อมูลยืนยันหน้าจอแอดมินภาษาไทยหรือทีมซัพพอร์ตไทยในหน้าที่เปิด",
       "goodFor": "ทีมบริการลูกค้าขนาดกลางถึงใหญ่ที่ต้องการระบบเคส SLA ฐานความรู้ และ AI agent ในระบบเดียว",
       "watchOut": "ราคาเป็นดอลลาร์และค่าใช้จ่ายรวมโตเร็วเมื่อเพิ่มเอเจนต์และจำนวนเคสที่ AI ปิด ควรประเมินปริมาณเคสก่อนเซ็นสัญญารายปี",
-      "source": "https://www.zendesk.com/pricing/"
+      "source": "https://www.zendesk.com/pricing/",
+      "productUrl": "https://www.zendesk.com/service/"
     },
     {
       "name": "Freshdesk",
@@ -35,8 +44,15 @@
       "origin": "intl",
       "country": "สหรัฐฯ (ก่อตั้งในอินเดีย)",
       "url": "https://www.freshworks.com/freshdesk/",
-      "size": ["sme", "mid"],
-      "types": ["online", "service", "store"],
+      "size": [
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service",
+        "store"
+      ],
       "priceTier": "mid",
       "priceNote": "Growth เริ่ม US$19 ต่อเอเจนต์ต่อเดือน (จ่ายรายปี); Pro US$55; ไม่พบแผนฟรีบนหน้าราคา มีทดลองฟรี 14 วัน; Freddy AI Agent ให้ฟรี 500 sessions ครั้งเดียว จากนั้น US$49 ต่อ 100 sessions; Freddy AI Copilot US$29 ต่อเอเจนต์ต่อเดือน (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันหน้าจอภาษาไทย ทีมซัพพอร์ตไทย หรือการเชื่อม LINE OA แบบสำเร็จรูปในหน้าที่เปิด",
@@ -50,14 +66,22 @@
       "origin": "intl",
       "country": "สหรัฐฯ/ไอร์แลนด์",
       "url": "https://www.intercom.com/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "Essential เริ่ม US$29 ต่อที่นั่งต่อเดือน; Advanced US$85; Fin AI Agent US$0.99 ต่อ outcome; ไม่มีแผนฟรี มีทดลองฟรี 14 วัน (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันหน้าจอภาษาไทย ทีมซัพพอร์ตไทย หรือการเชื่อม LINE OA ในหน้าที่เปิด",
       "goodFor": "ธุรกิจออนไลน์ แอป และ SaaS ที่ลูกค้าติดต่อผ่านแชตบนเว็บหรือในแอป และอยากให้ AI ตอบก่อนส่งต่อคน",
       "watchOut": "ค่า Fin คิดต่อ outcome จึงผันผวนตามปริมาณแชต และเน้นแชตบนเว็บ/แอปมากกว่าช่องทางยอดนิยมในไทยอย่าง LINE",
-      "source": "https://www.intercom.com/pricing"
+      "source": "https://www.intercom.com/pricing",
+      "productUrl": "https://www.intercom.com/helpdesk"
     },
     {
       "name": "Zoho Desk",
@@ -65,8 +89,16 @@
       "origin": "intl",
       "country": "อินเดีย",
       "url": "https://www.zoho.com/th/desk/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["service", "online", "store"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "service",
+        "online",
+        "store"
+      ],
       "priceTier": "free",
       "priceNote": "มีแผนฟรีถาวรสำหรับ 3 ผู้ใช้ (เน้นสร้าง ticket จากอีเมล); แผนเสียเงินเริ่มที่ Express คิดต่อผู้ใช้ต่อเดือน ราคาแสดงตามสกุลเงินของประเทศผู้เข้าชม ดูราคาบนเว็บ (ต.ค. 2026)",
       "thai": "หน้าเว็บและหน้าราคามีภาษาไทย; ไม่พบข้อมูลยืนยันการเชื่อม LINE OA แบบสำเร็จรูปในหน้าที่เปิด",
@@ -80,14 +112,22 @@
       "origin": "intl",
       "country": "สิงคโปร์ (มีสำนักงานกรุงเทพฯ)",
       "url": "https://www.zaapi.com/th",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store"
+      ],
       "priceTier": "low",
       "priceNote": "Basic ฿2,500 ต่อเดือน (รายเดือน) หรือ ฿1,875 (รายปี) รวม 3 ผู้ใช้ ไม่รวม VAT 7%; ผู้ใช้เพิ่ม ฿825–2,000 ต่อเดือน; มีทดลองฟรี ไม่มีแผนฟรีถาวร (หน้าราคา ต.ค. 2026)",
       "thai": "เว็บไซต์ภาษาไทย ราคาเป็นบาท เชื่อม LINE, Facebook, Instagram, WhatsApp, TikTok, Shopee และ Lazada",
       "goodFor": "ร้านออนไลน์ที่ขายหลายช่องทางและอยากรวมแชตโซเชียลกับมาร์เก็ตเพลสไว้ในกล่องเดียว",
       "watchOut": "หน้าราคาไม่ได้พูดถึงระบบ ticket โดยตรง (มีมอบหมายแชต ป้ายกำกับ และสถิติ) ถ้าต้องการ SLA และเคสหลายขั้นตอนควรทดสอบก่อน",
-      "source": "https://www.zaapi.com/th/pricing"
+      "source": "https://www.zaapi.com/th/pricing",
+      "productUrl": "https://www.zaapi.com/th/product/unified-inbox"
     },
     {
       "name": "Chatcone",
@@ -95,8 +135,16 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.chatcone.com/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "service", "store"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "service",
+        "store"
+      ],
       "priceTier": "mid",
       "priceNote": "ไม่แสดงราคาบนเว็บ ติดต่อฝ่ายขาย (ต.ค. 2026)",
       "thai": "บริษัทไทย ทีมซัพพอร์ตไทย เชื่อม LINE OA, Facebook, Instagram, TikTok, Lazada และ WeChat OA",
@@ -110,14 +158,23 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.oho.chat/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "service", "store"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service",
+        "store"
+      ],
       "priceTier": "low",
       "priceNote": "Pro ราว ฿900–1,000 ต่อเดือน (จ่ายล่วงหน้า 4 เดือนถึง 1 ปี เช่น ฿10,800 ต่อปี) ไม่รวม VAT; ทดลองฟรี 14 วัน 5 ผู้ใช้; หน้าราคาไม่ระบุวันที่มีผล (เปิดดู ต.ค. 2026)",
       "thai": "ทีมซัพพอร์ตคนไทย เชื่อม LINE OA, Facebook Messenger, คอมเมนต์ Facebook, Instagram, TikTok และแชตบนเว็บ",
       "goodFor": "ร้านค้าและคลินิกขนาดเล็กถึงกลางที่ต้องการรวมแชตพร้อมระบบเคส (Case) ราคาเข้าถึงง่าย",
       "watchOut": "ต้องจ่ายล่วงหน้าเป็นรอบหลายเดือน และแผนเล็กจำกัดจำนวนช่องทางที่เชื่อมได้ (2 ช่องทาง)",
-      "source": "https://www.oho.chat/pricing"
+      "source": "https://www.oho.chat/pricing",
+      "productUrl": "https://www.oho.chat/feature-page/case"
     },
     {
       "name": "LIVELY",
@@ -125,8 +182,14 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.amitysolutions.com/product/lively",
-      "size": ["mid", "enterprise"],
-      "types": ["service", "store"],
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "service",
+        "store"
+      ],
       "priceTier": "enterprise",
       "priceNote": "ไม่แสดงราคา ติดต่อฝ่ายขาย (ต.ค. 2026)",
       "thai": "บริษัทไทย รองรับภาษาไทยและอังกฤษ ใช้งานบน LINE Official Account, webchat, ในแอป และเสียง",
@@ -140,14 +203,22 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://wisesight.com/",
-      "size": ["mid", "enterprise"],
-      "types": ["service", "store", "online"],
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "service",
+        "store",
+        "online"
+      ],
       "priceTier": "enterprise",
       "priceNote": "ไม่แสดงราคา ติดต่อฝ่ายขาย (ต.ค. 2026)",
       "thai": "บริษัทไทย ซัพพอร์ตภาษาไทยและอังกฤษ",
       "goodFor": "แบรนด์ใหญ่ที่ต้องรับเรื่องจากโซเชียลหลายช่องทางเป็น ticket และอยากใช้ร่วมกับ social listening ของ Wisesight",
       "watchOut": "เน้นงานโซเชียลของแบรนด์ใหญ่ หน้าเว็บให้รายละเอียดฟีเจอร์และราคาน้อย ต้องนัดเดโมเพื่อประเมิน",
-      "source": "https://wisesight.com/"
+      "source": "https://wisesight.com/",
+      "productUrl": "https://wisesight.com/th/warroom/"
     }
   ]
 }

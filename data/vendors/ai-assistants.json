@@ -20,8 +20,17 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://chatgpt.com/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "Free US$0; Go US$8 ต่อเดือน; Plus US$20; Business US$20 ต่อผู้ใช้ต่อเดือน (จ่ายรายปี ขั้นต่ำ 2 ผู้ใช้) หรือ US$25 รายเดือน; Enterprise ติดต่อฝ่ายขาย (หน้าราคา ต.ค. 2026)",
       "thai": "ใช้ภาษาไทยได้ทั้งการพิมพ์ถามและคำตอบ",
@@ -35,14 +44,24 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://claude.com/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "Free US$0; Pro US$20 ต่อเดือน (หรือ US$17 เมื่อจ่ายรายปี); Team Standard US$25 ต่อที่นั่งต่อเดือน (US$20 รายปี) 2–150 ผู้ใช้; Enterprise US$20 ต่อที่นั่งต่อเดือนบวกค่าใช้งานตามอัตรา API (หน้าราคา ต.ค. 2026)",
       "thai": "ใช้ภาษาไทยได้ทั้งการพิมพ์ถามและคำตอบ",
       "goodFor": "ทีมที่ต้องวิเคราะห์เอกสารยาว ข้อมูลตาราง และร่างเนื้อหาหรือขั้นตอนงาน CRM อย่างละเอียด",
       "watchOut": "แผน Team และ Enterprise ระบุว่าไม่ฝึกโมเดลด้วยเนื้อหาโดยค่าเริ่มต้น แต่แผนบุคคลควรตรวจการตั้งค่าความเป็นส่วนตัวก่อนใช้กับข้อมูลงาน",
-      "source": "https://claude.com/pricing"
+      "source": "https://claude.com/pricing",
+      "productUrl": "https://claude.com/product/overview"
     },
     {
       "name": "Gemini",
@@ -50,14 +69,24 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://gemini.google/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "ฟรีด้วยบัญชี Google; Google AI Pro US$19.99 ต่อเดือน (ราคาหน้าสหรัฐฯ ราคาไทยอาจต่างกัน); สำหรับองค์กร Gemini รวมอยู่ในแพ็กเกจ Google Workspace ดูราคาบนเว็บ (ต.ค. 2026)",
       "thai": "ใช้ภาษาไทยได้ และทำงานใน Gmail, Docs, Sheets เมื่อใช้ Google Workspace แผน Standard ขึ้นไป",
       "goodFor": "ธุรกิจที่ใช้ Google Workspace อยู่แล้วและอยากให้ AI ช่วยในอีเมล เอกสาร และสเปรดชีตลูกค้า",
       "watchOut": "Workspace แผน Starter ใช้ Gemini ในแอปอย่าง Docs และ Sheets ไม่ได้ ต้องเลือกแผนให้ตรงกับงาน",
-      "source": "https://gemini.google/subscriptions/"
+      "source": "https://gemini.google/subscriptions/",
+      "productUrl": "https://gemini.google/th/overview/"
     },
     {
       "name": "Microsoft Copilot (เดิม Microsoft 365 Copilot)",
@@ -65,14 +94,23 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.microsoft.com/microsoft-365-copilot",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["store", "service", "online"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "store",
+        "service",
+        "online"
+      ],
       "priceTier": "mid",
       "priceNote": "Copilot Chat แบบค้นเว็บรวมอยู่ใน Microsoft 365 ที่เข้าเงื่อนไขโดยไม่มีค่าใช้จ่ายเพิ่ม; Copilot ที่ใช้ข้อมูลงานเป็นไลเซนส์เสริมต่อผู้ใช้ ดูราคาบนเว็บ (หน้าราคาเปิดไม่ได้รอบนี้; เอกสาร Microsoft Learn ก.ย. 2026)",
       "thai": "ไม่ได้ยืนยันภาษาไทยในหน้าที่เปิด",
       "goodFor": "องค์กรที่ใช้ Outlook, Teams, Excel และ Dynamics 365 และอยากให้ AI สรุปอีเมล ประชุม และข้อมูลลูกค้า",
       "watchOut": "ต้องมีแผน Microsoft 365 ที่เข้าเงื่อนไขก่อนซื้อไลเซนส์เสริม และควรจัดสิทธิ์เข้าถึงไฟล์ให้เรียบร้อยก่อนเปิดใช้",
-      "source": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-licensing"
+      "source": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-licensing",
+      "productUrl": "https://www.microsoft.com/th-th/microsoft-365-copilot"
     },
     {
       "name": "Salesforce Agentforce",
@@ -80,14 +118,22 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.salesforce.com/agentforce/",
-      "size": ["mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "enterprise",
       "priceNote": "เริ่มฟรีผ่าน Salesforce Foundations; Flex Credits US$500 ต่อ 100,000 credits (action มาตรฐาน 20 credits); แบบต่อบทสนทนา US$2; add-on ต่อผู้ใช้ US$125 ต่อเดือน (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด",
       "goodFor": "องค์กรที่ใช้ Salesforce Sales หรือ Service Cloud และต้องการ AI agent ที่ทำงานบนข้อมูลลูกค้าใน Salesforce",
       "watchOut": "credits ที่ไม่ได้ใช้ไม่ยกยอด และการคิดเงินหลายแบบทำให้ประมาณการงบยาก ควรเริ่มจาก use case เดียว",
-      "source": "https://www.salesforce.com/agentforce/pricing/"
+      "source": "https://www.salesforce.com/agentforce/pricing/",
+      "productUrl": "https://www.salesforce.com/th/agentforce/"
     },
     {
       "name": "HubSpot Breeze (Agent Hub)",
@@ -95,8 +141,15 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.hubspot.com/products/artificial-intelligence",
-      "size": ["sme", "mid"],
-      "types": ["online", "service", "store"],
+      "size": [
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service",
+        "store"
+      ],
       "priceTier": "mid",
       "priceNote": "Agent Hub รวมในแผน Starter, Professional และ Enterprise; agent หลายตัวใช้ HubSpot Credits ซื้อเป็นแพ็กหรือจ่ายตามใช้ ดูราคาบนเว็บ (ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยในหน้าที่เปิด",
@@ -110,8 +163,16 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://about.fb.com/news/2026/06/meta-business-agent/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "เริ่มใช้ได้ฟรี และ Meta แจ้งว่าจะมีแผนสมาชิกแบบเสียเงินตามมา (ประกาศ มิ.ย. 2026)",
       "thai": "ตอบลูกค้าในภาษาท้องถิ่น ใช้บน WhatsApp, Messenger และ Instagram; Business AI บน Messenger เปิดในไทยเมื่อ มี.ค. 2026",
@@ -125,8 +186,16 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://opentyphoon.ai/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "API ฟรีสำหรับการใช้งานเบา (5 requests ต่อวินาที 200 ต่อนาที); ใช้งานปริมาณมากผ่าน Together.ai แบบจ่ายตามใช้; โมเดลดาวน์โหลดได้ที่ Hugging Face (เอกสาร ต.ค. 2026)",
       "thai": "โมเดลภาษาไทยโดยเฉพาะ มีทั้งโมเดลข้อความ แปลไทย-อังกฤษ OCR เอกสารไทย และรู้จำเสียงพูดไทยและอีสาน",
@@ -140,14 +209,24 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://botnoigroup.com/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "ไม่แสดงราคาบนเว็บ มีทดลองใช้ฟรีและนัดเดโมฟรี (ต.ค. 2026)",
       "thai": "เว็บไซต์ภาษาไทย ทำแชตบอตและวอยซ์บอตภาษาไทย deploy ได้บน LINE, Facebook, WhatsApp, โทรศัพท์ และเว็บไซต์",
       "goodFor": "ธุรกิจไทยที่ต้องการแชตบอตหรือ AI agent ตอบลูกค้าบน LINE พร้อมเสียงพูดภาษาไทย (TTS) และระบบโทรอัตโนมัติ",
       "watchOut": "ราคาไม่เปิดเผย ต้องขอใบเสนอราคา และควรทดสอบความถูกต้องของคำตอบกับคำถามจริงก่อนเปิดให้ลูกค้าใช้",
-      "source": "https://botnoi.ai/"
+      "source": "https://botnoi.ai/",
+      "productUrl": "https://botnoi.ai/"
     }
   ]
 }

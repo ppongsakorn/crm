@@ -20,14 +20,24 @@
       "origin": "intl",
       "country": "ญี่ปุ่น (มีบริษัทในไทย)",
       "url": "https://lineforbusiness.com/th",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "ฟีเจอร์สำรวจความพึงพอใจใช้ได้โดยไม่เสียค่าบริการ แต่การส่งผ่านบรอดแคสต์นับโควตาข้อความของแพ็กเกจ LINE OA (LINE Help, ต.ค. 2026)",
       "thai": "หน้าจอภาษาไทย ใช้ใน LINE OA โดยตรง",
       "goodFor": "ธุรกิจที่มีเพื่อนใน LINE OA และอยากวัด NPS เป็นระยะ หรือส่งแบบสอบถามพร้อมคูปองตอบแทน",
       "watchOut": "สำรวจความพึงพอใจได้ทุก 90 วัน คำถามปลายเปิดใช้ได้เฉพาะบัญชีพรีเมียมหรือบัญชีรับรอง และถามข้อมูลลักษณะผู้ใช้ได้แค่เพศ อายุ และพื้นที่",
-      "source": "https://help2.line.me/official_account_th/ios/categoryId/200000079/3/pc?lang=th"
+      "source": "https://help2.line.me/official_account_th/ios/categoryId/200000079/3/pc?lang=th",
+      "productUrl": "https://lineforbusiness.com/th/service/line-oa-features"
     },
     {
       "name": "Google Forms",
@@ -35,14 +45,23 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://workspace.google.com/products/forms/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "หน้าทางการไม่แสดงราคา; สร้างฟอร์มได้ด้วยบัญชี Google และบันทึกใน Google Drive; การใช้ในนามองค์กรอยู่ในแพ็กเกจ Google Workspace ดูราคาบนเว็บ (ต.ค. 2026)",
       "thai": "ใช้ภาษาไทยในคำถามและหน้าจอได้",
       "goodFor": "ร้านเล็กและ SME ที่อยากทำแบบสอบถามหลังซื้อหรือหลังบริการเร็ว ๆ และดูผลใน Google Sheets",
       "watchOut": "ไม่มีตัวคำนวณ NPS หรือการตามแก้รายลูกค้าในตัว ต้องทำต่อใน Sheets และต้องเขียนข้อความแจ้ง PDPA เอง",
-      "source": "https://support.google.com/docs/answer/6281888?hl=en"
+      "source": "https://support.google.com/docs/answer/6281888?hl=en",
+      "productUrl": "https://workspace.google.com/intl/th/products/forms/"
     },
     {
       "name": "SurveyMonkey",
@@ -50,14 +69,23 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.surveymonkey.com/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "มีแผนฟรี Basic ที่ดูคำตอบได้จำกัด; Team Advantage US$30 ต่อผู้ใช้ต่อเดือน (จ่ายรายปี ขั้นต่ำ 3 ผู้ใช้) 50,000 คำตอบต่อปี; คำตอบเกินโควตา US$0.15 ต่อคำตอบ (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันหน้าจอภาษาไทยหรือการเชื่อม LINE OA ในหน้าที่เปิด",
       "goodFor": "ทีมที่ทำแบบสำรวจลูกค้าเป็นประจำและต้องการเทมเพลต NPS/CSAT และรายงานสำเร็จรูป",
       "watchOut": "แผนทีมบังคับขั้นต่ำ 3 ผู้ใช้และจ่ายรายปี และแผนฟรีซ่อนคำตอบบางส่วน",
-      "source": "https://www.surveymonkey.com/pricing/"
+      "source": "https://www.surveymonkey.com/pricing/",
+      "productUrl": "https://www.surveymonkey.com/use-cases/customer-satisfaction/"
     },
     {
       "name": "Typeform",
@@ -65,14 +93,22 @@
       "origin": "intl",
       "country": "สเปน",
       "url": "https://www.typeform.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "มีแผนฟรีจำกัดจำนวนคำตอบ; Basic US$39 ต่อเดือน (รายเดือน) หรือ US$28 (รายปี) 100 คำตอบต่อเดือน; หน้าราคาแสดงตัวเลขไม่ตรงกันบางจุด (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันหน้าจอภาษาไทยในหน้าที่เปิด",
       "goodFor": "แบรนด์ออนไลน์ที่อยากได้แบบสอบถามหน้าตาสวย ถามทีละข้อ เพื่อเพิ่มอัตราการตอบ",
       "watchOut": "โควตาคำตอบต่อเดือนต่ำในแผนเริ่มต้น และไม่สามารถพักการสมัครแบบจ่ายล่วงหน้าได้",
-      "source": "https://www.typeform.com/pricing/"
+      "source": "https://www.typeform.com/pricing/",
+      "productUrl": "https://www.typeform.com/use-case/customer-feedback"
     },
     {
       "name": "Qualtrics",
@@ -80,14 +116,21 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.qualtrics.com/",
-      "size": ["enterprise"],
-      "types": ["store", "service", "online"],
+      "size": [
+        "enterprise"
+      ],
+      "types": [
+        "store",
+        "service",
+        "online"
+      ],
       "priceTier": "enterprise",
       "priceNote": "ไม่แสดงราคา ต้องขอใบเสนอราคา คิดตามจำนวน interactions และรวมผู้ใช้ไม่จำกัด (หน้าราคา ต.ค. 2026)",
       "thai": "ไม่พบข้อมูลยืนยันภาษาไทยหรือทีมไทยในหน้าที่เปิด",
       "goodFor": "องค์กรใหญ่ที่ต้องการโปรแกรม CX ครบวงจร วัดผลหลายจุดสัมผัส และเชื่อมกับ contact centre",
       "watchOut": "ราคาระดับองค์กรและต้องมีทีมดูแลโปรแกรม CX ไม่คุ้มสำหรับธุรกิจที่ต้องการแค่แบบสอบถามทั่วไป",
-      "source": "https://www.qualtrics.com/pricing/"
+      "source": "https://www.qualtrics.com/pricing/",
+      "productUrl": "https://www.qualtrics.com/customer-experience/"
     },
     {
       "name": "Google Business Profile",
@@ -95,14 +138,23 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://business.google.com/en-all/business-profile/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "สร้างโปรไฟล์และแสดงธุรกิจบน Google ได้ฟรี (หน้าทางการ ต.ค. 2026)",
       "thai": "ลูกค้าเขียนรีวิวภาษาไทยได้ และเจ้าของตอบรีวิวได้",
       "goodFor": "ร้านที่มีหน้าร้าน คลินิก และร้านอาหารที่อยากติดตามและตอบรีวิวบน Google Search และ Maps",
       "watchOut": "เก็บได้เฉพาะรีวิวสาธารณะ ไม่ได้ข้อมูลระบุตัวลูกค้า จึงต้องใช้คู่กับแบบสอบถามของตัวเอง",
-      "source": "https://business.google.com/en-all/business-profile/"
+      "source": "https://business.google.com/en-all/business-profile/",
+      "productUrl": "https://business.google.com/th/business-profile/"
     },
     {
       "name": "ZOCIAL EYE",
@@ -110,8 +162,15 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://wisesight.com/th/zocialeye/",
-      "size": ["mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "enterprise",
       "priceNote": "ไม่แสดงราคา ติดต่อฝ่ายขาย (ต.ค. 2026)",
       "thai": "บริษัทไทย ซัพพอร์ตภาษาไทยและอังกฤษ วิเคราะห์ข้อความโซเชียลภาษาไทย",
@@ -125,14 +184,24 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.mandalasystem.com/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Mandala AI มีแผนฟรี Explorer (1 ผู้ใช้ จำกัด AI Points); Essential ฿495 ต่อเดือน; Social Listening เต็มรูปแบบและฟีดโซเชียลแบบกำหนดเองไม่รวมในแผนฟรี ดูราคาบนเว็บ (ต.ค. 2026)",
       "thai": "หน้าจอภาษาไทยและอังกฤษ มีแอปมือถือ",
       "goodFor": "SME และทีมการตลาดที่อยากเริ่มติดตามเสียงลูกค้าและกระแสบนโซเชียลด้วยงบไม่สูง",
       "watchOut": "หน้าแผนแสดงราคาไม่ตรงกันบางจุด ควรยืนยันว่าแผนที่เลือกครอบคลุม social listening ที่ต้องการ",
-      "source": "https://www.mandalasystem.com/plans"
+      "source": "https://www.mandalasystem.com/plans",
+      "productUrl": "https://www.mandalasystem.com/platform/analytics"
     }
   ]
 }
