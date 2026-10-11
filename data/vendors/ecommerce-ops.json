@@ -1,211 +1,214 @@
 {
- "id": "ecommerce-ops",
- "name": "ระบบจัดการร้านออนไลน์และหลาย Marketplace",
- "en": "E-commerce & Multi-Marketplace Operations",
- "what": "เครื่องมือหมวดนี้รวมออเดอร์ สต็อก และข้อมูลการซื้อจากเว็บไซต์ โซเชียล และ Marketplace ไว้ที่เดียว ทีม CRM จึงเห็นว่าลูกค้าซื้ออะไร ผ่านช่องทางไหน และบ่อยแค่ไหน",
- "whenNeeded": "ควรเริ่มเมื่อขายตั้งแต่ 2 ช่องทางขึ้นไปและเริ่มตัดสต็อกผิดหรือตอบแชทไม่ทัน ถ้าขายช่องทางเดียวและออเดอร์ยังน้อย เครื่องมือหลังร้านของแพลตฟอร์มนั้นก็พอ",
- "chooseBy": [
-  "เชื่อม Shopee, Lazada, TikTok Shop, LINE SHOPPING และ Facebook ได้ครบตามที่ร้านขายจริงไหม",
-  "เก็บข้อมูลลูกค้าและประวัติการซื้อข้ามช่องทาง และส่งออกไปใช้ใน CRM หรือ LINE OA ได้ไหม",
-  "คิดราคาแบบไหน: ต่อเดือน ต่อจำนวนออเดอร์ ต่อร้านที่เชื่อม หรือต่อแอดมิน",
-  "รองรับไลฟ์สด ตัวแทนจำหน่าย หรือ POS หน้าร้าน ถ้าธุรกิจต้องใช้",
-  "ภาษาไทย ทีมซัพพอร์ตไทย และการออกใบกำกับภาษี"
- ],
- "freeStart": "Page365 และ BigSeller มีแผนฟรีที่จำกัดจำนวนออเดอร์ WooCommerce ใช้ฟรีแต่ต้องจ่ายค่าโฮสติ้งเอง ส่วน ZORT และ Shipnity ให้ทดลองใช้ 14–15 วัน",
- "note": "ปี 2026 Shopee, Lazada และ TikTok Shop ขึ้นค่าธรรมเนียมหลายรอบ และ Marketplace จำกัดข้อมูลติดต่อผู้ซื้อ ลูกค้าบน Marketplace จึงไม่ใช่ฐานลูกค้าของแบรนด์โดยตรง ควรมีวิธีพาผู้ซื้อมาสมัครสมาชิกในช่องทางของตัวเองอย่างถูก PDPA",
- "vendors": [
-  {
-   "name": "ZORT",
-   "origin": "th",
-   "country": "ไทย",
-   "url": "https://zortout.com/",
-   "size": [
-    "micro",
-    "sme",
-    "mid",
-    "enterprise"
-   ],
-   "types": [
-    "online",
-    "store"
-   ],
-   "priceTier": "low",
-   "priceNote": "ZORT STARTER 525 บาท/เดือน (6,300 บาท/ปี), PROFESSIONAL 1,250 บาท/เดือน, BUSINESS 2,000 บาท/เดือน เมื่อจ่ายรายปี ทดลองฟรี 15 วัน ตามหน้าแพ็กเกจที่เปิด ต.ค. 2026",
-   "thai": "UI และทีมไทย เชื่อม Lazada, Shopee, TikTok Shop และ LINE SHOPPING มีรายงานพฤติกรรมการซื้อของลูกค้าทุกช่องทาง",
-   "goodFor": "ร้านที่ขายหลาย Marketplace และต้องการระบบออเดอร์ สต็อก ขนส่ง และ POS หน้าร้านในที่เดียว",
-   "watchOut": "แพ็กเกจจำกัดจำนวนรายการซื้อขายต่อเดือนและจำนวนร้านที่เชื่อม ส่วนเกินต้องซื้อแพ็กเสริม",
-   "source": "https://zortout.com/package"
-  },
-  {
-   "name": "Page365",
-   "company": "Softbaked Co., Ltd.",
-   "origin": "th",
-   "country": "ไทย",
-   "url": "https://www.page365.net/",
-   "size": [
-    "micro",
-    "sme",
-    "mid"
-   ],
-   "types": [
-    "online"
-   ],
-   "priceTier": "free",
-   "priceNote": "มีแผน FREE แผน Solo 799 บาท/เดือน, Pro 1,499 บาท/เดือน, ProLive 2,999 บาท/เดือน, SME 5,999 บาท/เดือน, Enterprise รายปีเท่านั้น ตามหน้าราคาที่เปิด ต.ค. 2026",
-   "thai": "UI และทีมไทย แชทกับเจ้าหน้าที่ได้ 24 ชม. รองรับ LINE OA แต่ค่าส่งข้อความ LINE OA คิดแยกตามค่าบริการของ LINE",
-   "goodFor": "ร้านที่ขายผ่านแชท Facebook, LINE และไลฟ์สด และอยากเปลี่ยนแชทเป็นบิลอัตโนมัติ",
-   "watchOut": "แต่ละแผนจำกัดจำนวนบิลและแอดมินต่อเดือน และการ Broadcast ที่ไม่เหมาะสมอาจทำให้เพจถูก Facebook ระงับ",
-   "source": "https://www.page365.net/pricing"
-  },
-  {
-   "name": "Shipnity",
-   "origin": "th",
-   "country": "ไทย",
-   "url": "https://www.shipnity.com/",
-   "size": [
-    "micro",
-    "sme"
-   ],
-   "types": [
-    "online",
-    "store"
-   ],
-   "priceTier": "low",
-   "priceNote": "Quite Pro 890 บาท/เดือน ถึง Private Live 4,990 บาท/เดือน (ยังไม่รวม VAT 7%) ทดลองฟรี 14 วัน ตามหน้าแพ็กเกจที่เปิด ต.ค. 2026",
-   "thai": "UI และทีมไทย เชื่อมแชท Facebook, IG และ LINE OA และเชื่อม Shopee, Lazada, TikTok และ LINE SHOPPING",
-   "goodFor": "ร้านออนไลน์ที่มีตัวแทนจำหน่ายหรือขายผ่านไลฟ์สด และต้องการจัดการออเดอร์กับสต็อกในที่เดียว",
-   "watchOut": "แผนเริ่มต้นเชื่อม Marketplace ได้อย่างละ 1 ร้าน ถ้ามีหลายร้านต้องขยับแผน",
-   "source": "https://package.shipnity.com/"
-  },
-  {
-   "name": "BigSeller",
-   "company": "Shenzhen Douxun Technology Co., Ltd.",
-   "origin": "intl",
-   "country": "จีน",
-   "url": "https://www.bigseller.com/",
-   "size": [
-    "micro",
-    "sme",
-    "mid"
-   ],
-   "types": [
-    "online"
-   ],
-   "priceTier": "free",
-   "priceNote": "แผนฟรีใช้ได้ถาวร 1,500 ออเดอร์/เดือน แผนเสียเงินแสดงราคาเป็นสกุลเงินท้องถิ่นตามประเทศ ดูราคาบนเว็บ (เปิด ต.ค. 2026)",
-   "thai": "มีเบอร์ติดต่อสำนักงานกรุงเทพฯ บนเว็บ หน้าเว็บที่เปิดเป็นภาษาอังกฤษ ไม่ได้ยืนยัน UI ภาษาไทยหรือการเชื่อม LINE OA",
-   "goodFor": "ร้านที่ขายหลาย Marketplace ใน SEA และอยากเริ่มรวมออเดอร์ สินค้า และสต็อกโดยไม่เสียเงิน",
-   "watchOut": "แผนฟรีจำกัดจำนวนออเดอร์ ร้าน และบัญชีย่อย เน้นงานหลังร้านมากกว่างานดูแลลูกค้า",
-   "source": "https://www.bigseller.com/en_US/goods/price.htm"
-  },
-  {
-   "name": "Shopify",
-   "origin": "intl",
-   "country": "แคนาดา",
-   "url": "https://www.shopify.com/th",
-   "size": [
-    "micro",
-    "sme",
-    "mid",
-    "enterprise"
-   ],
-   "types": [
-    "online",
-    "store"
-   ],
-   "priceTier": "low",
-   "priceNote": "Basic US$19/เดือน, Grow US$49/เดือน, Advanced US$299/เดือน ตามหน้าราคาที่เปิด ต.ค. 2026 บวกค่าธรรมเนียม 2% หากใช้ผู้ให้บริการชำระเงินภายนอกในแผน Basic",
-   "thai": "เว็บไซต์ภาษาไทยและระบุว่ามีซัพพอร์ต 24 ชั่วโมงเป็นภาษาไทย หน้าเว็บไม่ได้ระบุการเชื่อม LINE OA",
-   "goodFor": "แบรนด์ที่อยากมีเว็บไซต์ขายของเอง เก็บบัญชีลูกค้าและข้อมูลการซื้อเป็นของแบรนด์",
-   "watchOut": "คิดเงินเป็นดอลลาร์ และฟีเจอร์บางอย่างต้องใช้แอปเสริมจาก Shopify App Store ซึ่งบางตัวมีค่ารายเดือนเพิ่ม",
-   "source": "https://www.shopify.com/th/pricing"
-  },
-  {
-   "name": "WooCommerce",
-   "origin": "intl",
-   "country": "สหรัฐฯ",
-   "url": "https://woocommerce.com/",
-   "size": [
-    "micro",
-    "sme",
-    "mid",
-    "enterprise"
-   ],
-   "types": [
-    "online"
-   ],
-   "priceTier": "free",
-   "priceNote": "ตัวระบบฟรีบน WordPress ไม่หักส่วนแบ่งยอดขาย ค่าโฮสติ้งราว US$25–350/เดือน และส่วนขยาย US$29–299/ปีต่อตัว ตามหน้าราคาที่เปิด ต.ค. 2026",
-   "thai": "เป็นซอฟต์แวร์โอเพนซอร์ส ภาษาไทยและการเชื่อม LINE OA ขึ้นกับธีม ปลั๊กอิน และผู้พัฒนาที่จ้าง",
-   "goodFor": "ธุรกิจที่มีเว็บ WordPress อยู่แล้ว และอยากเป็นเจ้าของข้อมูลลูกค้าพร้อมปรับแต่งได้เต็มที่",
-   "watchOut": "ต้องดูแลโฮสติ้ง ความปลอดภัย และอัปเดตปลั๊กอินเอง ค่าใช้จ่ายรวมจึงขึ้นกับทีมเทคนิค",
-   "source": "https://woocommerce.com/pricing/"
-  },
-  {
-   "name": "Shopee Seller Centre",
-   "company": "Shopee (Thailand) / Sea Limited",
-   "origin": "intl",
-   "country": "สิงคโปร์",
-   "url": "https://seller.shopee.co.th/",
-   "size": [
-    "micro",
-    "sme",
-    "mid",
-    "enterprise"
-   ],
-   "types": [
-    "online"
-   ],
-   "priceTier": "free",
-   "priceNote": "ไม่มีค่ารายเดือนสำหรับเปิดร้าน แต่หักค่าธรรมเนียมต่อออเดอร์ ปี 2026 ค่าคอมมิชชันราว 7.49–19.26% (รวม VAT) บวกค่าธุรกรรม 3.21% และ 1.07 บาท/ออเดอร์ ตามสรุปของ FlowAccount ส.ค. 2026 ควรเช็กอัตราล่าสุดกับ Shopee",
-   "thai": "Seller Centre และทีมไทย ใช้ภาษาไทยได้",
-   "goodFor": "ร้านที่ต้องการเข้าถึงผู้ซื้อจำนวนมากและใช้โค้ดส่วนลด แชท และแคมเปญในแพลตฟอร์ม",
-   "watchOut": "ค่าธรรมเนียมขึ้นหลายรอบในปี 2026 และข้อมูลติดต่อผู้ซื้อถูกจำกัด จึงสร้างฐาน CRM ของแบรนด์จากออเดอร์โดยตรงได้ยาก",
-   "source": "https://flowaccount.com/blog/commission-fees-ecommerce-shopee-lazada-tiktok/"
-  },
-  {
-   "name": "Lazada Seller Center",
-   "company": "Lazada",
-   "origin": "intl",
-   "country": "สิงคโปร์",
-   "url": "https://sellercenter.lazada.co.th/",
-   "size": [
-    "micro",
-    "sme",
-    "mid",
-    "enterprise"
-   ],
-   "types": [
-    "online"
-   ],
-   "priceTier": "free",
-   "priceNote": "ไม่มีค่ารายเดือนสำหรับเปิดร้าน แต่หักค่าธรรมเนียมต่อออเดอร์ ค่าบริการ Marketplace 6.96–17.12%, LazMall 6.96–18.73% บวกค่าชำระเงิน 3.21% มีผล 1 ส.ค. 2026 ผู้ขายใหม่ได้ค่าคอมมิชชัน 0% ใน 90 วันแรกตามหน้าสมัครที่เปิด ต.ค. 2026",
-   "thai": "Seller Center และทีมไทย ใช้ภาษาไทยได้",
-   "goodFor": "แบรนด์ที่ต้องการเปิดร้าน LazMall และใช้แคมเปญหรือคูปองของแพลตฟอร์ม",
-   "watchOut": "ส่วนแบ่งตลาดของ Lazada ใน SEA ลดลงในปี 2025 และข้อมูลลูกค้ายังอยู่ในแพลตฟอร์ม",
-   "source": "https://sellercenter.lazada.co.th/"
-  },
-  {
-   "name": "TikTok Shop Seller Center",
-   "company": "TikTok",
-   "origin": "intl",
-   "country": "สิงคโปร์",
-   "url": "https://seller-th.tiktok.com/",
-   "size": [
-    "micro",
-    "sme",
-    "mid",
-    "enterprise"
-   ],
-   "types": [
-    "online"
-   ],
-   "priceTier": "free",
-   "priceNote": "ไม่มีค่ารายเดือนสำหรับเปิดร้าน แต่หักค่าธรรมเนียมต่อออเดอร์ ค่าคอมมิชชันราว 5.35–7.49% บวกค่าธุรกรรม 3.21% และ Growth Fee สูงสุด 199 บาท/ชิ้น ตามสรุปของ FlowAccount ส.ค. 2026 ควรเช็กอัตราล่าสุดกับ TikTok",
-   "thai": "Seller Center ภาษาไทย ล็อกอินด้วยเบอร์ไทย",
-   "goodFor": "แบรนด์ที่ขายผ่านคลิปสั้น ไลฟ์ และครีเอเตอร์ Affiliate",
-   "watchOut": "ยอดขายพึ่งคอนเทนต์และโฆษณาของแพลตฟอร์มมาก ลูกค้าที่ได้มาเป็นผู้ติดตามบน TikTok ไม่ใช่ฐานข้อมูลของแบรนด์",
-   "source": "https://flowaccount.com/blog/commission-fees-ecommerce-shopee-lazada-tiktok/"
-  }
- ]
+  "id": "ecommerce-ops",
+  "name": "ระบบจัดการร้านออนไลน์และหลาย Marketplace",
+  "en": "E-commerce & Multi-Marketplace Operations",
+  "what": "เครื่องมือหมวดนี้รวมออเดอร์ สต็อก และข้อมูลการซื้อจากเว็บไซต์ โซเชียล และ Marketplace ไว้ที่เดียว ทีม CRM จึงเห็นว่าลูกค้าซื้ออะไร ผ่านช่องทางไหน และบ่อยแค่ไหน",
+  "whenNeeded": "ควรเริ่มเมื่อขายตั้งแต่ 2 ช่องทางขึ้นไปและเริ่มตัดสต็อกผิดหรือตอบแชทไม่ทัน ถ้าขายช่องทางเดียวและออเดอร์ยังน้อย เครื่องมือหลังร้านของแพลตฟอร์มนั้นก็พอ",
+  "chooseBy": [
+    "เชื่อม Shopee, Lazada, TikTok Shop, LINE SHOPPING และ Facebook ได้ครบตามที่ร้านขายจริงไหม",
+    "เก็บข้อมูลลูกค้าและประวัติการซื้อข้ามช่องทาง และส่งออกไปใช้ใน CRM หรือ LINE OA ได้ไหม",
+    "คิดราคาแบบไหน: ต่อเดือน ต่อจำนวนออเดอร์ ต่อร้านที่เชื่อม หรือต่อแอดมิน",
+    "รองรับไลฟ์สด ตัวแทนจำหน่าย หรือ POS หน้าร้าน ถ้าธุรกิจต้องใช้",
+    "ภาษาไทย ทีมซัพพอร์ตไทย และการออกใบกำกับภาษี"
+  ],
+  "freeStart": "Page365 และ BigSeller มีแผนฟรีที่จำกัดจำนวนออเดอร์ WooCommerce ใช้ฟรีแต่ต้องจ่ายค่าโฮสติ้งเอง ส่วน ZORT และ Shipnity ให้ทดลองใช้ 14–15 วัน",
+  "note": "ปี 2026 Shopee, Lazada และ TikTok Shop ขึ้นค่าธรรมเนียมหลายรอบ และ Marketplace จำกัดข้อมูลติดต่อผู้ซื้อ ลูกค้าบน Marketplace จึงไม่ใช่ฐานลูกค้าของแบรนด์โดยตรง ควรมีวิธีพาผู้ซื้อมาสมัครสมาชิกในช่องทางของตัวเองอย่างถูก PDPA",
+  "vendors": [
+    {
+      "name": "ZORT",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://zortout.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store"
+      ],
+      "priceTier": "low",
+      "priceNote": "ZORT STARTER 525 บาท/เดือน (6,300 บาท/ปี), PROFESSIONAL 1,250 บาท/เดือน, BUSINESS 2,000 บาท/เดือน เมื่อจ่ายรายปี ทดลองฟรี 15 วัน ตามหน้าแพ็กเกจที่เปิด ต.ค. 2026",
+      "thai": "UI และทีมไทย เชื่อม Lazada, Shopee, TikTok Shop และ LINE SHOPPING มีรายงานพฤติกรรมการซื้อของลูกค้าทุกช่องทาง",
+      "goodFor": "ร้านที่ขายหลาย Marketplace และต้องการระบบออเดอร์ สต็อก ขนส่ง และ POS หน้าร้านในที่เดียว",
+      "watchOut": "แพ็กเกจจำกัดจำนวนรายการซื้อขายต่อเดือนและจำนวนร้านที่เชื่อม ส่วนเกินต้องซื้อแพ็กเสริม",
+      "source": "https://zortout.com/package"
+    },
+    {
+      "name": "Page365",
+      "company": "Softbaked Co., Ltd.",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://www.page365.net/",
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "free",
+      "priceNote": "มีแผน FREE แผน Solo 799 บาท/เดือน, Pro 1,499 บาท/เดือน, ProLive 2,999 บาท/เดือน, SME 5,999 บาท/เดือน, Enterprise รายปีเท่านั้น ตามหน้าราคาที่เปิด ต.ค. 2026",
+      "thai": "UI และทีมไทย แชทกับเจ้าหน้าที่ได้ 24 ชม. รองรับ LINE OA แต่ค่าส่งข้อความ LINE OA คิดแยกตามค่าบริการของ LINE",
+      "goodFor": "ร้านที่ขายผ่านแชท Facebook, LINE และไลฟ์สด และอยากเปลี่ยนแชทเป็นบิลอัตโนมัติ",
+      "watchOut": "แต่ละแผนจำกัดจำนวนบิลและแอดมินต่อเดือน และการ Broadcast ที่ไม่เหมาะสมอาจทำให้เพจถูก Facebook ระงับ",
+      "source": "https://www.page365.net/pricing"
+    },
+    {
+      "name": "Shipnity",
+      "origin": "th",
+      "country": "ไทย",
+      "url": "https://www.shipnity.com/",
+      "size": [
+        "micro",
+        "sme"
+      ],
+      "types": [
+        "online",
+        "store"
+      ],
+      "priceTier": "low",
+      "priceNote": "Quite Pro 890 บาท/เดือน ถึง Private Live 4,990 บาท/เดือน (ยังไม่รวม VAT 7%) ทดลองฟรี 14 วัน ตามหน้าแพ็กเกจที่เปิด ต.ค. 2026",
+      "thai": "UI และทีมไทย เชื่อมแชท Facebook, IG และ LINE OA และเชื่อม Shopee, Lazada, TikTok และ LINE SHOPPING",
+      "goodFor": "ร้านออนไลน์ที่มีตัวแทนจำหน่ายหรือขายผ่านไลฟ์สด และต้องการจัดการออเดอร์กับสต็อกในที่เดียว",
+      "watchOut": "แผนเริ่มต้นเชื่อม Marketplace ได้อย่างละ 1 ร้าน ถ้ามีหลายร้านต้องขยับแผน",
+      "source": "https://package.shipnity.com/"
+    },
+    {
+      "name": "BigSeller",
+      "company": "Shenzhen Douxun Technology Co., Ltd.",
+      "origin": "intl",
+      "country": "จีน",
+      "url": "https://www.bigseller.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "free",
+      "priceNote": "แผนฟรีใช้ได้ถาวร 1,500 ออเดอร์/เดือน แผนเสียเงินแสดงราคาเป็นสกุลเงินท้องถิ่นตามประเทศ ดูราคาบนเว็บ (เปิด ต.ค. 2026)",
+      "thai": "มีเบอร์ติดต่อสำนักงานกรุงเทพฯ บนเว็บ หน้าเว็บที่เปิดเป็นภาษาอังกฤษ ไม่ได้ยืนยัน UI ภาษาไทยหรือการเชื่อม LINE OA",
+      "goodFor": "ร้านที่ขายหลาย Marketplace ใน SEA และอยากเริ่มรวมออเดอร์ สินค้า และสต็อกโดยไม่เสียเงิน",
+      "watchOut": "แผนฟรีจำกัดจำนวนออเดอร์ ร้าน และบัญชีย่อย เน้นงานหลังร้านมากกว่างานดูแลลูกค้า",
+      "source": "https://www.bigseller.com/en_US/goods/price.htm",
+      "productUrl": "https://www.bigseller.com/th/index.htm"
+    },
+    {
+      "name": "Shopify",
+      "origin": "intl",
+      "country": "แคนาดา",
+      "url": "https://www.shopify.com/th",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store"
+      ],
+      "priceTier": "low",
+      "priceNote": "Basic US$19/เดือน, Grow US$49/เดือน, Advanced US$299/เดือน ตามหน้าราคาที่เปิด ต.ค. 2026 บวกค่าธรรมเนียม 2% หากใช้ผู้ให้บริการชำระเงินภายนอกในแผน Basic",
+      "thai": "เว็บไซต์ภาษาไทยและระบุว่ามีซัพพอร์ต 24 ชั่วโมงเป็นภาษาไทย หน้าเว็บไม่ได้ระบุการเชื่อม LINE OA",
+      "goodFor": "แบรนด์ที่อยากมีเว็บไซต์ขายของเอง เก็บบัญชีลูกค้าและข้อมูลการซื้อเป็นของแบรนด์",
+      "watchOut": "คิดเงินเป็นดอลลาร์ และฟีเจอร์บางอย่างต้องใช้แอปเสริมจาก Shopify App Store ซึ่งบางตัวมีค่ารายเดือนเพิ่ม",
+      "source": "https://www.shopify.com/th/pricing",
+      "productUrl": "https://www.shopify.com/th/online"
+    },
+    {
+      "name": "WooCommerce",
+      "origin": "intl",
+      "country": "สหรัฐฯ",
+      "url": "https://woocommerce.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "free",
+      "priceNote": "ตัวระบบฟรีบน WordPress ไม่หักส่วนแบ่งยอดขาย ค่าโฮสติ้งราว US$25–350/เดือน และส่วนขยาย US$29–299/ปีต่อตัว ตามหน้าราคาที่เปิด ต.ค. 2026",
+      "thai": "เป็นซอฟต์แวร์โอเพนซอร์ส ภาษาไทยและการเชื่อม LINE OA ขึ้นกับธีม ปลั๊กอิน และผู้พัฒนาที่จ้าง",
+      "goodFor": "ธุรกิจที่มีเว็บ WordPress อยู่แล้ว และอยากเป็นเจ้าของข้อมูลลูกค้าพร้อมปรับแต่งได้เต็มที่",
+      "watchOut": "ต้องดูแลโฮสติ้ง ความปลอดภัย และอัปเดตปลั๊กอินเอง ค่าใช้จ่ายรวมจึงขึ้นกับทีมเทคนิค",
+      "source": "https://woocommerce.com/pricing/"
+    },
+    {
+      "name": "Shopee Seller Centre",
+      "company": "Shopee (Thailand) / Sea Limited",
+      "origin": "intl",
+      "country": "สิงคโปร์",
+      "url": "https://seller.shopee.co.th/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "free",
+      "priceNote": "ไม่มีค่ารายเดือนสำหรับเปิดร้าน แต่หักค่าธรรมเนียมต่อออเดอร์ ปี 2026 ค่าคอมมิชชันราว 7.49–19.26% (รวม VAT) บวกค่าธุรกรรม 3.21% และ 1.07 บาท/ออเดอร์ ตามสรุปของ FlowAccount ส.ค. 2026 ควรเช็กอัตราล่าสุดกับ Shopee",
+      "thai": "Seller Centre และทีมไทย ใช้ภาษาไทยได้",
+      "goodFor": "ร้านที่ต้องการเข้าถึงผู้ซื้อจำนวนมากและใช้โค้ดส่วนลด แชท และแคมเปญในแพลตฟอร์ม",
+      "watchOut": "ค่าธรรมเนียมขึ้นหลายรอบในปี 2026 และข้อมูลติดต่อผู้ซื้อถูกจำกัด จึงสร้างฐาน CRM ของแบรนด์จากออเดอร์โดยตรงได้ยาก",
+      "source": "https://flowaccount.com/blog/commission-fees-ecommerce-shopee-lazada-tiktok/",
+      "productUrl": "https://seller.shopee.co.th/edu/home"
+    },
+    {
+      "name": "Lazada Seller Center",
+      "company": "Lazada",
+      "origin": "intl",
+      "country": "สิงคโปร์",
+      "url": "https://sellercenter.lazada.co.th/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "free",
+      "priceNote": "ไม่มีค่ารายเดือนสำหรับเปิดร้าน แต่หักค่าธรรมเนียมต่อออเดอร์ ค่าบริการ Marketplace 6.96–17.12%, LazMall 6.96–18.73% บวกค่าชำระเงิน 3.21% มีผล 1 ส.ค. 2026 ผู้ขายใหม่ได้ค่าคอมมิชชัน 0% ใน 90 วันแรกตามหน้าสมัครที่เปิด ต.ค. 2026",
+      "thai": "Seller Center และทีมไทย ใช้ภาษาไทยได้",
+      "goodFor": "แบรนด์ที่ต้องการเปิดร้าน LazMall และใช้แคมเปญหรือคูปองของแพลตฟอร์ม",
+      "watchOut": "ส่วนแบ่งตลาดของ Lazada ใน SEA ลดลงในปี 2025 และข้อมูลลูกค้ายังอยู่ในแพลตฟอร์ม",
+      "source": "https://sellercenter.lazada.co.th/"
+    },
+    {
+      "name": "TikTok Shop Seller Center",
+      "company": "TikTok",
+      "origin": "intl",
+      "country": "สิงคโปร์",
+      "url": "https://seller-th.tiktok.com/",
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online"
+      ],
+      "priceTier": "free",
+      "priceNote": "ไม่มีค่ารายเดือนสำหรับเปิดร้าน แต่หักค่าธรรมเนียมต่อออเดอร์ ค่าคอมมิชชันราว 5.35–7.49% บวกค่าธุรกรรม 3.21% และ Growth Fee สูงสุด 199 บาท/ชิ้น ตามสรุปของ FlowAccount ส.ค. 2026 ควรเช็กอัตราล่าสุดกับ TikTok",
+      "thai": "Seller Center ภาษาไทย ล็อกอินด้วยเบอร์ไทย",
+      "goodFor": "แบรนด์ที่ขายผ่านคลิปสั้น ไลฟ์ และครีเอเตอร์ Affiliate",
+      "watchOut": "ยอดขายพึ่งคอนเทนต์และโฆษณาของแพลตฟอร์มมาก ลูกค้าที่ได้มาเป็นผู้ติดตามบน TikTok ไม่ใช่ฐานข้อมูลของแบรนด์",
+      "source": "https://flowaccount.com/blog/commission-fees-ecommerce-shopee-lazada-tiktok/"
+    }
+  ]
 }

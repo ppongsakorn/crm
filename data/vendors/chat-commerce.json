@@ -20,14 +20,24 @@
       "origin": "intl",
       "country": "ญี่ปุ่น (มีเว็บ LINE for Business ภาษาไทย)",
       "url": "https://lineforbusiness.com/th/",
-      "size": ["micro", "sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "แผนฟรี 300 ข้อความ/เดือน, Basic 1,280 บาท/เดือน (15,000 ข้อความ), Pro 1,780 บาท/เดือน (35,000 ข้อความ) ยังไม่รวม VAT (ต.ค. 2026)",
       "thai": "ภาษาไทยเต็มรูปแบบ และเป็นช่องทางแชทหลักของลูกค้าไทย",
       "goodFor": "ทุกธุรกิจไทยที่ต้องการช่องทางแชทและบรอดแคสต์ที่ลูกค้าใช้อยู่แล้ว",
       "watchOut": "ค่าบรอดแคสต์โตตามจำนวนเพื่อน และข้อมูลลูกค้าอยู่ในระบบของ LINE ถ้าไม่ส่งออกไปเก็บเอง",
-      "source": "https://lineforbusiness.com/th/service/line-oa-features/broadcast-message"
+      "source": "https://lineforbusiness.com/th/service/line-oa-features/broadcast-message",
+      "productUrl": "https://lineforbusiness.com/th/service/line-oa-features"
     },
     {
       "name": "MyShop",
@@ -35,8 +45,13 @@
       "origin": "intl",
       "country": "ญี่ปุ่น (บริการเฉพาะ LINE ประเทศไทย)",
       "url": "https://lineforbusiness.com/th/service/myshop",
-      "size": ["micro", "sme"],
-      "types": ["online"],
+      "size": [
+        "micro",
+        "sme"
+      ],
+      "types": [
+        "online"
+      ],
       "priceTier": "free",
       "priceNote": "เปิดร้านฟรี ค่าธรรมเนียมรับชำระผ่าน PromptPay, Mobile Banking, LINE Pay และ COD เริ่ม 3% ฟีเจอร์เสริมบางอย่างต้องอัปเกรดแพ็กเกจ LINE OA (ต.ค. 2026)",
       "thai": "ภาษาไทย ผูกกับ LINE OA โดยตรง",
@@ -50,14 +65,22 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://zwiz.ai/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "หน้าแรกระบุเริ่ม 500 บาท/เดือน ชุดรวมแชทบอทกับระบบจองหรือแต้ม 28,500–35,000 บาท/ปี องค์กรติดต่อฝ่ายขาย (ต.ค. 2026)",
       "thai": "บริษัทไทย ตอบแชทภาษาไทย รองรับ LINE OA, Facebook, Instagram, TikTok และ WhatsApp",
       "goodFor": "แม่ค้าออนไลน์และร้านบริการที่ต้องการแชทบอทตอบ 24 ชม. พร้อมตะกร้า ตรวจสลิป และติดตามลูกค้า",
       "watchOut": "หน้าราคาไม่ได้ระบุจำนวนผู้ใช้หรือขีดจำกัดการตอบต่อแผน ควรถามให้ชัดก่อนซื้อรายปี",
-      "source": "https://zwiz.ai/th/pricing"
+      "source": "https://zwiz.ai/th/pricing",
+      "productUrl": "https://zwiz.ai/th/chatbot"
     },
     {
       "name": "Oho Chat",
@@ -65,8 +88,15 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.oho.chat/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Pro 4,000 บาท/4 เดือน หรือ 10,800 บาท/ปี ยังไม่รวม VAT, Corporate 43,200 บาท/ปี ทดลองใช้ฟรี 14 วัน (ต.ค. 2026)",
       "thai": "ระบบภาษาไทย รวม LINE OA, Facebook, Instagram, TikTok และเว็บแชท",
@@ -80,8 +110,16 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.chatcone.com/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "ไม่แสดงราคาบนเว็บ ติดต่อฝ่ายขาย (ต.ค. 2026)",
       "thai": "บริษัทไทย รองรับ LINE OA, Facebook, Instagram, เว็บแชท, Lazada และ TikTok Shop",
@@ -95,8 +133,14 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.readyplanet.com/r-chatcenter",
-      "size": ["micro", "sme"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Premium 9,500 บาท/ปี (1 ผู้ใช้), Gold 15,000 บาท/ปี, Platinum 31,500 บาท/ปี (3 ผู้ใช้) ยังไม่รวม VAT ทดลองใช้ฟรี 14 วัน (ต.ค. 2026)",
       "thai": "ภาษาไทย รวม LINE OA, Facebook Messenger, Instagram, TikTok และเว็บแชท",
@@ -110,14 +154,22 @@
       "origin": "intl",
       "country": "มาเลเซีย",
       "url": "https://respond.io/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "Starter US$79/เดือน จ่ายรายปี (US$99 รายเดือน) รวม 5 ผู้ใช้และ 1,000 ผู้ติดต่อที่ทักมาต่อเดือน ทดลองใช้ฟรี 7 วัน (ต.ค. 2026)",
       "thai": "เว็บมีภาษาไทยให้เลือก รองรับ LINE (หน้าเชื่อมต่ออัปเดต พ.ค. 2026) ไม่ได้ยืนยันทีมซัพพอร์ตไทย",
       "goodFor": "ธุรกิจที่ขายข้ามประเทศ ใช้ทั้ง LINE, WhatsApp และ Facebook และต้องการ workflow อัตโนมัติ",
       "watchOut": "คิดเงินเป็นดอลลาร์ และค่าใช้จ่ายเพิ่มตามจำนวนผู้ติดต่อที่ทักมาต่อเดือนและผู้ใช้เพิ่ม",
-      "source": "https://respond.io/pricing"
+      "source": "https://respond.io/pricing",
+      "productUrl": "https://respond.io/th/omnichannel-ai-crm-conversation-platform"
     }
   ]
 }

@@ -20,8 +20,14 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.readyplanetcrm.com/",
-      "size": ["micro", "sme"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "ขายรวมในแพ็กเกจ RMP เริ่ม 9,500 บาท/ปี (Premium) ยังไม่รวม VAT 7% และค่าติดตั้ง ทดลองใช้ฟรี 14 วัน (หน้า RMP, ต.ค. 2026)",
       "thai": "ระบบและทีมซัพพอร์ตภาษาไทย มีคอลเซ็นเตอร์ 24 ชม. รวมแชท LINE OA, Facebook และเว็บไซต์ผ่าน R-Chat ได้",
@@ -35,8 +41,14 @@
       "origin": "th",
       "country": "ไทย",
       "url": "https://www.crmultra.com/",
-      "size": ["sme", "mid"],
-      "types": ["store", "service"],
+      "size": [
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "store",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "ไม่แสดงราคาบนเว็บ ติดต่อฝ่ายขาย มีให้ลงทะเบียนทดลองใช้ฟรี (ต.ค. 2026)",
       "thai": "ระบบและเอกสารภาษาไทย มีอบรมออนไลน์รายเดือน ไม่พบข้อมูลการเชื่อม LINE OA บนหน้าเว็บ",
@@ -50,14 +62,22 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.hubspot.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "มี CRM ฟรี แผน Starter ราคาปกติ US$20/ที่นั่ง/เดือน (ช่วงโปรฯ US$7–10) (หน้าราคา Sales Hub, ต.ค. 2026)",
       "thai": "ไม่ได้ยืนยันว่ามีหน้าจอภาษาไทย ไม่พบการเชื่อม LINE OA แบบในตัวบนหน้าที่เปิด",
       "goodFor": "ธุรกิจที่อยากเริ่มฟรีและค่อยๆ เพิ่มเครื่องมือการตลาด การขาย และบริการลูกค้าในระบบเดียว",
       "watchOut": "แผนฟรีเริ่มง่าย แต่ฟีเจอร์อัตโนมัติและรายงานขั้นสูงอยู่ในแผน Professional ขึ้นไปซึ่งแพงขึ้นมาก",
-      "source": "https://www.hubspot.com/pricing/sales"
+      "source": "https://www.hubspot.com/pricing/sales",
+      "productUrl": "https://www.hubspot.com/products/crm"
     },
     {
       "name": "Zoho CRM",
@@ -65,8 +85,16 @@
       "origin": "intl",
       "country": "อินเดีย",
       "url": "https://www.zoho.com/th/crm/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "แผนฟรีใช้ได้ถึง 3 ผู้ใช้ แผนเสียเงินคิดต่อผู้ใช้ต่อเดือน หน้าราคาแสดงตามสกุลเงินท้องถิ่น (เช่น Standard ₹800) (ต.ค. 2026)",
       "thai": "มีหน้าเว็บภาษาไทย เชื่อมแอปอื่นผ่าน Zoho Marketplace ได้ แต่หน้าเว็บไม่ได้ระบุการเชื่อม LINE OA",
@@ -80,14 +108,23 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.salesforce.com/th/",
-      "size": ["sme", "mid", "enterprise"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "sme",
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Starter Suite US$25/ผู้ใช้/เดือน, Pro Suite US$100 (จ่ายรายปี) รุ่น Enterprise ขึ้นไปแพงกว่ามาก มี Free Suite ในตารางเทียบ (ต.ค. 2026)",
       "thai": "มีเว็บไซต์ภาษาไทยและเบอร์ติดต่อในไทย หน้าเว็บไม่ได้ระบุการเชื่อม LINE OA",
       "goodFor": "บริษัทที่วางแผนโตเป็นองค์กรใหญ่ และต้องการ CRM ที่ปรับแต่งและต่อยอดได้มาก",
       "watchOut": "ราคาขยับแรงเมื่อขึ้นรุ่นสูง และมักต้องจ้างพาร์ทเนอร์ติดตั้งและดูแลระบบ",
-      "source": "https://www.salesforce.com/sales/pricing/"
+      "source": "https://www.salesforce.com/sales/pricing/",
+      "productUrl": "https://www.salesforce.com/th/sales/"
     },
     {
       "name": "Microsoft Dynamics 365 Sales",
@@ -95,14 +132,21 @@
       "origin": "intl",
       "country": "สหรัฐฯ",
       "url": "https://www.microsoft.com/en-us/dynamics-365/products/sales",
-      "size": ["mid", "enterprise"],
-      "types": ["store", "service"],
+      "size": [
+        "mid",
+        "enterprise"
+      ],
+      "types": [
+        "store",
+        "service"
+      ],
       "priceTier": "mid",
       "priceNote": "Sales Professional US$65/ผู้ใช้/เดือน จ่ายรายปี, Enterprise US$105, Premium US$150 ราคาอาจต่างตามประเทศ (ต.ค. 2026)",
       "thai": "ไม่ได้ยืนยันภาษาไทยบนหน้าราคาที่เปิด ไม่พบการเชื่อม LINE OA ในตัว",
       "goodFor": "องค์กรที่ใช้ Microsoft 365, Teams หรือ Dynamics ด้านบัญชีอยู่แล้ว",
       "watchOut": "ค่า Copilot และ Copilot Studio คิดแยก และโครงการติดตั้งมักต้องใช้พาร์ทเนอร์",
-      "source": "https://www.microsoft.com/en-us/dynamics-365/products/sales/pricing"
+      "source": "https://www.microsoft.com/en-us/dynamics-365/products/sales/pricing",
+      "productUrl": "https://www.microsoft.com/th-th/dynamics-365/products/sales"
     },
     {
       "name": "Freshsales",
@@ -110,14 +154,22 @@
       "origin": "intl",
       "country": "สหรัฐฯ (ก่อตั้งในอินเดีย)",
       "url": "https://www.freshworks.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "service"
+      ],
       "priceTier": "low",
       "priceNote": "Growth US$9/ผู้ใช้/เดือน จ่ายรายปี, Pro US$39, Enterprise US$59 ทดลองใช้ฟรี 21 วัน (ต.ค. 2026)",
       "thai": "ไม่ได้ยืนยันหน้าจอภาษาไทยและการเชื่อม LINE OA บนหน้าที่เปิด",
       "goodFor": "ทีมขายเล็กถึงกลางที่ต้องการ CRM ใช้ง่าย มีโทรและอีเมลในตัว",
       "watchOut": "ฟีเจอร์ AI Agent คิดเงินเพิ่มตามจำนวนเซสชัน และราคาที่เห็นเป็นแบบจ่ายรายปี",
-      "source": "https://www.freshworks.com/crm/pricing/"
+      "source": "https://www.freshworks.com/crm/pricing/",
+      "productUrl": "https://www.freshworks.com/crm/sales/"
     },
     {
       "name": "Odoo CRM",
@@ -125,14 +177,23 @@
       "origin": "intl",
       "country": "เบลเยียม",
       "url": "https://www.odoo.com/",
-      "size": ["micro", "sme", "mid"],
-      "types": ["online", "store", "service"],
+      "size": [
+        "micro",
+        "sme",
+        "mid"
+      ],
+      "types": [
+        "online",
+        "store",
+        "service"
+      ],
       "priceTier": "free",
       "priceNote": "One App Free ใช้แอปเดียวฟรีไม่จำกัดผู้ใช้ แผน Standard เริ่ม US$24.90/ผู้ใช้/เดือน (ราคาส่วนลดปีแรก) (ต.ค. 2026)",
       "thai": "หน้าเว็บมีภาษาไทย มีพาร์ทเนอร์ในไทย 44 ราย ตามหน้ารายชื่อพาร์ทเนอร์",
       "goodFor": "ธุรกิจที่อยากให้ CRM ต่อกับขาย สต็อก บัญชี และหน้าร้านในระบบเดียว",
       "watchOut": "ส่วนลดหน้าราคาใช้ได้ 12 เดือนแรก และการปรับแต่งมักต้องจ้างพาร์ทเนอร์",
-      "source": "https://www.odoo.com/pricing"
+      "source": "https://www.odoo.com/pricing",
+      "productUrl": "https://www.odoo.com/th_TH/app/crm"
     }
   ]
 }
