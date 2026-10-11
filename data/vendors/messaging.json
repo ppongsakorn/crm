@@ -1,0 +1,214 @@
+{
+ "id": "messaging",
+ "name": "Email, SMS และ Marketing Automation",
+ "en": "Email, SMS & Marketing Automation",
+ "what": "เครื่องมือหมวดนี้ส่งข้อความหาลูกค้าทางอีเมล SMS แอป หรือ LINE ตามกลุ่มและพฤติกรรม และตั้งให้ส่งอัตโนมัติได้ เช่น ต้อนรับสมาชิกใหม่ เตือนตะกร้าค้าง หรือชวนกลับมาซื้อซ้ำ",
+ "whenNeeded": "ควรเริ่มเมื่อมีรายชื่อลูกค้าที่ยินยอมรับข่าวสารแล้ว และต้องส่งข้อความซ้ำ ๆ เป็นประจำ ถ้าลูกค้าส่วนใหญ่อยู่ใน LINE OA และยังส่งไม่บ่อย ใช้ LINE OA อย่างเดียวก่อนก็พอ",
+ "chooseBy": [
+  "ช่องทางที่ลูกค้าคุณใช้จริง: อีเมล SMS แอป LINE หรือ WhatsApp",
+  "ผู้ส่ง SMS ได้รับใบอนุญาต กสทช. และช่วยลงทะเบียนชื่อผู้ส่งตามกฎใหม่ได้ไหม",
+  "ตั้งค่า SPF, DKIM, DMARC และปุ่มยกเลิกรับแบบคลิกเดียวได้ง่ายไหม",
+  "วิธีคิดเงิน: ต่อข้อความ ต่อรายชื่อ ต่อผู้ใช้งานรายเดือน (MAU) หรือสัญญารายปี",
+  "เชื่อมกับร้านออนไลน์ POS หรือ CRM ที่ใช้อยู่ และรองรับข้อความภาษาไทยไหม"
+ ],
+ "freeStart": "Brevo, Mailchimp, Klaviyo และ Taximail มีแผนอีเมลฟรีที่จำกัดจำนวนรายชื่อหรือจำนวนส่ง ส่วน Thaibulksms ให้ทดลองส่ง SMS ฟรีก่อนซื้อแพ็กเกจ",
+ "note": "SMS ในไทยถูกคุมเข้มขึ้นตั้งแต่ปี 2025 ชื่อผู้ส่งต้องลงทะเบียนและต่ออายุทุกปี ข้อความที่มีลิงก์ต้องลงทะเบียนและถูกตรวจ และธนาคารเลิกส่งลิงก์ทาง SMS แล้ว ส่วนอีเมลที่ส่งถึง Gmail และ Outlook จำนวนมากต้องมี SPF, DKIM, DMARC จึงควรวัดผลจากคลิกและยอดขายมากกว่า open rate",
+ "vendors": [
+  {
+   "name": "Thaibulksms",
+   "company": "1Moby",
+   "origin": "th",
+   "country": "ไทย",
+   "url": "https://www.thaibulksms.com/",
+   "size": [
+    "micro",
+    "sme",
+    "mid",
+    "enterprise"
+   ],
+   "types": [
+    "online",
+    "store",
+    "service"
+   ],
+   "priceTier": "low",
+   "priceNote": "แพ็กเกจเริ่มต้น ฿3,500 (Standard SMS ฿0.41/เครดิต หรือ Corporate SMS ฿0.48/เครดิต) ราคาต่อเครดิตลดลงเมื่อซื้อมาก ตามหน้าราคาที่เปิด ต.ค. 2026",
+   "thai": "UI และทีมไทย มีบริการขอ Whitelist ชื่อผู้ส่ง อีเมล และ LINE LON ที่ส่งแจ้งเตือนผ่าน LINE ด้วยเบอร์มือถือ",
+   "goodFor": "ธุรกิจทุกขนาดที่ต้องส่ง SMS แจ้งเตือน OTP หรือโปรโมชันถึงเบอร์ลูกค้าในไทย",
+   "watchOut": "ซื้อเป็นเครดิตล่วงหน้า และ Whitelist ไม่ครอบคลุมข้อความโฆษณา จึงอาจส่งไม่ถึงคนที่แจ้งไม่รับ SMS",
+   "source": "https://www.thaibulksms.com/pricing/sms/"
+  },
+  {
+   "name": "ANTS",
+   "company": "Advance Network Technology and Services Co., Ltd.",
+   "origin": "th",
+   "country": "ไทย",
+   "url": "https://ants.co.th/",
+   "size": [
+    "sme",
+    "mid",
+    "enterprise"
+   ],
+   "types": [
+    "online",
+    "store",
+    "service"
+   ],
+   "priceTier": "low",
+   "priceNote": "SMS เริ่ม 0.15 บาท/เครดิต ราคาขึ้นกับแพ็กเกจและปริมาณ ส่งมากติดต่อฝ่ายขาย ตามหน้าราคาที่เปิด ต.ค. 2026",
+   "thai": "ทีมไทย ได้ใบอนุญาตจาก กสทช. ให้บริการ SMS เป็น LINE Certified Agency Partner และมี LINE LON",
+   "goodFor": "องค์กรที่อยากได้ SMS, LINE และเครื่องมือ MarTech จากผู้ให้บริการไทยรายเดียว",
+   "watchOut": "ราคาต่ำสุดใช้กับปริมาณสูง แพ็กเกจองค์กรคิดเฉพาะข้อความที่ส่งถึง แต่ราคาต่อเครดิตสูงกว่า",
+   "source": "https://ants.co.th/pricing-package/communication/"
+  },
+  {
+   "name": "Taximail",
+   "origin": "th",
+   "country": "ไทย",
+   "url": "https://www.taximail.com/th",
+   "size": [
+    "micro",
+    "sme",
+    "mid"
+   ],
+   "types": [
+    "online",
+    "store",
+    "service"
+   ],
+   "priceTier": "free",
+   "priceNote": "แผนฟรี US$0 สูงสุด 2,000 รายชื่อและ 5,000 ฉบับ/เดือน แผน Basic US$15/เดือน แผน Pro US$21/เดือน ตามหน้าราคาที่เปิด ต.ค. 2026",
+   "thai": "UI ภาษาไทย สำนักงานใหญ่และทีมอยู่กรุงเทพฯ ส่ง SMS ได้แบบเติมเงิน",
+   "goodFor": "ธุรกิจไทยที่อยากเริ่มอีเมลการตลาดและอีเมลอัตโนมัติพร้อมทีมช่วยเหลือภาษาไทย",
+   "watchOut": "แผนฟรีช่วยเหลือผ่านอีเมลเท่านั้น และราคาแสดงเป็นดอลลาร์",
+   "source": "https://www.taximail.com/th/pricing"
+  },
+  {
+   "name": "Brevo",
+   "origin": "intl",
+   "country": "ฝรั่งเศส",
+   "url": "https://www.brevo.com/",
+   "size": [
+    "micro",
+    "sme",
+    "mid"
+   ],
+   "types": [
+    "online",
+    "store",
+    "service"
+   ],
+   "priceTier": "free",
+   "priceNote": "แผนฟรีส่งได้ 300 อีเมล/วัน แผน Starter US$9/เดือน หรือ US$8.08/เดือนเมื่อจ่ายรายปี (5,000 อีเมล/เดือน) เครดิต SMS ซื้อแยก ตามหน้าราคาที่เปิด ต.ค. 2026",
+   "thai": "หน้าเว็บไม่ได้ยืนยัน UI ภาษาไทยหรือทีมไทย ซัพพอร์ตมี 6 ภาษา",
+   "goodFor": "SME ที่อยากได้อีเมล SMS WhatsApp และ automation ในราคาเริ่มต้นต่ำ",
+   "watchOut": "ช่องทาง WhatsApp ในแพ็กเกจรายเดือนอยู่ในแผน Professional (เริ่ม US$499/เดือน) และค่า SMS คิดแยกจากค่ารายเดือน",
+   "source": "https://www.brevo.com/pricing/"
+  },
+  {
+   "name": "Mailchimp",
+   "company": "Intuit",
+   "origin": "intl",
+   "country": "สหรัฐฯ",
+   "url": "https://mailchimp.com/",
+   "size": [
+    "micro",
+    "sme",
+    "mid"
+   ],
+   "types": [
+    "online",
+    "service"
+   ],
+   "priceTier": "free",
+   "priceNote": "ฟรีเมื่อมีไม่เกิน 250 รายชื่อ Essentials เริ่ม US$13/เดือน, Standard เริ่ม US$20/เดือน, Premium เริ่ม US$350/เดือน ตามหน้าราคาที่เปิด ต.ค. 2026",
+   "thai": "UI ภาษาอังกฤษ ไม่ได้ยืนยันทีมไทยหรือการเชื่อม LINE OA",
+   "goodFor": "ธุรกิจที่เน้นจดหมายข่าวและอีเมลอัตโนมัติ และอยากได้เทมเพลตกับคู่มือจำนวนมาก",
+   "watchOut": "ราคาขึ้นตามจำนวนรายชื่อ และเกินโควตาจะมีค่าส่วนเกินหรือถูกหยุดส่ง",
+   "source": "https://mailchimp.com/pricing/marketing/"
+  },
+  {
+   "name": "Klaviyo",
+   "origin": "intl",
+   "country": "สหรัฐฯ",
+   "url": "https://www.klaviyo.com/",
+   "size": [
+    "micro",
+    "sme",
+    "mid",
+    "enterprise"
+   ],
+   "types": [
+    "online"
+   ],
+   "priceTier": "free",
+   "priceNote": "แผนฟรีสูงสุด 250 active profiles และ 500 อีเมล/เดือน แผนเสียเงินคิดตามจำนวนโปรไฟล์ ดูราคาบนเว็บ (เปิด ต.ค. 2026)",
+   "thai": "UI ภาษาอังกฤษ ไม่ได้ยืนยันทีมไทยหรือการเชื่อม LINE OA",
+   "goodFor": "แบรนด์ออนไลน์ที่ใช้ Shopify หรือเว็บไซต์ของตัวเอง และอยากส่งข้อความตามพฤติกรรมการซื้อ",
+   "watchOut": "เหมาะกับข้อมูลจากร้านออนไลน์มากกว่าหน้าร้าน และค่าใช้จ่ายโตเร็วเมื่อรายชื่อเพิ่ม",
+   "source": "https://www.klaviyo.com/pricing"
+  },
+  {
+   "name": "MoEngage",
+   "origin": "intl",
+   "country": "อินเดีย / สหรัฐฯ",
+   "url": "https://www.moengage.com/",
+   "size": [
+    "mid",
+    "enterprise"
+   ],
+   "types": [
+    "online",
+    "service"
+   ],
+   "priceTier": "enterprise",
+   "priceNote": "แผน Growth และ Enterprise คิดตามจำนวนผู้ใช้ที่ติดตาม (MTU) ติดต่อฝ่ายขาย",
+   "thai": "มีสำนักงานกรุงเทพฯ ตามหน้าติดต่อ ไม่ได้ยืนยัน UI ภาษาไทยหรือการเชื่อม LINE",
+   "goodFor": "แบรนด์ที่มีแอปมือถือและต้องการ push, in-app, อีเมล, SMS และ WhatsApp ตามพฤติกรรมผู้ใช้",
+   "watchOut": "ต้องติดตั้ง SDK ในแอปและเว็บ ใช้ทีมเทคนิคและสัญญารายปี",
+   "source": "https://www.moengage.com/contact-us/"
+  },
+  {
+   "name": "Insider One",
+   "company": "Insider (รีแบรนด์เป็น Insider One)",
+   "origin": "intl",
+   "country": "ตุรกี",
+   "url": "https://insiderone.com/",
+   "size": [
+    "mid",
+    "enterprise"
+   ],
+   "types": [
+    "online",
+    "store",
+    "service"
+   ],
+   "priceTier": "enterprise",
+   "priceNote": "ไม่แสดงราคาบนเว็บ ติดต่อฝ่ายขาย",
+   "thai": "มีสำนักงานกรุงเทพฯ และอีเมลทีมประเทศไทย ตามหน้าติดต่อ ไม่ได้ยืนยัน UI ภาษาไทยหรือการเชื่อม LINE",
+   "goodFor": "ค้าปลีกและอีคอมเมิร์ซขนาดใหญ่ที่อยากรวม CDP กับเว็บ แอป อีเมล SMS และ WhatsApp ในระบบเดียว",
+   "watchOut": "เป็นแพลตฟอร์มองค์กร ต้องใช้เวลาเชื่อมข้อมูลและทีมดูแล ราคาไม่เปิดเผย",
+   "source": "https://insiderone.com/contact-us/"
+  },
+  {
+   "name": "Braze",
+   "origin": "intl",
+   "country": "สหรัฐฯ",
+   "url": "https://www.braze.com/",
+   "size": [
+    "mid",
+    "enterprise"
+   ],
+   "types": [
+    "online",
+    "service"
+   ],
+   "priceTier": "enterprise",
+   "priceNote": "ราคาคิดตามจำนวนผู้ใช้งานรายเดือน (MAU) ติดต่อฝ่ายขาย",
+   "thai": "รองรับช่องทาง LINE ในตัว ตามหน้าราคา ไม่ได้ยืนยัน UI ภาษาไทยหรือทีมในไทย",
+   "goodFor": "แบรนด์ขนาดใหญ่ที่มีแอปและต้องการส่งข้อความข้ามช่องทาง รวมถึง LINE ตามพฤติกรรมลูกค้าแบบเรียลไทม์",
+   "watchOut": "ต้องมีทีมข้อมูลและวิศวกรช่วยติดตั้ง และค่าใช้จ่ายสูงสำหรับธุรกิจเล็ก",
+   "source": "https://www.braze.com/pricing"
+  }
+ ]
+}
